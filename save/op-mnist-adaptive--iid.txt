@@ -1,0 +1,194 @@
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=20, frac=0.2, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=1, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 20
+ Federated settings
+Dataset : IID
+ Adaptive participation
+Local batch size: 128
+Local epochs: 30
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 1.6127353816032408
+Validation Accuracy: 74.77% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 0.5742599126622084
+Validation Accuracy: 86.43% 
+
+
+ | Global Training Round : 3 |
+
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 0.3851511964220554
+Validation Accuracy: 89.45% 
+
+
+ | Global Training Round : 4 |
+
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 0.3193123094425537
+Validation Accuracy: 90.80% 
+
+
+ | Global Training Round : 5 |
+
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.27710836599697347
+Validation Accuracy: 91.90% 
+
+
+ | Global Training Round : 6 |
+
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.2508980709023309
+Validation Accuracy: 92.57% 
+
+
+ | Global Training Round : 7 |
+
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.22895141212316233
+Validation Accuracy: 93.22% 
+
+
+ | Global Training Round : 8 |
+
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.21316704788303467
+Validation Accuracy: 93.47% 
+
+
+ | Global Training Round : 9 |
+
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.20020380335621304
+Validation Accuracy: 93.73% 
+
+
+ | Global Training Round : 10 |
+
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.18947391117428197
+Validation Accuracy: 94.00% 
+
+
+ | Global Training Round : 11 |
+
+ 
+Avg validation Stats after 11 global rounds:
+Validation Loss : 0.17918541399284732
+Validation Accuracy: 94.43% 
+
+
+ | Global Training Round : 12 |
+
+ 
+Avg validation Stats after 12 global rounds:
+Validation Loss : 0.17137155496189377
+Validation Accuracy: 94.65% 
+
+
+ | Global Training Round : 13 |
+
+ 
+Avg validation Stats after 13 global rounds:
+Validation Loss : 0.1635541694806598
+Validation Accuracy: 94.98% 
+
+
+ | Global Training Round : 14 |
+
+ 
+Avg validation Stats after 14 global rounds:
+Validation Loss : 0.15759853210304578
+Validation Accuracy: 95.18% 
+
+
+ | Global Training Round : 15 |
+
+ 
+Avg validation Stats after 15 global rounds:
+Validation Loss : 0.15163664328776938
+Validation Accuracy: 95.42% 
+
+
+ | Global Training Round : 16 |
+
+ 
+Avg validation Stats after 16 global rounds:
+Validation Loss : 0.1461025049610762
+Validation Accuracy: 95.58% 
+
+
+ | Global Training Round : 17 |
+
+ 
+Avg validation Stats after 17 global rounds:
+Validation Loss : 0.14098337756265394
+Validation Accuracy: 95.77% 
+
+
+ | Global Training Round : 18 |
+
+ 
+Avg validation Stats after 18 global rounds:
+Validation Loss : 0.13706586782831434
+Validation Accuracy: 95.90% 
+
+
+ | Global Training Round : 19 |
+
+ 
+Avg validation Stats after 19 global rounds:
+Validation Loss : 0.13327137614976525
+Validation Accuracy: 95.90% 
+
+
+ | Global Training Round : 20 |
+
+ 
+Avg validation Stats after 20 global rounds:
+Validation Loss : 0.13010484451159568
+Validation Accuracy: 96.00% 
+
+precision: 0.9654400091355724
+recall 0.9655686915595592
+accuracy 0.9657
+F1 score 0.9654509681732726
+correct : 9657.0
+total : 10000.0
+test loss now: 0.11175920194622035
+bnatch index: 79
+ 
+ Results after 20 global rounds of training:
+ 
+ Results after 20 global rounds of training:
+ Train loss:  [2.135641829054931, 1.2592294974848017, 0.7778203295088475, 0.6084197670879862, 0.5238620380362392, 0.47574754737594116, 0.43405669647623935, 0.400174191707226, 0.37360363576376027, 0.3503009577877465, 0.3326354539579341, 0.3161080456232195, 0.30271198245631376, 0.29068918103458674, 0.28160641579731027, 0.27477364439754026, 0.2657933850636826, 0.25792675969552037, 0.25113610873166364, 0.2471361421462933]
+ Validation loss:  [1.6127353816032408, 0.5742599126622084, 0.3851511964220554, 0.3193123094425537, 0.27710836599697347, 0.2508980709023309, 0.22895141212316233, 0.21316704788303467, 0.20020380335621304, 0.18947391117428197, 0.17918541399284732, 0.17137155496189377, 0.1635541694806598, 0.15759853210304578, 0.15163664328776938, 0.1461025049610762, 0.14098337756265394, 0.13706586782831434, 0.13327137614976525, 0.13010484451159568]
+ Validation accuracy:  [74.76666666666665, 86.43333333333335, 89.45000000000002, 90.80000000000005, 91.90000000000009, 92.56666666666675, 93.21666666666677, 93.46666666666678, 93.73333333333343, 94.00000000000011, 94.43333333333342, 94.6500000000001, 94.98333333333342, 95.18333333333342, 95.41666666666677, 95.58333333333341, 95.76666666666675, 95.9000000000001, 95.9000000000001, 96.0000000000001]
+ Test Accuracy: 96.57%
+ Test loss: 0.11
+
+ Total Run Time: 4134.0370
+

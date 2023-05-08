@@ -1,0 +1,1087 @@
+(base) soura@soura-Lenovo-ideapad-320-15IKB:~/WASP-Phd/straggler-mitigation-fl/code$ python fed_main.py --l_epoch=20 --user_type=1 --iid=1 --l_batch=128 --dataset=mnist --epoch=100 --straggler_frac=0.9 --method=fedprox --rm_straggler=0 --adaptiveness=1
+----------Experiment---------
+Namespace(adaptiveness=1, dataset='mnist', epoch=100, frac=0.2, gpu=None, iid=1, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=20, lr=0.01, max_pool='True', method='fedprox', model='cnn', mu=0.01, n_classes=10, n_equal=0, norm='batch_norm', num_channels=3, num_filters=32, num_users=100, optimizer='sgd', rm_straggler=0, seed=0, stop=10, straggler_frac=0.9, user_type=1, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 100
+ Federated settings
+Dataset : non-IID
+ Adaptive participation
+method : fedprox
+Proximal term constant 0.01
+Local batch size: 128
+Local epochs: 20
+straggler_frac: 0.9
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+[30207  5662 55366 ... 23285 15728 11924]
+len idxs_epoch 10
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+Traceback (most recent call last):
+  File "fed_main.py", line 400, in <module>
+    main()
+  File "fed_main.py", line 265, in main
+    w, loss = local_model.update_weights(model=copy.deepcopy(global_model), global_round=epoch)
+  File "/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py", line 86, in update_weights
+    log_probs = model(images)
+  File "/home/soura/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/soura/WASP-Phd/straggler-mitigation-fl/code/model.py", line 15, in forward
+    x = F.relu(F.max_pool2d(self.conv1(x), 2))
+  File "/home/soura/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/soura/anaconda3/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 345, in forward
+    return self.conv2d_forward(input, self.weight)
+  File "/home/soura/anaconda3/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 342, in conv2d_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: Given groups=1, weight of size 10 3 5 5, expected input[128, 1, 28, 28] to have 3 channels, but got 1 channels instead
+(base) soura@soura-Lenovo-ideapad-320-15IKB:~/WASP-Phd/straggler-mitigation-fl/code$ python fed_main.py --l_epoch=20 --user_type=1 --iid=1 --l_batch=128 --dataset=mnist --epoch=100 --straggler_frac=0.9 --method=fedprox --rm_straggler=0 --adaptiveness=1 --channel=1
+usage: fed_main.py [-h] [--dataset DATASET] [--n_classes N_CLASSES]
+                   [--gpu GPU] [--optimizer OPTIMIZER] [--lr LR] [--stop STOP]
+                   [--verbose VERBOSE] [--seed SEED] [--mu MU]
+                   [--straggler_frac STRAGGLER_FRAC]
+                   [--adaptiveness ADAPTIVENESS] [--epoch EPOCH]
+                   [--num_users NUM_USERS] [--iid IID] [--l_epoch L_EPOCH]
+                   [--l_batch L_BATCH] [--n_equal N_EQUAL]
+                   [--user_type USER_TYPE] [--method METHOD] [--frac FRAC]
+                   [--rm_straggler RM_STRAGGLER] [--model MODEL]
+                   [--kernel_num KERNEL_NUM] [--kernel_sizes KERNEL_SIZES]
+                   [--num_channels NUM_CHANNELS] [--norm NORM]
+                   [--num_filters NUM_FILTERS] [--max_pool MAX_POOL]
+fed_main.py: error: unrecognized arguments: --channel=1
+(base) soura@soura-Lenovo-ideapad-320-15IKB:~/WASP-Phd/straggler-mitigation-fl/code$ python fed_main.py --l_epoch=20 --user_type=1 --iid=1 --l_batch=128 --dataset=mnist --epoch=100 --straggler_frac=0.9 --method=fedprox --rm_straggler=0 --adaptiveness=1 --num_channels=1
+----------Experiment---------
+Namespace(adaptiveness=1, dataset='mnist', epoch=100, frac=0.2, gpu=None, iid=1, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=20, lr=0.01, max_pool='True', method='fedprox', model='cnn', mu=0.01, n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', rm_straggler=0, seed=0, stop=10, straggler_frac=0.9, user_type=1, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 100
+ Federated settings
+Dataset : non-IID
+ Adaptive participation
+method : fedprox
+Proximal term constant 0.01
+Local batch size: 128
+Local epochs: 20
+straggler_frac: 0.9
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+[30207  5662 55366 ... 23285 15728 11924]
+len idxs_epoch 10
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 4.827400707706809
+Validation Accuracy: 9.00% 
+
+Validation loss decreased (inf --> 4.827401).  Saving model ...
+
+ | Global Training Round : 2 |
+
+idxs1 : 2
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 3.235565887212754
+Validation Accuracy: 20.37% 
+
+Validation loss decreased (4.827401 --> 3.235566).  Saving model ...
+
+ | Global Training Round : 3 |
+
+idxs1 : 3
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 3.3749766475558287
+Validation Accuracy: 18.57% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 4 |
+
+idxs1 : 4
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 4.559201269194483
+Validation Accuracy: 9.00% 
+
+EarlyStopping counter: 2 out of 10
+
+ | Global Training Round : 5 |
+
+idxs1 : 5
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 3.889236572653054
+Validation Accuracy: 18.52% 
+
+EarlyStopping counter: 3 out of 10
+
+ | Global Training Round : 6 |
+
+idxs1 : 6
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 4.5970210996419185
+Validation Accuracy: 10.85% 
+
+EarlyStopping counter: 4 out of 10
+
+ | Global Training Round : 7 |
+
+idxs1 : 7
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 3.9692326515615006
+Validation Accuracy: 20.08% 
+
+EarlyStopping counter: 5 out of 10
+
+ | Global Training Round : 8 |
+
+idxs1 : 8
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 3.3994999270290127
+Validation Accuracy: 19.03% 
+
+EarlyStopping counter: 6 out of 10
+
+ | Global Training Round : 9 |
+
+idxs1 : 9
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 2.9550612729042767
+Validation Accuracy: 22.35% 
+
+Validation loss decreased (3.235566 --> 2.955061).  Saving model ...
+
+ | Global Training Round : 10 |
+
+idxs1 : 10
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 3.0015407526195044
+Validation Accuracy: 21.38% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 11 |
+
+idxs1 : 11
+ 
+Avg validation Stats after 11 global rounds:
+Validation Loss : 2.622578679203988
+Validation Accuracy: 29.28% 
+
+Validation loss decreased (2.955061 --> 2.622579).  Saving model ...
+
+ | Global Training Round : 12 |
+
+idxs1 : 12
+ 
+Avg validation Stats after 12 global rounds:
+Validation Loss : 2.8059812157750135
+Validation Accuracy: 27.88% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 13 |
+
+idxs1 : 13
+ 
+Avg validation Stats after 13 global rounds:
+Validation Loss : 2.606659242458643
+Validation Accuracy: 30.80% 
+
+Validation loss decreased (2.622579 --> 2.606659).  Saving model ...
+
+ | Global Training Round : 14 |
+
+idxs1 : 14
+ 
+Avg validation Stats after 14 global rounds:
+Validation Loss : 2.643496357619762
+Validation Accuracy: 30.23% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 15 |
+
+idxs1 : 15
+ 
+Avg validation Stats after 15 global rounds:
+Validation Loss : 2.375742257192731
+Validation Accuracy: 39.35% 
+
+Validation loss decreased (2.606659 --> 2.375742).  Saving model ...
+
+ | Global Training Round : 16 |
+
+idxs1 : 16
+ 
+Avg validation Stats after 16 global rounds:
+Validation Loss : 2.2532725093234336
+Validation Accuracy: 34.17% 
+
+Validation loss decreased (2.375742 --> 2.253273).  Saving model ...
+
+ | Global Training Round : 17 |
+
+idxs1 : 17
+ 
+Avg validation Stats after 17 global rounds:
+Validation Loss : 2.026503655174747
+Validation Accuracy: 38.22% 
+
+Validation loss decreased (2.253273 --> 2.026504).  Saving model ...
+
+ | Global Training Round : 18 |
+
+idxs1 : 18
+ 
+Avg validation Stats after 18 global rounds:
+Validation Loss : 2.073991933388636
+Validation Accuracy: 35.87% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 19 |
+
+idxs1 : 19
+ 
+Avg validation Stats after 19 global rounds:
+Validation Loss : 1.895169618498534
+Validation Accuracy: 44.95% 
+
+Validation loss decreased (2.026504 --> 1.895170).  Saving model ...
+
+ | Global Training Round : 20 |
+
+idxs1 : 20
+ 
+Avg validation Stats after 20 global rounds:
+Validation Loss : 1.8970092606069506
+Validation Accuracy: 43.78% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 21 |
+
+idxs1 : 21
+ 
+Avg validation Stats after 21 global rounds:
+Validation Loss : 1.7178315667356363
+Validation Accuracy: 53.58% 
+
+Validation loss decreased (1.895170 --> 1.717832).  Saving model ...
+
+ | Global Training Round : 22 |
+
+idxs1 : 22
+ 
+Avg validation Stats after 22 global rounds:
+Validation Loss : 1.7844574844127061
+Validation Accuracy: 48.02% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 23 |
+
+idxs1 : 23
+ 
+Avg validation Stats after 23 global rounds:
+Validation Loss : 1.5063250486031174
+Validation Accuracy: 54.05% 
+
+Validation loss decreased (1.717832 --> 1.506325).  Saving model ...
+
+ | Global Training Round : 24 |
+
+idxs1 : 24
+ 
+Avg validation Stats after 24 global rounds:
+Validation Loss : 1.4538193882023924
+Validation Accuracy: 53.38% 
+
+Validation loss decreased (1.506325 --> 1.453819).  Saving model ...
+
+ | Global Training Round : 25 |
+
+idxs1 : 25
+ 
+Avg validation Stats after 25 global rounds:
+Validation Loss : 1.3799175295906603
+Validation Accuracy: 56.48% 
+
+Validation loss decreased (1.453819 --> 1.379918).  Saving model ...
+
+ | Global Training Round : 26 |
+
+idxs1 : 26
+ 
+Avg validation Stats after 26 global rounds:
+Validation Loss : 1.3052695476145018
+Validation Accuracy: 57.65% 
+
+Validation loss decreased (1.379918 --> 1.305270).  Saving model ...
+
+ | Global Training Round : 27 |
+
+idxs1 : 27
+ 
+Avg validation Stats after 27 global rounds:
+Validation Loss : 1.266683938917238
+Validation Accuracy: 57.75% 
+
+Validation loss decreased (1.305270 --> 1.266684).  Saving model ...
+
+ | Global Training Round : 28 |
+
+idxs1 : 28
+ 
+Avg validation Stats after 28 global rounds:
+Validation Loss : 1.2349106579327487
+Validation Accuracy: 58.83% 
+
+Validation loss decreased (1.266684 --> 1.234911).  Saving model ...
+
+ | Global Training Round : 29 |
+
+idxs1 : 29
+ 
+Avg validation Stats after 29 global rounds:
+Validation Loss : 1.1660492279154715
+Validation Accuracy: 59.30% 
+
+Validation loss decreased (1.234911 --> 1.166049).  Saving model ...
+
+ | Global Training Round : 30 |
+
+idxs1 : 30
+ 
+Avg validation Stats after 30 global rounds:
+Validation Loss : 1.1395913292646873
+Validation Accuracy: 60.13% 
+
+Validation loss decreased (1.166049 --> 1.139591).  Saving model ...
+
+ | Global Training Round : 31 |
+
+idxs1 : 31
+ 
+Avg validation Stats after 31 global rounds:
+Validation Loss : 1.1103782616467213
+Validation Accuracy: 61.23% 
+
+Validation loss decreased (1.139591 --> 1.110378).  Saving model ...
+
+ | Global Training Round : 32 |
+
+idxs1 : 32
+ 
+Avg validation Stats after 32 global rounds:
+Validation Loss : 1.0092730306987647
+Validation Accuracy: 62.93% 
+
+Validation loss decreased (1.110378 --> 1.009273).  Saving model ...
+
+ | Global Training Round : 33 |
+
+idxs1 : 33
+ 
+Avg validation Stats after 33 global rounds:
+Validation Loss : 0.9952027136255057
+Validation Accuracy: 64.70% 
+
+Validation loss decreased (1.009273 --> 0.995203).  Saving model ...
+
+ | Global Training Round : 34 |
+
+idxs1 : 34
+ 
+Avg validation Stats after 34 global rounds:
+Validation Loss : 0.9730689792955528
+Validation Accuracy: 65.85% 
+
+Validation loss decreased (0.995203 --> 0.973069).  Saving model ...
+
+ | Global Training Round : 35 |
+
+idxs1 : 35
+ 
+Avg validation Stats after 35 global rounds:
+Validation Loss : 0.9484546675756576
+Validation Accuracy: 65.83% 
+
+Validation loss decreased (0.973069 --> 0.948455).  Saving model ...
+
+ | Global Training Round : 36 |
+
+idxs1 : 36
+ 
+Avg validation Stats after 36 global rounds:
+Validation Loss : 0.8784680394937747
+Validation Accuracy: 67.85% 
+
+Validation loss decreased (0.948455 --> 0.878468).  Saving model ...
+
+ | Global Training Round : 37 |
+
+idxs1 : 37
+ 
+Avg validation Stats after 37 global rounds:
+Validation Loss : 0.8642997961801009
+Validation Accuracy: 68.38% 
+
+Validation loss decreased (0.878468 --> 0.864300).  Saving model ...
+
+ | Global Training Round : 38 |
+
+idxs1 : 38
+ 
+Avg validation Stats after 38 global rounds:
+Validation Loss : 0.8291397771071641
+Validation Accuracy: 69.85% 
+
+Validation loss decreased (0.864300 --> 0.829140).  Saving model ...
+
+ | Global Training Round : 39 |
+
+idxs1 : 39
+ 
+Avg validation Stats after 39 global rounds:
+Validation Loss : 0.8058884545587937
+Validation Accuracy: 71.20% 
+
+Validation loss decreased (0.829140 --> 0.805888).  Saving model ...
+
+ | Global Training Round : 40 |
+
+idxs1 : 40
+ 
+Avg validation Stats after 40 global rounds:
+Validation Loss : 0.7752296438298653
+Validation Accuracy: 72.70% 
+
+Validation loss decreased (0.805888 --> 0.775230).  Saving model ...
+
+ | Global Training Round : 41 |
+
+idxs1 : 41
+ 
+Avg validation Stats after 41 global rounds:
+Validation Loss : 0.7393226099967726
+Validation Accuracy: 74.20% 
+
+Validation loss decreased (0.775230 --> 0.739323).  Saving model ...
+
+ | Global Training Round : 42 |
+
+idxs1 : 42
+ 
+Avg validation Stats after 42 global rounds:
+Validation Loss : 0.7187152354454155
+Validation Accuracy: 75.35% 
+
+Validation loss decreased (0.739323 --> 0.718715).  Saving model ...
+
+ | Global Training Round : 43 |
+
+idxs1 : 43
+ 
+Avg validation Stats after 43 global rounds:
+Validation Loss : 0.6946205641755365
+Validation Accuracy: 76.15% 
+
+Validation loss decreased (0.718715 --> 0.694621).  Saving model ...
+
+ | Global Training Round : 44 |
+
+idxs1 : 44
+ 
+Avg validation Stats after 44 global rounds:
+Validation Loss : 0.6652190548640208
+Validation Accuracy: 77.38% 
+
+Validation loss decreased (0.694621 --> 0.665219).  Saving model ...
+
+ | Global Training Round : 45 |
+
+idxs1 : 45
+ 
+Avg validation Stats after 45 global rounds:
+Validation Loss : 0.6532772381830732
+Validation Accuracy: 77.97% 
+
+Validation loss decreased (0.665219 --> 0.653277).  Saving model ...
+
+ | Global Training Round : 46 |
+
+idxs1 : 46
+ 
+Avg validation Stats after 46 global rounds:
+Validation Loss : 0.6375536008519118
+Validation Accuracy: 78.85% 
+
+Validation loss decreased (0.653277 --> 0.637554).  Saving model ...
+
+ | Global Training Round : 47 |
+
+idxs1 : 47
+ 
+Avg validation Stats after 47 global rounds:
+Validation Loss : 0.6351130867445608
+Validation Accuracy: 78.88% 
+
+Validation loss decreased (0.637554 --> 0.635113).  Saving model ...
+
+ | Global Training Round : 48 |
+
+idxs1 : 48
+ 
+Avg validation Stats after 48 global rounds:
+Validation Loss : 0.6085399263611762
+Validation Accuracy: 79.75% 
+
+Validation loss decreased (0.635113 --> 0.608540).  Saving model ...
+
+ | Global Training Round : 49 |
+
+idxs1 : 49
+ 
+Avg validation Stats after 49 global rounds:
+Validation Loss : 0.6033051807614974
+Validation Accuracy: 80.07% 
+
+Validation loss decreased (0.608540 --> 0.603305).  Saving model ...
+
+ | Global Training Round : 50 |
+
+idxs1 : 50
+ 
+Avg validation Stats after 50 global rounds:
+Validation Loss : 0.5851627049127128
+Validation Accuracy: 80.83% 
+
+Validation loss decreased (0.603305 --> 0.585163).  Saving model ...
+
+ | Global Training Round : 51 |
+
+idxs1 : 51
+ 
+Avg validation Stats after 51 global rounds:
+Validation Loss : 0.573498358615092
+Validation Accuracy: 81.78% 
+
+Validation loss decreased (0.585163 --> 0.573498).  Saving model ...
+
+ | Global Training Round : 52 |
+
+idxs1 : 52
+ 
+Avg validation Stats after 52 global rounds:
+Validation Loss : 0.555185912123532
+Validation Accuracy: 83.00% 
+
+Validation loss decreased (0.573498 --> 0.555186).  Saving model ...
+
+ | Global Training Round : 53 |
+
+idxs1 : 53
+ 
+Avg validation Stats after 53 global rounds:
+Validation Loss : 0.5509022969098295
+Validation Accuracy: 82.93% 
+
+Validation loss decreased (0.555186 --> 0.550902).  Saving model ...
+
+ | Global Training Round : 54 |
+
+idxs1 : 54
+ 
+Avg validation Stats after 54 global rounds:
+Validation Loss : 0.5418704567245443
+Validation Accuracy: 82.72% 
+
+Validation loss decreased (0.550902 --> 0.541870).  Saving model ...
+
+ | Global Training Round : 55 |
+
+idxs1 : 55
+ 
+Avg validation Stats after 55 global rounds:
+Validation Loss : 0.5242229352348369
+Validation Accuracy: 83.83% 
+
+Validation loss decreased (0.541870 --> 0.524223).  Saving model ...
+
+ | Global Training Round : 56 |
+
+idxs1 : 56
+ 
+Avg validation Stats after 56 global rounds:
+Validation Loss : 0.5268111576059602
+Validation Accuracy: 82.93% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 57 |
+
+idxs1 : 57
+ 
+Avg validation Stats after 57 global rounds:
+Validation Loss : 0.5140036696484312
+Validation Accuracy: 83.70% 
+
+Validation loss decreased (0.524223 --> 0.514004).  Saving model ...
+
+ | Global Training Round : 58 |
+
+idxs1 : 58
+ 
+Avg validation Stats after 58 global rounds:
+Validation Loss : 0.5137745450346266
+Validation Accuracy: 83.70% 
+
+Validation loss decreased (0.514004 --> 0.513775).  Saving model ...
+
+ | Global Training Round : 59 |
+
+idxs1 : 59
+ 
+Avg validation Stats after 59 global rounds:
+Validation Loss : 0.5036124587291853
+Validation Accuracy: 84.12% 
+
+Validation loss decreased (0.513775 --> 0.503612).  Saving model ...
+
+ | Global Training Round : 60 |
+
+idxs1 : 60
+ 
+Avg validation Stats after 60 global rounds:
+Validation Loss : 0.4991005068555245
+Validation Accuracy: 84.00% 
+
+Validation loss decreased (0.503612 --> 0.499101).  Saving model ...
+
+ | Global Training Round : 61 |
+
+idxs1 : 61
+ 
+Avg validation Stats after 61 global rounds:
+Validation Loss : 0.48405201420094807
+Validation Accuracy: 84.80% 
+
+Validation loss decreased (0.499101 --> 0.484052).  Saving model ...
+
+ | Global Training Round : 62 |
+
+idxs1 : 62
+ 
+Avg validation Stats after 62 global rounds:
+Validation Loss : 0.4826157711440466
+Validation Accuracy: 84.52% 
+
+Validation loss decreased (0.484052 --> 0.482616).  Saving model ...
+
+ | Global Training Round : 63 |
+
+idxs1 : 63
+ 
+Avg validation Stats after 63 global rounds:
+Validation Loss : 0.46750588549301014
+Validation Accuracy: 85.77% 
+
+Validation loss decreased (0.482616 --> 0.467506).  Saving model ...
+
+ | Global Training Round : 64 |
+
+idxs1 : 64
+ 
+Avg validation Stats after 64 global rounds:
+Validation Loss : 0.4710996811595979
+Validation Accuracy: 85.02% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 65 |
+
+idxs1 : 65
+ 
+Avg validation Stats after 65 global rounds:
+Validation Loss : 0.46905398527579384
+Validation Accuracy: 84.57% 
+
+EarlyStopping counter: 2 out of 10
+
+ | Global Training Round : 66 |
+
+idxs1 : 66
+ 
+Avg validation Stats after 66 global rounds:
+Validation Loss : 0.4653666372579755
+Validation Accuracy: 84.87% 
+
+Validation loss decreased (0.467506 --> 0.465367).  Saving model ...
+
+ | Global Training Round : 67 |
+
+idxs1 : 67
+ 
+Avg validation Stats after 67 global rounds:
+Validation Loss : 0.45041576174669923
+Validation Accuracy: 85.47% 
+
+Validation loss decreased (0.465367 --> 0.450416).  Saving model ...
+
+ | Global Training Round : 68 |
+
+idxs1 : 68
+ 
+Avg validation Stats after 68 global rounds:
+Validation Loss : 0.44123520650656417
+Validation Accuracy: 85.85% 
+
+Validation loss decreased (0.450416 --> 0.441235).  Saving model ...
+
+ | Global Training Round : 69 |
+
+idxs1 : 69
+ 
+Avg validation Stats after 69 global rounds:
+Validation Loss : 0.4439367550272145
+Validation Accuracy: 85.62% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 70 |
+
+idxs1 : 70
+ 
+Avg validation Stats after 70 global rounds:
+Validation Loss : 0.44442070381052334
+Validation Accuracy: 85.65% 
+
+EarlyStopping counter: 2 out of 10
+
+ | Global Training Round : 71 |
+
+idxs1 : 71
+ 
+Avg validation Stats after 71 global rounds:
+Validation Loss : 0.438283333679079
+Validation Accuracy: 85.62% 
+
+Validation loss decreased (0.441235 --> 0.438283).  Saving model ...
+
+ | Global Training Round : 72 |
+
+idxs1 : 72
+ 
+Avg validation Stats after 72 global rounds:
+Validation Loss : 0.44255088876409
+Validation Accuracy: 85.03% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 73 |
+
+idxs1 : 73
+ 
+Avg validation Stats after 73 global rounds:
+Validation Loss : 0.433285682834452
+Validation Accuracy: 85.78% 
+
+Validation loss decreased (0.438283 --> 0.433286).  Saving model ...
+
+ | Global Training Round : 74 |
+
+idxs1 : 74
+ 
+Avg validation Stats after 74 global rounds:
+Validation Loss : 0.4351208883300426
+Validation Accuracy: 85.40% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 75 |
+
+idxs1 : 75
+ 
+Avg validation Stats after 75 global rounds:
+Validation Loss : 0.4280868914381133
+Validation Accuracy: 85.78% 
+
+Validation loss decreased (0.433286 --> 0.428087).  Saving model ...
+
+ | Global Training Round : 76 |
+
+idxs1 : 76
+ 
+Avg validation Stats after 76 global rounds:
+Validation Loss : 0.42404217578790826
+Validation Accuracy: 85.72% 
+
+Validation loss decreased (0.428087 --> 0.424042).  Saving model ...
+
+ | Global Training Round : 77 |
+
+idxs1 : 77
+ 
+Avg validation Stats after 77 global rounds:
+Validation Loss : 0.4200164127484895
+Validation Accuracy: 86.22% 
+
+Validation loss decreased (0.424042 --> 0.420016).  Saving model ...
+
+ | Global Training Round : 78 |
+
+idxs1 : 78
+ 
+Avg validation Stats after 78 global rounds:
+Validation Loss : 0.4242041434339479
+Validation Accuracy: 86.12% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 79 |
+
+idxs1 : 79
+ 
+Avg validation Stats after 79 global rounds:
+Validation Loss : 0.4156107654463269
+Validation Accuracy: 86.45% 
+
+Validation loss decreased (0.420016 --> 0.415611).  Saving model ...
+
+ | Global Training Round : 80 |
+
+idxs1 : 80
+ 
+Avg validation Stats after 80 global rounds:
+Validation Loss : 0.40191612549568506
+Validation Accuracy: 87.07% 
+
+Validation loss decreased (0.415611 --> 0.401916).  Saving model ...
+
+ | Global Training Round : 81 |
+
+idxs1 : 81
+ 
+Avg validation Stats after 81 global rounds:
+Validation Loss : 0.40370814547291967
+Validation Accuracy: 87.08% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 82 |
+
+idxs1 : 82
+ 
+Avg validation Stats after 82 global rounds:
+Validation Loss : 0.39896976644662224
+Validation Accuracy: 87.20% 
+
+Validation loss decreased (0.401916 --> 0.398970).  Saving model ...
+
+ | Global Training Round : 83 |
+
+idxs1 : 83
+ 
+Avg validation Stats after 83 global rounds:
+Validation Loss : 0.3968874124873546
+Validation Accuracy: 87.30% 
+
+Validation loss decreased (0.398970 --> 0.396887).  Saving model ...
+
+ | Global Training Round : 84 |
+
+idxs1 : 84
+ 
+Avg validation Stats after 84 global rounds:
+Validation Loss : 0.3931648923719767
+Validation Accuracy: 87.30% 
+
+Validation loss decreased (0.396887 --> 0.393165).  Saving model ...
+
+ | Global Training Round : 85 |
+
+idxs1 : 85
+ 
+Avg validation Stats after 85 global rounds:
+Validation Loss : 0.386512592097395
+Validation Accuracy: 87.57% 
+
+Validation loss decreased (0.393165 --> 0.386513).  Saving model ...
+
+ | Global Training Round : 86 |
+
+idxs1 : 86
+ 
+Avg validation Stats after 86 global rounds:
+Validation Loss : 0.38635090406803646
+Validation Accuracy: 87.78% 
+
+Validation loss decreased (0.386513 --> 0.386351).  Saving model ...
+
+ | Global Training Round : 87 |
+
+idxs1 : 87
+ 
+Avg validation Stats after 87 global rounds:
+Validation Loss : 0.38231533688807395
+Validation Accuracy: 87.62% 
+
+Validation loss decreased (0.386351 --> 0.382315).  Saving model ...
+
+ | Global Training Round : 88 |
+
+idxs1 : 88
+ 
+Avg validation Stats after 88 global rounds:
+Validation Loss : 0.38597595504031046
+Validation Accuracy: 87.80% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 89 |
+
+idxs1 : 89
+ 
+Avg validation Stats after 89 global rounds:
+Validation Loss : 0.3811660241547506
+Validation Accuracy: 87.85% 
+
+Validation loss decreased (0.382315 --> 0.381166).  Saving model ...
+
+ | Global Training Round : 90 |
+
+idxs1 : 90
+ 
+Avg validation Stats after 90 global rounds:
+Validation Loss : 0.37853030822519196
+Validation Accuracy: 87.92% 
+
+Validation loss decreased (0.381166 --> 0.378530).  Saving model ...
+
+ | Global Training Round : 91 |
+
+idxs1 : 91
+ 
+Avg validation Stats after 91 global rounds:
+Validation Loss : 0.3666934273174267
+Validation Accuracy: 88.42% 
+
+Validation loss decreased (0.378530 --> 0.366693).  Saving model ...
+
+ | Global Training Round : 92 |
+
+idxs1 : 92
+ 
+Avg validation Stats after 92 global rounds:
+Validation Loss : 0.35587460389942854
+Validation Accuracy: 89.07% 
+
+Validation loss decreased (0.366693 --> 0.355875).  Saving model ...
+
+ | Global Training Round : 93 |
+
+idxs1 : 93
+ 
+Avg validation Stats after 93 global rounds:
+Validation Loss : 0.3553989488407971
+Validation Accuracy: 88.90% 
+
+Validation loss decreased (0.355875 --> 0.355399).  Saving model ...
+
+ | Global Training Round : 94 |
+
+idxs1 : 94
+ 
+Avg validation Stats after 94 global rounds:
+Validation Loss : 0.3438507706347154
+Validation Accuracy: 89.65% 
+
+Validation loss decreased (0.355399 --> 0.343851).  Saving model ...
+
+ | Global Training Round : 95 |
+
+idxs1 : 95
+ 
+Avg validation Stats after 95 global rounds:
+Validation Loss : 0.34134183326712814
+Validation Accuracy: 89.42% 
+
+Validation loss decreased (0.343851 --> 0.341342).  Saving model ...
+
+ | Global Training Round : 96 |
+
+idxs1 : 96
+ 
+Avg validation Stats after 96 global rounds:
+Validation Loss : 0.33595094735035674
+Validation Accuracy: 89.87% 
+
+Validation loss decreased (0.341342 --> 0.335951).  Saving model ...
+
+ | Global Training Round : 97 |
+
+idxs1 : 97
+ 
+Avg validation Stats after 97 global rounds:
+Validation Loss : 0.3346940936612664
+Validation Accuracy: 89.80% 
+
+Validation loss decreased (0.335951 --> 0.334694).  Saving model ...
+
+ | Global Training Round : 98 |
+
+idxs1 : 98
+ 
+Avg validation Stats after 98 global rounds:
+Validation Loss : 0.33557327707740486
+Validation Accuracy: 89.82% 
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 99 |
+
+idxs1 : 99
+ 
+Avg validation Stats after 99 global rounds:
+Validation Loss : 0.33138679674995364
+Validation Accuracy: 89.85% 
+
+Validation loss decreased (0.334694 --> 0.331387).  Saving model ...
+
+ | Global Training Round : 100 |
+
+idxs1 : 100
+ 
+Avg validation Stats after 100 global rounds:
+Validation Loss : 0.3222003241342609
+Validation Accuracy: 90.30% 
+
+Validation loss decreased (0.331387 --> 0.322200).  Saving model ...
+precision: 0.908964593234964
+recall 0.905305928217705
+accuracy 0.9069
+F1 score 0.9051581928972878
+correct : 9069.0
+total : 10000.0
+test loss now: 0.3022961808910853
+bnatch index: 79
+

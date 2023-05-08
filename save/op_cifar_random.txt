@@ -1,0 +1,1970 @@
+----------Experiment---------
+Namespace(dataset='cifer', epoch=30, frac=0.1, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=3, num_filters=32, num_users=100, optimizer='sgd', seed=0, stop=10, straggler_frac=0.9, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 30
+ Federated settings
+Dataset : IID
+Fraction of participating users: 0.1
+Local batch size: 128
+Local epochs: 30
+straggler_frac: 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+
+ | Global Training Round : 1 |
+
+len idxs_epoch 10
+idxs_epoch [7, 2, 14, 2, 1, 30, 30, 5, 30, 8, 13, 14, 14, 13, 1, 8, 8, 3, 13, 15, 30, 3, 15, 7, 6, 30, 4, 7, 8, 10, 8, 8, 14, 15, 7, 15, 11, 13, 30, 2, 9, 12, 30, 11, 10, 3, 15, 8, 10, 5, 1, 8, 10, 12, 14, 6, 11, 5, 4, 11, 8, 13, 8, 9, 4, 5, 14, 15, 2, 13, 30, 13, 4, 10, 8, 1, 30, 2, 4, 9, 4, 7, 15, 10, 9, 15, 4, 11, 9, 30, 6, 14, 11, 4, 14, 5, 14, 3, 7, 12]
+len_epoch: 100
+/home/sourasb/PHD/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.305808074712753
+Validation Accuracy: 11.02%
+
+Validation loss decreased (inf --> 2.305808).  Saving model ...
+
+ | Global Training Round : 2 |
+
+len idxs_epoch 10
+idxs_epoch [30, 1, 13, 6, 6, 2, 14, 30, 7, 4, 12, 12, 30, 11, 4, 11, 10, 7, 3, 9, 30, 10, 5, 11, 13, 6, 5, 2, 5, 4, 13, 1, 9, 13, 6, 14, 5, 30, 13, 7, 14, 9, 14, 4, 7, 12, 15, 12, 3, 15, 6, 6, 12, 13, 1, 6, 1, 14, 14, 13, 30, 8, 30, 4, 10, 13, 6, 15, 10, 30, 15, 11, 10, 11, 6, 15, 10, 30, 7, 4, 11, 4, 9, 5, 6, 13, 7, 1, 14, 14, 8, 3, 4, 14, 9, 7, 30, 2, 9, 15]
+len_epoch: 100
+
+Avg validation Stats after 2 global rounds:
+Validation Loss : 2.305247396945953
+Validation Accuracy: 11.08%
+
+Validation loss decreased (2.305808 --> 2.305247).  Saving model ...
+
+ | Global Training Round : 3 |
+
+len idxs_epoch 10
+idxs_epoch [1, 9, 10, 14, 15, 30, 14, 10, 14, 14, 30, 5, 3, 5, 7, 13, 2, 12, 15, 10, 14, 30, 30, 3, 3, 3, 11, 2, 13, 12, 12, 13, 2, 14, 14, 15, 2, 5, 7, 9, 15, 4, 9, 12, 30, 2, 11, 7, 5, 11, 14, 10, 14, 15, 15, 6, 8, 30, 6, 5, 14, 3, 10, 11, 9, 7, 6, 1, 10, 11, 12, 11, 30, 4, 13, 5, 30, 1, 14, 14, 12, 10, 12, 1, 15, 4, 15, 30, 5, 8, 13, 11, 7, 6, 8, 2, 30, 2, 5, 2]
+len_epoch: 100
+
+Avg validation Stats after 3 global rounds:
+Validation Loss : 2.3041596205234534
+Validation Accuracy: 11.70%
+
+Validation loss decreased (2.305247 --> 2.304160).  Saving model ...
+
+ | Global Training Round : 4 |
+
+len idxs_epoch 10
+idxs_epoch [13, 5, 15, 2, 14, 1, 11, 12, 10, 14, 11, 3, 12, 5, 5, 6, 4, 8, 1, 30, 15, 30, 2, 4, 9, 12, 1, 3, 4, 7, 14, 12, 12, 11, 15, 15, 11, 30, 30, 4, 30, 12, 10, 7, 10, 3, 4, 8, 15, 10, 8, 10, 8, 14, 9, 30, 12, 30, 5, 30, 30, 10, 15, 14, 1, 30, 12, 5, 2, 9, 8, 7, 5, 10, 6, 7, 3, 8, 9, 8, 10, 7, 11, 11, 14, 7, 5, 5, 15, 4, 5, 12, 3, 5, 15, 12, 14, 1, 8, 1]
+len_epoch: 100
+
+Avg validation Stats after 4 global rounds:
+Validation Loss : 2.3031021018028257
+Validation Accuracy: 10.72%
+
+Validation loss decreased (2.304160 --> 2.303102).  Saving model ...
+
+ | Global Training Round : 5 |
+
+len idxs_epoch 10
+idxs_epoch [7, 7, 5, 12, 10, 6, 7, 4, 10, 2, 9, 5, 9, 8, 5, 10, 9, 11, 15, 12, 1, 14, 8, 10, 3, 5, 30, 2, 6, 7, 3, 7, 15, 14, 9, 5, 30, 13, 3, 11, 3, 30, 3, 4, 10, 30, 4, 1, 7, 3, 2, 7, 9, 7, 2, 12, 2, 8, 30, 12, 15, 14, 7, 3, 11, 4, 5, 13, 7, 30, 5, 7, 13, 7, 30, 12, 2, 2, 7, 7, 10, 30, 1, 13, 8, 30, 15, 12, 2, 3, 4, 3, 15, 9, 15, 14, 15, 6, 2, 30]
+len_epoch: 100
+
+Avg validation Stats after 5 global rounds:
+Validation Loss : 2.30206354689598
+Validation Accuracy: 11.52%
+
+Validation loss decreased (2.303102 --> 2.302064).  Saving model ...
+
+ | Global Training Round : 6 |
+
+len idxs_epoch 10
+idxs_epoch [6, 15, 5, 5, 12, 7, 10, 5, 5, 11, 11, 9, 1, 15, 30, 12, 9, 1, 14, 4, 1, 1, 8, 3, 13, 4, 30, 30, 5, 30, 30, 14, 12, 2, 30, 5, 9, 11, 4, 4, 5, 6, 12, 7, 1, 4, 5, 3, 14, 12, 8, 1, 30, 13, 1, 5, 9, 12, 13, 14, 15, 4, 2, 8, 12, 3, 5, 15, 3, 12, 8, 10, 30, 1, 11, 3, 14, 8, 15, 14, 15, 10, 10, 4, 13, 8, 11, 6, 30, 2, 5, 14, 1, 4, 2, 30, 13, 1, 4, 4]
+len_epoch: 100
+
+Avg validation Stats after 6 global rounds:
+Validation Loss : 2.3010322892665855
+Validation Accuracy: 12.78%
+
+Validation loss decreased (2.302064 --> 2.301032).  Saving model ...
+
+ | Global Training Round : 7 |
+
+len idxs_epoch 10
+idxs_epoch [13, 2, 30, 6, 2, 4, 30, 1, 13, 13, 12, 2, 10, 6, 5, 12, 8, 8, 12, 9, 7, 12, 11, 4, 4, 5, 7, 13, 8, 10, 11, 2, 2, 12, 12, 1, 13, 13, 9, 12, 6, 10, 10, 8, 8, 12, 30, 30, 14, 9, 9, 7, 6, 2, 30, 2, 30, 30, 2, 30, 13, 4, 7, 15, 15, 3, 30, 11, 7, 7, 5, 6, 15, 7, 7, 4, 13, 4, 14, 14, 3, 1, 8, 2, 7, 10, 13, 8, 2, 9, 11, 2, 11, 2, 6, 14, 30, 9, 11, 5]
+len_epoch: 100
+
+Avg validation Stats after 7 global rounds:
+Validation Loss : 2.299794258117675
+Validation Accuracy: 11.82%
+
+Validation loss decreased (2.301032 --> 2.299794).  Saving model ...
+
+ | Global Training Round : 8 |
+
+len idxs_epoch 10
+idxs_epoch [2, 3, 30, 7, 30, 11, 9, 15, 6, 6, 10, 30, 12, 2, 5, 6, 1, 7, 30, 1, 11, 30, 10, 30, 14, 10, 3, 15, 1, 2, 13, 3, 4, 14, 6, 8, 7, 7, 1, 3, 3, 8, 11, 8, 11, 14, 9, 6, 14, 30, 10, 13, 1, 7, 2, 1, 14, 14, 3, 7, 7, 14, 3, 9, 30, 13, 12, 5, 11, 15, 6, 30, 1, 15, 9, 8, 15, 9, 30, 11, 10, 6, 5, 2, 10, 1, 13, 6, 5, 3, 6, 4, 14, 12, 12, 6, 5, 6, 8, 9]
+len_epoch: 100
+
+Avg validation Stats after 8 global rounds:
+Validation Loss : 2.2977762429714197
+Validation Accuracy: 12.32%
+
+Validation loss decreased (2.299794 --> 2.297776).  Saving model ...
+
+ | Global Training Round : 9 |
+
+len idxs_epoch 10
+idxs_epoch [14, 30, 1, 2, 13, 10, 2, 11, 14, 6, 30, 7, 5, 2, 12, 11, 4, 13, 1, 10, 30, 3, 11, 6, 1, 10, 9, 14, 1, 13, 4, 7, 7, 30, 15, 2, 5, 5, 9, 13, 13, 8, 8, 15, 11, 2, 6, 9, 6, 9, 6, 5, 30, 4, 10, 7, 30, 5, 11, 4, 4, 7, 3, 3, 15, 13, 5, 30, 7, 4, 1, 30, 10, 11, 10, 11, 11, 30, 14, 30, 13, 7, 15, 7, 2, 1, 7, 6, 5, 14, 9, 4, 8, 2, 5, 5, 9, 12, 8, 4]
+len_epoch: 100
+
+Avg validation Stats after 9 global rounds:
+Validation Loss : 2.296079847574234
+Validation Accuracy: 12.92%
+
+Validation loss decreased (2.297776 --> 2.296080).  Saving model ...
+
+ | Global Training Round : 10 |
+
+len idxs_epoch 10
+idxs_epoch [7, 4, 9, 15, 3, 12, 7, 9, 9, 1, 1, 3, 8, 9, 9, 30, 2, 3, 30, 13, 1, 4, 15, 3, 4, 5, 15, 8, 12, 10, 10, 3, 30, 30, 3, 7, 1, 30, 6, 30, 11, 30, 10, 4, 6, 2, 10, 12, 1, 10, 3, 7, 1, 14, 13, 4, 14, 2, 30, 2, 10, 8, 12, 12, 9, 2, 7, 7, 2, 8, 7, 10, 1, 3, 5, 11, 5, 13, 30, 7, 6, 30, 3, 15, 4, 4, 7, 13, 5, 5, 5, 2, 12, 2, 12, 2, 2, 15, 8, 14]
+len_epoch: 100
+
+Avg validation Stats after 10 global rounds:
+Validation Loss : 2.294583179473877
+Validation Accuracy: 14.00%
+
+Validation loss decreased (2.296080 --> 2.294583).  Saving model ...
+
+ | Global Training Round : 11 |
+
+len idxs_epoch 10
+idxs_epoch [9, 14, 30, 12, 11, 9, 3, 12, 11, 12, 15, 13, 3, 30, 4, 3, 8, 14, 8, 7, 5, 2, 5, 10, 4, 8, 11, 9, 6, 6, 4, 15, 10, 8, 10, 1, 6, 10, 30, 7, 10, 3, 14, 13, 7, 12, 2, 3, 12, 10, 7, 15, 7, 8, 9, 9, 14, 7, 30, 9, 5, 13, 2, 2, 12, 13, 13, 13, 2, 13, 2, 15, 14, 30, 6, 30, 12, 8, 10, 30, 3, 10, 6, 15, 3, 7, 2, 4, 15, 12, 1, 1, 30, 13, 30, 3, 9, 8, 10, 30]
+len_epoch: 100
+
+Avg validation Stats after 11 global rounds:
+Validation Loss : 2.292303198337555
+Validation Accuracy: 13.62%
+
+Validation loss decreased (2.294583 --> 2.292303).  Saving model ...
+
+ | Global Training Round : 12 |
+
+len idxs_epoch 10
+idxs_epoch [30, 10, 13, 11, 9, 2, 6, 30, 6, 10, 6, 9, 10, 15, 13, 12, 14, 10, 12, 7, 3, 15, 9, 8, 1, 1, 9, 6, 9, 10, 11, 13, 2, 5, 9, 14, 6, 7, 6, 5, 11, 30, 1, 14, 9, 1, 10, 6, 4, 30, 5, 9, 30, 13, 11, 14, 3, 11, 15, 14, 3, 2, 30, 9, 10, 9, 13, 13, 9, 6, 14, 11, 11, 7, 6, 7, 8, 13, 30, 1, 11, 30, 15, 13, 3, 7, 30, 30, 5, 14, 4, 4, 15, 10, 7, 10, 6, 12, 7, 8]
+len_epoch: 100
+
+Avg validation Stats after 12 global rounds:
+Validation Loss : 2.2884180691242224
+Validation Accuracy: 14.48%
+
+Validation loss decreased (2.292303 --> 2.288418).  Saving model ...
+
+ | Global Training Round : 13 |
+
+len idxs_epoch 10
+idxs_epoch [10, 5, 3, 3, 1, 15, 4, 6, 7, 4, 5, 14, 5, 10, 2, 15, 12, 2, 7, 30, 3, 9, 7, 12, 14, 4, 30, 10, 9, 6, 11, 11, 30, 9, 9, 8, 11, 11, 14, 8, 7, 6, 2, 14, 7, 9, 15, 6, 4, 15, 11, 10, 2, 2, 5, 10, 13, 2, 9, 3, 12, 2, 5, 8, 30, 30, 5, 15, 3, 9, 30, 2, 13, 10, 14, 11, 7, 14, 15, 11, 30, 1, 30, 11, 8, 12, 1, 7, 8, 11, 10, 3, 12, 7, 30, 7, 13, 6, 30, 12]
+len_epoch: 100
+
+Avg validation Stats after 13 global rounds:
+Validation Loss : 2.2836240775585175
+Validation Accuracy: 14.92%
+
+Validation loss decreased (2.288418 --> 2.283624).  Saving model ...
+
+ | Global Training Round : 14 |
+
+len idxs_epoch 10
+idxs_epoch [30, 30, 11, 10, 9, 8, 1, 8, 30, 30, 2, 5, 4, 15, 11, 1, 15, 10, 8, 6, 8, 30, 15, 4, 1, 1, 6, 15, 12, 4, 10, 4, 1, 30, 3, 30, 30, 11, 30, 3, 7, 12, 5, 6, 3, 7, 6, 14, 7, 8, 3, 6, 1, 15, 14, 12, 11, 12, 12, 6, 13, 14, 11, 7, 1, 1, 15, 9, 6, 2, 3, 12, 15, 13, 10, 11, 15, 14, 12, 3, 9, 12, 2, 6, 3, 5, 1, 4, 8, 11, 13, 30, 14, 7, 13, 10, 9, 2, 13, 11]
+len_epoch: 100
+
+Avg validation Stats after 14 global rounds:
+Validation Loss : 2.2722735469341275
+Validation Accuracy: 15.42%
+
+Validation loss decreased (2.283624 --> 2.272274).  Saving model ...
+
+ | Global Training Round : 15 |
+
+len idxs_epoch 10
+idxs_epoch [13, 15, 3, 13, 1, 2, 3, 2, 13, 4, 30, 11, 12, 15, 8, 7, 5, 5, 7, 2, 3, 1, 8, 6, 12, 9, 10, 10, 10, 2, 12, 13, 11, 10, 8, 13, 11, 4, 8, 5, 9, 13, 9, 15, 15, 2, 30, 3, 30, 9, 6, 3, 11, 11, 7, 2, 15, 4, 12, 9, 4, 7, 13, 30, 11, 10, 8, 30, 10, 5, 1, 14, 7, 14, 13, 10, 4, 30, 30, 8, 7, 13, 30, 2, 9, 3, 12, 6, 11, 4, 13, 5, 5, 5, 30, 12, 14, 30, 12, 13]
+len_epoch: 100
+
+Avg validation Stats after 15 global rounds:
+Validation Loss : 2.255554627418518
+Validation Accuracy: 17.86%
+
+Validation loss decreased (2.272274 --> 2.255555).  Saving model ...
+
+ | Global Training Round : 16 |
+
+len idxs_epoch 10
+idxs_epoch [4, 6, 2, 10, 30, 9, 4, 6, 12, 13, 8, 12, 2, 12, 30, 3, 4, 9, 7, 15, 13, 11, 3, 15, 5, 11, 4, 30, 1, 2, 1, 4, 6, 9, 8, 7, 2, 9, 5, 14, 8, 5, 30, 30, 11, 30, 12, 10, 2, 14, 6, 4, 14, 8, 13, 12, 12, 30, 5, 15, 13, 9, 30, 15, 6, 11, 4, 14, 10, 5, 8, 1, 8, 7, 14, 11, 13, 4, 1, 13, 14, 3, 15, 12, 30, 9, 15, 4, 12, 1, 13, 3, 13, 3, 1, 8, 13, 30, 2, 2]
+len_epoch: 100
+
+Avg validation Stats after 16 global rounds:
+Validation Loss : 2.237717448234558
+Validation Accuracy: 18.10%
+
+Validation loss decreased (2.255555 --> 2.237717).  Saving model ...
+
+ | Global Training Round : 17 |
+
+len idxs_epoch 10
+idxs_epoch [1, 4, 8, 14, 10, 15, 1, 1, 7, 15, 7, 30, 6, 14, 2, 7, 3, 7, 9, 11, 9, 9, 30, 15, 9, 8, 9, 12, 3, 5, 15, 3, 5, 14, 6, 5, 6, 6, 8, 10, 30, 12, 10, 10, 12, 3, 30, 8, 6, 12, 12, 7, 12, 6, 30, 7, 6, 13, 30, 1, 3, 11, 11, 13, 7, 12, 13, 13, 4, 30, 5, 11, 30, 14, 14, 15, 13, 30, 9, 30, 6, 13, 4, 4, 15, 13, 1, 8, 6, 13, 5, 8, 7, 8, 13, 9, 10, 15, 2, 11]
+len_epoch: 100
+
+Avg validation Stats after 17 global rounds:
+Validation Loss : 2.2185468782186506
+Validation Accuracy: 18.28%
+
+Validation loss decreased (2.237717 --> 2.218547).  Saving model ...
+
+ | Global Training Round : 18 |
+
+len idxs_epoch 10
+idxs_epoch [11, 13, 11, 9, 1, 14, 2, 2, 6, 14, 4, 4, 13, 10, 2, 30, 10, 30, 12, 9, 6, 11, 2, 6, 13, 5, 30, 11, 4, 8, 1, 13, 11, 11, 3, 6, 4, 3, 9, 14, 9, 11, 30, 6, 4, 14, 30, 30, 3, 8, 3, 5, 13, 9, 10, 9, 14, 11, 14, 1, 5, 4, 8, 10, 15, 6, 30, 10, 7, 12, 12, 4, 9, 9, 4, 5, 8, 14, 9, 30, 6, 30, 3, 10, 14, 30, 3, 6, 11, 2, 1, 3, 9, 15, 11, 3, 4, 12, 9, 7]
+len_epoch: 100
+
+Avg validation Stats after 18 global rounds:
+Validation Loss : 2.201921649575233
+Validation Accuracy: 21.56%
+
+Validation loss decreased (2.218547 --> 2.201922).  Saving model ...
+
+ | Global Training Round : 19 |
+
+len idxs_epoch 10
+idxs_epoch [14, 10, 2, 1, 6, 2, 12, 15, 8, 13, 5, 7, 15, 9, 2, 15, 30, 11, 30, 4, 30, 8, 10, 2, 5, 4, 14, 8, 8, 12, 7, 14, 3, 30, 14, 7, 30, 12, 10, 7, 8, 14, 5, 5, 6, 10, 12, 9, 9, 12, 11, 30, 2, 15, 11, 8, 6, 4, 12, 8, 12, 13, 9, 8, 9, 3, 2, 2, 13, 9, 30, 13, 11, 11, 13, 9, 9, 2, 11, 6, 15, 12, 30, 2, 30, 13, 12, 1, 11, 2, 11, 30, 8, 1, 2, 15, 15, 1, 6, 3]
+len_epoch: 100
+
+Avg validation Stats after 19 global rounds:
+Validation Loss : 2.1826329151391977
+Validation Accuracy: 22.08%
+
+Validation loss decreased (2.201922 --> 2.182633).  Saving model ...
+
+ | Global Training Round : 20 |
+
+len idxs_epoch 10
+idxs_epoch [6, 15, 4, 9, 9, 2, 11, 1, 30, 10, 3, 4, 15, 9, 5, 7, 6, 14, 5, 10, 5, 30, 14, 11, 13, 6, 6, 6, 7, 8, 1, 11, 13, 9, 2, 2, 8, 30, 13, 30, 15, 3, 12, 10, 11, 8, 1, 3, 8, 13, 2, 13, 3, 3, 6, 10, 11, 3, 30, 7, 9, 9, 30, 12, 12, 5, 30, 4, 3, 7, 7, 13, 7, 4, 4, 10, 2, 5, 4, 6, 10, 9, 30, 12, 7, 5, 13, 1, 13, 3, 6, 8, 6, 30, 13, 30, 11, 4, 6, 1]
+len_epoch: 100
+
+Avg validation Stats after 20 global rounds:
+Validation Loss : 2.1670706199407577
+Validation Accuracy: 22.04%
+
+Validation loss decreased (2.182633 --> 2.167071).  Saving model ...
+
+ | Global Training Round : 21 |
+
+len idxs_epoch 10
+idxs_epoch [11, 11, 2, 4, 15, 3, 15, 11, 15, 30, 3, 3, 5, 2, 9, 7, 8, 15, 11, 15, 5, 9, 11, 12, 11, 6, 5, 3, 5, 13, 1, 8, 10, 10, 14, 1, 5, 12, 7, 9, 30, 7, 5, 30, 11, 30, 1, 13, 1, 15, 8, 11, 30, 10, 30, 1, 5, 2, 7, 5, 12, 2, 5, 30, 14, 3, 5, 10, 2, 14, 14, 13, 8, 7, 5, 6, 4, 14, 8, 13, 2, 15, 30, 8, 5, 1, 30, 14, 6, 4, 12, 15, 2, 30, 13, 2, 9, 6, 1, 7]
+len_epoch: 100
+
+Avg validation Stats after 21 global rounds:
+Validation Loss : 2.1339055125713333
+Validation Accuracy: 22.34%
+
+Validation loss decreased (2.167071 --> 2.133906).  Saving model ...
+
+ | Global Training Round : 22 |
+
+len idxs_epoch 10
+idxs_epoch [15, 10, 5, 8, 10, 2, 1, 30, 3, 12, 30, 4, 6, 9, 30, 11, 7, 1, 11, 30, 11, 8, 2, 15, 30, 1, 11, 4, 10, 4, 15, 12, 4, 10, 4, 2, 3, 4, 9, 10, 12, 4, 7, 1, 11, 30, 4, 12, 4, 12, 8, 2, 30, 8, 15, 5, 10, 5, 15, 13, 6, 12, 15, 11, 13, 3, 9, 12, 8, 2, 2, 30, 7, 14, 7, 14, 2, 2, 15, 11, 15, 4, 14, 13, 12, 12, 10, 5, 13, 30, 30, 2, 11, 1, 13, 9, 7, 10, 10, 12]
+len_epoch: 100
+
+Avg validation Stats after 22 global rounds:
+Validation Loss : 2.112046548724175
+Validation Accuracy: 23.62%
+
+Validation loss decreased (2.133906 --> 2.112047).  Saving model ...
+
+ | Global Training Round : 23 |
+
+len idxs_epoch 10
+idxs_epoch [9, 4, 11, 15, 1, 30, 13, 1, 4, 2, 14, 3, 5, 13, 12, 14, 12, 2, 30, 5, 1, 1, 5, 5, 8, 13, 13, 13, 15, 15, 30, 30, 7, 9, 5, 10, 14, 11, 5, 13, 6, 8, 8, 1, 6, 8, 1, 3, 30, 13, 11, 4, 4, 11, 30, 7, 30, 12, 12, 10, 6, 4, 3, 6, 11, 9, 10, 9, 1, 12, 15, 8, 15, 5, 9, 4, 13, 30, 4, 3, 30, 5, 2, 11, 11, 11, 1, 1, 30, 3, 4, 4, 9, 4, 13, 6, 7, 5, 11, 14]
+len_epoch: 100
+
+Avg validation Stats after 23 global rounds:
+Validation Loss : 2.088298532485963
+Validation Accuracy: 24.74%
+
+Validation loss decreased (2.112047 --> 2.088299).  Saving model ...
+
+ | Global Training Round : 24 |
+
+len idxs_epoch 10
+idxs_epoch [11, 11, 5, 3, 2, 8, 5, 8, 4, 13, 5, 14, 30, 6, 6, 14, 15, 2, 30, 14, 2, 7, 9, 11, 11, 14, 30, 5, 10, 9, 3, 6, 3, 9, 5, 8, 7, 10, 14, 6, 14, 1, 2, 11, 1, 9, 11, 13, 8, 12, 6, 5, 2, 5, 7, 10, 12, 10, 2, 9, 7, 6, 5, 30, 8, 12, 10, 30, 10, 5, 13, 11, 6, 30, 11, 7, 13, 14, 8, 7, 11, 6, 2, 30, 5, 15, 3, 14, 6, 12, 30, 4, 14, 30, 4, 11, 2, 30, 6, 3]
+len_epoch: 100
+
+Avg validation Stats after 24 global rounds:
+Validation Loss : 2.057033967614174
+Validation Accuracy: 25.12%
+
+Validation loss decreased (2.088299 --> 2.057034).  Saving model ...
+
+ | Global Training Round : 25 |
+
+len idxs_epoch 10
+idxs_epoch [5, 11, 13, 11, 14, 30, 14, 14, 30, 7, 15, 11, 30, 8, 4, 4, 13, 11, 10, 5, 6, 1, 5, 5, 12, 5, 11, 15, 5, 2, 30, 10, 9, 12, 1, 6, 2, 1, 15, 5, 8, 9, 2, 13, 5, 11, 7, 11, 30, 8, 5, 11, 3, 4, 15, 15, 30, 9, 1, 3, 11, 4, 14, 7, 6, 15, 8, 10, 30, 3, 15, 5, 4, 10, 11, 2, 8, 6, 30, 4, 15, 15, 12, 30, 4, 12, 2, 30, 15, 3, 4, 12, 11, 3, 1, 6, 15, 1, 9, 8]
+len_epoch: 100
+
+Avg validation Stats after 25 global rounds:
+Validation Loss : 2.0324505407810216
+Validation Accuracy: 26.20%
+
+Validation loss decreased (2.057034 --> 2.032451).  Saving model ...
+
+ | Global Training Round : 26 |
+
+len idxs_epoch 10
+idxs_epoch [30, 15, 14, 12, 2, 6, 5, 6, 12, 30, 1, 5, 6, 14, 12, 11, 8, 8, 5, 7, 12, 30, 7, 14, 1, 6, 2, 6, 4, 15, 7, 6, 3, 3, 11, 15, 7, 7, 7, 8, 1, 12, 14, 2, 11, 11, 30, 1, 30, 11, 30, 10, 11, 3, 4, 4, 7, 1, 30, 7, 4, 15, 3, 2, 8, 7, 7, 7, 8, 13, 5, 7, 11, 11, 4, 12, 30, 11, 15, 12, 15, 30, 4, 30, 3, 15, 1, 9, 10, 5, 1, 12, 1, 7, 1, 5, 6, 4, 10, 11]
+len_epoch: 100
+
+Avg validation Stats after 26 global rounds:
+Validation Loss : 2.0204004794359203
+Validation Accuracy: 27.06%
+
+Validation loss decreased (2.032451 --> 2.020400).  Saving model ...
+
+ | Global Training Round : 27 |
+
+len idxs_epoch 10
+idxs_epoch [30, 4, 30, 11, 3, 30, 30, 6, 6, 2, 8, 15, 13, 14, 1, 8, 15, 2, 4, 5, 14, 6, 11, 9, 9, 11, 6, 6, 4, 9, 8, 8, 2, 4, 3, 4, 12, 5, 11, 5, 30, 9, 4, 30, 7, 5, 14, 5, 10, 13, 7, 30, 15, 15, 5, 10, 10, 5, 8, 7, 1, 10, 7, 5, 15, 5, 11, 15, 8, 7, 11, 4, 1, 3, 2, 30, 1, 14, 30, 7, 11, 9, 6, 13, 6, 4, 7, 10, 3, 2, 13, 6, 9, 7, 6, 13, 7, 12, 30, 6]
+len_epoch: 100
+
+Avg validation Stats after 27 global rounds:
+Validation Loss : 2.004172086119652
+Validation Accuracy: 27.24%
+
+Validation loss decreased (2.020400 --> 2.004172).  Saving model ...
+
+ | Global Training Round : 28 |
+
+len idxs_epoch 10
+idxs_epoch [11, 14, 6, 11, 3, 10, 30, 12, 7, 11, 14, 14, 11, 13, 10, 12, 3, 1, 30, 5, 9, 3, 6, 12, 14, 3, 1, 9, 13, 15, 4, 9, 9, 15, 30, 2, 15, 3, 3, 3, 11, 4, 4, 12, 10, 1, 14, 11, 1, 3, 15, 3, 8, 1, 13, 8, 3, 10, 14, 13, 8, 30, 7, 11, 2, 11, 30, 7, 9, 30, 13, 1, 6, 30, 30, 10, 9, 14, 15, 14, 4, 8, 12, 12, 15, 1, 9, 11, 7, 30, 7, 12, 6, 15, 6, 30, 8, 7, 13, 4]
+len_epoch: 100
+
+Avg validation Stats after 28 global rounds:
+Validation Loss : 1.9864206634759909
+Validation Accuracy: 28.16%
+
+Validation loss decreased (2.004172 --> 1.986421).  Saving model ...
+
+ | Global Training Round : 29 |
+
+len idxs_epoch 10
+idxs_epoch [1, 7, 1, 5, 11, 15, 30, 7, 15, 10, 11, 11, 1, 7, 10, 6, 8, 3, 6, 30, 8, 1, 13, 8, 7, 14, 7, 14, 4, 13, 11, 10, 2, 30, 1, 5, 7, 9, 2, 13, 6, 1, 11, 30, 13, 5, 30, 8, 30, 9, 5, 5, 6, 6, 5, 30, 10, 1, 11, 1, 5, 8, 6, 5, 30, 13, 5, 10, 30, 13, 10, 7, 12, 2, 7, 2, 2, 3, 8, 15, 5, 15, 14, 7, 10, 12, 13, 12, 5, 13, 10, 4, 1, 15, 2, 10, 3, 6, 8, 30]
+len_epoch: 100
+
+Avg validation Stats after 29 global rounds:
+Validation Loss : 1.9633401943445192
+Validation Accuracy: 29.40%
+
+Validation loss decreased (1.986421 --> 1.963340).  Saving model ...
+
+ | Global Training Round : 30 |
+
+len idxs_epoch 10
+idxs_epoch [30, 3, 14, 13, 9, 12, 2, 13, 11, 7, 8, 7, 7, 12, 15, 12, 5, 7, 14, 11, 1, 13, 7, 4, 30, 10, 10, 30, 30, 15, 8, 9, 2, 8, 3, 9, 14, 4, 14, 6, 30, 7, 4, 30, 30, 4, 11, 11, 9, 6, 4, 1, 8, 8, 5, 1, 30, 8, 8, 13, 4, 2, 6, 6, 9, 12, 10, 14, 8, 12, 30, 12, 13, 3, 11, 12, 7, 10, 10, 9, 11, 2, 1, 10, 8, 15, 5, 15, 10, 5, 10, 11, 15, 6, 5, 2, 2, 6, 30, 4]
+len_epoch: 100
+
+Avg validation Stats after 30 global rounds:
+Validation Loss : 1.93131976044178
+Validation Accuracy: 30.44%
+
+Validation loss decreased (1.963340 --> 1.931320).  Saving model ...
+precision: 0.29802245869823785
+recall 0.3133
+accuracy 0.3133
+F1 score 0.2803168521308729
+correct : 3133.0
+total : 10000.0
+test loss now: 1.8991741983196404
+bnatch index: 79
+
+ Results after 30 global rounds of training:
+ Train loss:  [2.3032555306955285, 2.3014138202212138, 2.3028286442964796, 2.301960036776684, 2.3011132695498286, 2.300330881530588, 2.2969962527161143, 2.296561329809446, 2.2955029482090916, 2.292930453883277, 2.2911409414938406, 2.288952518179277, 2.283451596847821, 2.2747388522320495, 2.2600556457144583, 2.2417611801226007, 2.2166747047850697, 2.203764581139761, 2.1841085197228276, 2.1640554388466042, 2.1212296380689986, 2.078720364756884, 2.0642633242183046, 2.0310944520440914, 2.00100294942736, 1.971803387715703, 1.9758575647023373, 1.95572405637185, 1.910732163750334, 1.8909778659889305]
+ Validation loss:  [2.305808074712753, 2.305247396945953, 2.3041596205234534, 2.3031021018028257, 2.30206354689598, 2.3010322892665855, 2.299794258117675, 2.2977762429714197, 2.296079847574234, 2.294583179473877, 2.292303198337555, 2.2884180691242224, 2.2836240775585175, 2.2722735469341275, 2.255554627418518, 2.237717448234558, 2.2185468782186506, 2.201921649575233, 2.1826329151391977, 2.1670706199407577, 2.1339055125713333, 2.112046548724175, 2.088298532485963, 2.057033967614174, 2.0324505407810216, 2.0204004794359203, 2.004172086119652, 1.9864206634759909, 1.9633401943445192, 1.93131976044178]
+ Validation accuracy:  [11.019999999999987, 11.07999999999999, 11.7, 10.719999999999992, 11.519999999999989, 12.77999999999999, 11.819999999999997, 12.319999999999991, 12.919999999999993, 13.99999999999999, 13.61999999999999, 14.47999999999999, 14.919999999999991, 15.419999999999995, 17.859999999999996, 18.1, 18.280000000000005, 21.559999999999995, 22.080000000000005, 22.040000000000006, 22.340000000000007, 23.62, 24.740000000000006, 25.120000000000005, 26.200000000000014, 27.060000000000013, 27.240000000000002, 28.16, 29.400000000000016, 30.440000000000015]
+ Test Accuracy: 31.33%
+ Test loss: 1.90
+
+ Total Run Time: 279.3397
+----------Experiment---------
+Namespace(dataset='cifer', epoch=30, frac=0.2, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=3, num_filters=32, num_users=100, optimizer='sgd', seed=0, stop=10, straggler_frac=0.7, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 30
+ Federated settings
+Dataset : IID
+Fraction of participating users: 0.2
+Local batch size: 128
+Local epochs: 30
+straggler_frac: 0.7
+Files already downloaded and verified
+Files already downloaded and verified
+
+ | Global Training Round : 1 |
+
+len idxs_epoch 31
+idxs_epoch [5, 30, 8, 11, 30, 7, 9, 8, 30, 30, 6, 11, 9, 11, 11, 12, 6, 4, 30, 10, 10, 2, 12, 30, 6, 13, 14, 15, 12, 5, 30, 30, 30, 11, 14, 30, 10, 15, 2, 14, 30, 30, 13, 3, 30, 9, 5, 30, 7, 30, 13, 11, 14, 30, 1, 5, 30, 13, 5, 7, 30, 30, 13, 30, 30, 30, 30, 30, 3, 13, 30, 14, 9, 6, 30, 30, 9, 3, 10, 13, 30, 7, 6, 7, 30, 14, 30, 15, 8, 15, 30, 6, 3, 4, 4, 9, 3, 11, 10, 13]
+len_epoch: 100
+/home/sourasb/PHD/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.3043596653938296
+Validation Accuracy: 10.10%
+
+Validation loss decreased (inf --> 2.304360).  Saving model ...
+
+ | Global Training Round : 2 |
+
+len idxs_epoch 31
+idxs_epoch [30, 9, 7, 30, 30, 3, 1, 4, 2, 6, 4, 4, 30, 5, 13, 30, 14, 1, 30, 7, 14, 15, 11, 8, 11, 10, 30, 9, 30, 9, 4, 30, 5, 5, 4, 5, 9, 10, 10, 5, 15, 30, 4, 6, 2, 30, 14, 30, 12, 5, 9, 12, 30, 30, 30, 30, 8, 8, 15, 13, 3, 3, 30, 4, 30, 30, 13, 5, 30, 30, 10, 5, 12, 1, 30, 15, 30, 30, 14, 4, 30, 5, 5, 4, 2, 15, 15, 30, 7, 30, 30, 1, 30, 10, 30, 30, 3, 15, 1, 13]
+len_epoch: 100
+
+Avg validation Stats after 2 global rounds:
+Validation Loss : 2.3033296391963964
+Validation Accuracy: 10.22%
+
+Validation loss decreased (2.304360 --> 2.303330).  Saving model ...
+
+ | Global Training Round : 3 |
+
+len idxs_epoch 31
+idxs_epoch [30, 14, 1, 10, 10, 11, 3, 11, 10, 30, 5, 13, 9, 11, 9, 30, 8, 30, 30, 7, 2, 3, 5, 30, 15, 9, 2, 30, 30, 1, 11, 30, 5, 30, 3, 12, 30, 4, 9, 3, 2, 2, 2, 30, 30, 10, 6, 6, 14, 5, 30, 11, 11, 30, 5, 9, 30, 30, 12, 8, 15, 10, 30, 13, 15, 12, 30, 30, 9, 11, 8, 11, 2, 5, 13, 9, 30, 30, 5, 30, 4, 7, 10, 30, 12, 30, 6, 13, 30, 7, 30, 6, 12, 10, 8, 8, 3, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 3 global rounds:
+Validation Loss : 2.3023388049602507
+Validation Accuracy: 12.50%
+
+Validation loss decreased (2.303330 --> 2.302339).  Saving model ...
+
+ | Global Training Round : 4 |
+
+len idxs_epoch 31
+idxs_epoch [6, 14, 30, 7, 30, 30, 1, 8, 14, 30, 30, 1, 3, 13, 1, 30, 30, 30, 15, 12, 11, 6, 3, 30, 30, 30, 2, 10, 11, 3, 2, 12, 7, 6, 2, 9, 11, 30, 2, 14, 30, 7, 10, 7, 30, 9, 30, 30, 6, 12, 2, 30, 6, 3, 13, 9, 5, 4, 14, 9, 30, 5, 3, 30, 30, 13, 9, 2, 30, 30, 15, 30, 15, 13, 15, 30, 30, 7, 30, 7, 12, 12, 9, 30, 8, 12, 30, 9, 15, 30, 1, 9, 4, 15, 30, 14, 30, 2, 7, 9]
+len_epoch: 100
+
+Avg validation Stats after 4 global rounds:
+Validation Loss : 2.3015356526374817
+Validation Accuracy: 14.60%
+
+Validation loss decreased (2.302339 --> 2.301536).  Saving model ...
+
+ | Global Training Round : 5 |
+
+len idxs_epoch 31
+idxs_epoch [12, 1, 12, 7, 30, 15, 12, 30, 5, 11, 13, 30, 15, 9, 1, 30, 11, 15, 8, 15, 30, 8, 30, 7, 14, 12, 14, 2, 8, 30, 8, 12, 4, 11, 30, 2, 5, 1, 7, 2, 30, 7, 30, 4, 30, 30, 10, 30, 30, 1, 30, 12, 7, 8, 5, 6, 5, 30, 5, 7, 1, 12, 11, 11, 14, 30, 30, 9, 4, 12, 30, 6, 6, 30, 30, 30, 30, 30, 5, 30, 11, 10, 8, 6, 30, 8, 1, 30, 2, 30, 5, 4, 30, 4, 3, 3, 30, 30, 5, 7]
+len_epoch: 100
+
+Avg validation Stats after 5 global rounds:
+Validation Loss : 2.300287123680115
+Validation Accuracy: 14.44%
+
+Validation loss decreased (2.301536 --> 2.300287).  Saving model ...
+
+ | Global Training Round : 6 |
+
+len idxs_epoch 31
+idxs_epoch [30, 30, 8, 3, 10, 30, 30, 8, 12, 6, 11, 30, 30, 30, 3, 11, 30, 30, 10, 1, 13, 4, 7, 11, 13, 6, 4, 1, 6, 30, 15, 15, 15, 30, 1, 3, 30, 11, 30, 13, 4, 5, 11, 12, 10, 13, 30, 30, 10, 10, 15, 30, 15, 4, 30, 2, 30, 4, 30, 30, 15, 6, 14, 30, 13, 30, 12, 8, 2, 6, 5, 4, 12, 6, 2, 30, 4, 8, 13, 2, 1, 30, 4, 30, 30, 9, 7, 2, 13, 8, 6, 30, 30, 9, 12, 3, 30, 30, 30, 13]
+len_epoch: 100
+
+Avg validation Stats after 6 global rounds:
+Validation Loss : 2.298812299489976
+Validation Accuracy: 15.26%
+
+Validation loss decreased (2.300287 --> 2.298812).  Saving model ...
+
+ | Global Training Round : 7 |
+
+len idxs_epoch 31
+idxs_epoch [30, 10, 30, 8, 30, 6, 30, 30, 30, 30, 9, 5, 30, 10, 30, 30, 3, 4, 15, 30, 12, 15, 8, 14, 30, 9, 30, 30, 1, 14, 30, 13, 30, 14, 8, 6, 10, 2, 11, 30, 11, 8, 14, 30, 12, 14, 30, 2, 30, 13, 12, 30, 5, 10, 6, 15, 13, 4, 15, 6, 14, 30, 9, 4, 6, 30, 13, 30, 30, 12, 5, 1, 11, 13, 1, 12, 3, 1, 6, 30, 6, 1, 30, 14, 8, 1, 3, 30, 2, 30, 6, 5, 3, 30, 4, 6, 9, 3, 30, 11]
+len_epoch: 100
+
+Avg validation Stats after 7 global rounds:
+Validation Loss : 2.2968358976840966
+Validation Accuracy: 15.18%
+
+Validation loss decreased (2.298812 --> 2.296836).  Saving model ...
+
+ | Global Training Round : 8 |
+
+len idxs_epoch 31
+idxs_epoch [5, 3, 6, 30, 14, 30, 4, 30, 4, 1, 30, 30, 30, 4, 2, 30, 30, 13, 6, 6, 30, 30, 30, 4, 30, 13, 10, 13, 9, 30, 14, 15, 30, 11, 12, 30, 1, 12, 5, 30, 15, 14, 3, 1, 30, 8, 30, 12, 9, 4, 11, 3, 2, 12, 6, 30, 14, 10, 30, 30, 2, 30, 30, 3, 30, 14, 4, 30, 1, 30, 3, 1, 30, 8, 9, 8, 1, 30, 15, 2, 5, 1, 8, 30, 4, 14, 7, 1, 4, 30, 4, 10, 13, 30, 1, 6, 7, 14, 9, 9]
+len_epoch: 100
+
+Avg validation Stats after 8 global rounds:
+Validation Loss : 2.2945039200782773
+Validation Accuracy: 16.44%
+
+Validation loss decreased (2.296836 --> 2.294504).  Saving model ...
+
+ | Global Training Round : 9 |
+
+len idxs_epoch 31
+idxs_epoch [7, 2, 4, 30, 6, 30, 12, 30, 15, 13, 30, 30, 10, 9, 30, 4, 5, 30, 7, 8, 9, 1, 9, 7, 30, 13, 30, 8, 13, 10, 30, 2, 30, 5, 30, 30, 5, 4, 30, 3, 9, 30, 30, 30, 30, 13, 11, 3, 30, 14, 30, 8, 5, 13, 30, 13, 11, 6, 9, 9, 3, 8, 30, 3, 4, 11, 4, 4, 30, 30, 30, 1, 5, 11, 7, 13, 12, 30, 30, 9, 8, 4, 14, 30, 12, 7, 14, 2, 10, 30, 30, 5, 6, 5, 1, 3, 30, 12, 9, 3]
+len_epoch: 100
+
+Avg validation Stats after 9 global rounds:
+Validation Loss : 2.2913396944999693
+Validation Accuracy: 16.20%
+
+Validation loss decreased (2.294504 --> 2.291340).  Saving model ...
+
+ | Global Training Round : 10 |
+
+len idxs_epoch 31
+idxs_epoch [3, 11, 3, 30, 14, 6, 14, 15, 6, 30, 12, 30, 9, 14, 11, 13, 30, 12, 12, 30, 14, 4, 15, 30, 6, 30, 30, 30, 11, 30, 7, 30, 6, 13, 2, 8, 30, 3, 15, 30, 4, 30, 30, 30, 30, 10, 6, 13, 10, 6, 8, 30, 4, 2, 11, 3, 8, 13, 30, 9, 2, 6, 3, 30, 30, 10, 10, 5, 30, 5, 30, 7, 30, 1, 4, 11, 8, 1, 1, 30, 2, 30, 8, 30, 12, 5, 30, 30, 1, 12, 30, 2, 1, 7, 2, 14, 10, 8, 5, 9]
+len_epoch: 100
+
+Avg validation Stats after 10 global rounds:
+Validation Loss : 2.287149258613586
+Validation Accuracy: 16.34%
+
+Validation loss decreased (2.291340 --> 2.287149).  Saving model ...
+
+ | Global Training Round : 11 |
+
+len idxs_epoch 31
+idxs_epoch [7, 7, 14, 30, 3, 13, 30, 10, 30, 30, 14, 7, 3, 11, 30, 11, 7, 12, 13, 8, 14, 5, 12, 8, 30, 5, 8, 11, 4, 30, 10, 30, 2, 10, 9, 12, 30, 12, 4, 10, 8, 15, 14, 8, 30, 30, 30, 30, 8, 14, 3, 6, 30, 13, 30, 3, 2, 30, 13, 7, 9, 13, 10, 30, 7, 14, 14, 6, 7, 4, 8, 8, 2, 14, 5, 4, 30, 30, 30, 30, 30, 4, 3, 30, 10, 30, 30, 30, 30, 15, 2, 30, 1, 30, 30, 2, 7, 8, 13, 9]
+len_epoch: 100
+
+Avg validation Stats after 11 global rounds:
+Validation Loss : 2.2782099592685703
+Validation Accuracy: 17.44%
+
+Validation loss decreased (2.287149 --> 2.278210).  Saving model ...
+
+ | Global Training Round : 12 |
+
+len idxs_epoch 31
+idxs_epoch [30, 30, 30, 3, 4, 30, 30, 6, 30, 13, 1, 30, 11, 11, 8, 5, 30, 30, 4, 30, 11, 8, 13, 6, 6, 9, 8, 4, 30, 9, 14, 9, 4, 8, 7, 6, 5, 5, 30, 10, 8, 8, 7, 12, 8, 5, 30, 30, 5, 4, 5, 11, 12, 30, 7, 30, 12, 7, 30, 9, 14, 4, 3, 4, 30, 13, 10, 4, 15, 2, 15, 10, 13, 3, 15, 30, 4, 30, 14, 7, 30, 30, 30, 30, 15, 12, 30, 30, 30, 14, 30, 30, 11, 1, 30, 13, 7, 10, 9, 30]
+len_epoch: 100
+
+Avg validation Stats after 12 global rounds:
+Validation Loss : 2.2599132966995232
+Validation Accuracy: 18.78%
+
+Validation loss decreased (2.278210 --> 2.259913).  Saving model ...
+
+ | Global Training Round : 13 |
+
+len idxs_epoch 31
+idxs_epoch [11, 3, 30, 30, 6, 4, 15, 30, 12, 7, 3, 6, 12, 15, 30, 30, 30, 8, 6, 5, 3, 1, 30, 5, 7, 1, 30, 30, 5, 30, 30, 12, 11, 30, 30, 12, 14, 30, 3, 30, 6, 30, 8, 13, 6, 6, 6, 2, 11, 12, 13, 6, 12, 30, 30, 30, 9, 30, 6, 14, 30, 10, 30, 30, 13, 11, 6, 30, 9, 6, 6, 2, 3, 30, 1, 30, 9, 14, 30, 4, 1, 2, 4, 2, 1, 30, 11, 6, 2, 12, 13, 1, 5, 7, 30, 8, 30, 5, 30, 11]
+len_epoch: 100
+
+Avg validation Stats after 13 global rounds:
+Validation Loss : 2.2314104257822036
+Validation Accuracy: 20.72%
+
+Validation loss decreased (2.259913 --> 2.231410).  Saving model ...
+
+ | Global Training Round : 14 |
+
+len idxs_epoch 31
+idxs_epoch [11, 15, 13, 9, 9, 9, 7, 8, 12, 11, 30, 6, 5, 3, 3, 6, 1, 30, 30, 8, 9, 30, 9, 7, 30, 3, 30, 9, 30, 10, 30, 12, 30, 12, 10, 30, 1, 15, 30, 3, 30, 13, 6, 30, 7, 30, 1, 13, 30, 12, 1, 13, 8, 11, 5, 9, 7, 13, 30, 30, 30, 9, 4, 12, 30, 7, 30, 10, 30, 9, 9, 10, 30, 4, 30, 5, 30, 15, 9, 8, 30, 10, 30, 7, 3, 3, 10, 11, 10, 14, 30, 30, 8, 3, 13, 6, 30, 30, 11, 6]
+len_epoch: 100
+
+Avg validation Stats after 14 global rounds:
+Validation Loss : 2.164794014930725
+Validation Accuracy: 22.80%
+
+Validation loss decreased (2.231410 --> 2.164794).  Saving model ...
+
+ | Global Training Round : 15 |
+
+len idxs_epoch 31
+idxs_epoch [30, 30, 10, 2, 10, 1, 9, 14, 11, 8, 5, 3, 30, 30, 12, 15, 7, 30, 30, 30, 1, 12, 2, 30, 14, 3, 4, 3, 30, 1, 6, 6, 4, 2, 7, 3, 30, 9, 30, 30, 14, 5, 10, 30, 10, 14, 13, 30, 30, 30, 15, 6, 4, 11, 1, 30, 30, 30, 30, 30, 13, 30, 1, 14, 3, 30, 14, 4, 2, 7, 3, 3, 15, 30, 30, 3, 8, 2, 30, 30, 15, 30, 7, 2, 6, 4, 8, 12, 8, 7, 30, 2, 4, 30, 4, 15, 15, 30, 13, 12]
+len_epoch: 100
+
+Avg validation Stats after 15 global rounds:
+Validation Loss : 2.107678379297256
+Validation Accuracy: 25.48%
+
+Validation loss decreased (2.164794 --> 2.107678).  Saving model ...
+
+ | Global Training Round : 16 |
+
+len idxs_epoch 31
+idxs_epoch [30, 10, 30, 5, 9, 30, 4, 2, 4, 3, 4, 4, 11, 9, 3, 30, 4, 4, 4, 15, 11, 11, 8, 30, 4, 30, 10, 10, 8, 30, 9, 30, 5, 30, 30, 2, 1, 11, 12, 30, 30, 30, 4, 30, 13, 4, 7, 30, 30, 30, 8, 30, 30, 30, 11, 30, 11, 8, 13, 30, 30, 30, 14, 10, 5, 4, 11, 10, 1, 30, 30, 8, 14, 6, 12, 30, 12, 14, 11, 7, 7, 1, 13, 10, 4, 3, 7, 4, 4, 9, 30, 3, 7, 5, 14, 30, 6, 30, 11, 30]
+len_epoch: 100
+
+Avg validation Stats after 16 global rounds:
+Validation Loss : 2.0538878890275956
+Validation Accuracy: 27.66%
+
+Validation loss decreased (2.107678 --> 2.053888).  Saving model ...
+
+ | Global Training Round : 17 |
+
+len idxs_epoch 31
+idxs_epoch [30, 5, 15, 30, 10, 30, 15, 14, 30, 30, 5, 7, 14, 10, 15, 30, 3, 7, 9, 10, 6, 30, 7, 30, 4, 30, 6, 3, 30, 3, 14, 30, 30, 10, 4, 2, 12, 30, 30, 10, 30, 2, 15, 30, 9, 30, 4, 10, 8, 7, 7, 15, 30, 30, 15, 30, 11, 3, 13, 30, 1, 30, 11, 30, 8, 12, 11, 30, 11, 5, 1, 4, 13, 8, 30, 30, 10, 5, 15, 5, 8, 11, 30, 30, 30, 9, 15, 8, 11, 10, 3, 30, 2, 10, 2, 6, 3, 4, 4, 30]
+len_epoch: 100
+
+Avg validation Stats after 17 global rounds:
+Validation Loss : 1.9813601233959195
+Validation Accuracy: 29.48%
+
+Validation loss decreased (2.053888 --> 1.981360).  Saving model ...
+
+ | Global Training Round : 18 |
+
+len idxs_epoch 31
+idxs_epoch [2, 30, 11, 5, 3, 7, 6, 14, 13, 11, 30, 11, 12, 15, 30, 6, 30, 30, 30, 4, 30, 13, 30, 9, 7, 30, 30, 30, 14, 10, 11, 10, 30, 30, 30, 15, 3, 15, 1, 12, 15, 11, 30, 11, 1, 6, 7, 8, 30, 15, 11, 12, 2, 14, 30, 30, 30, 8, 30, 6, 30, 30, 12, 8, 30, 30, 10, 9, 30, 14, 10, 8, 2, 30, 9, 30, 13, 30, 14, 30, 6, 6, 14, 3, 12, 15, 5, 15, 1, 6, 30, 13, 15, 9, 8, 7, 2, 30, 15, 2]
+len_epoch: 100
+
+Avg validation Stats after 18 global rounds:
+Validation Loss : 1.9064141424894336
+Validation Accuracy: 31.60%
+
+Validation loss decreased (1.981360 --> 1.906414).  Saving model ...
+
+ | Global Training Round : 19 |
+
+len idxs_epoch 31
+idxs_epoch [9, 14, 13, 14, 12, 3, 14, 9, 4, 5, 14, 15, 30, 2, 5, 5, 30, 14, 13, 2, 30, 7, 10, 30, 8, 5, 10, 30, 2, 30, 1, 8, 7, 30, 2, 7, 7, 30, 30, 30, 4, 1, 11, 8, 30, 30, 30, 6, 3, 8, 7, 15, 8, 30, 30, 30, 13, 10, 30, 30, 30, 6, 9, 1, 5, 11, 30, 30, 30, 13, 30, 3, 30, 8, 7, 30, 30, 5, 8, 6, 10, 30, 11, 7, 3, 15, 3, 12, 9, 5, 9, 30, 30, 5, 4, 30, 7, 14, 30, 7]
+len_epoch: 100
+
+Avg validation Stats after 19 global rounds:
+Validation Loss : 1.8690605438947685
+Validation Accuracy: 32.38%
+
+Validation loss decreased (1.906414 --> 1.869061).  Saving model ...
+
+ | Global Training Round : 20 |
+
+len idxs_epoch 31
+idxs_epoch [14, 30, 10, 3, 13, 3, 11, 11, 2, 8, 30, 3, 4, 30, 30, 10, 9, 10, 30, 3, 30, 10, 30, 1, 30, 3, 8, 9, 30, 15, 3, 8, 3, 30, 13, 8, 5, 5, 30, 8, 30, 15, 30, 12, 4, 1, 8, 5, 30, 30, 14, 7, 6, 5, 13, 15, 2, 5, 7, 7, 9, 7, 2, 30, 30, 15, 3, 2, 13, 15, 1, 6, 10, 7, 30, 12, 30, 5, 8, 30, 8, 30, 10, 30, 14, 30, 10, 2, 10, 30, 30, 12, 1, 30, 30, 30, 13, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 20 global rounds:
+Validation Loss : 1.826533212244511
+Validation Accuracy: 34.46%
+
+Validation loss decreased (1.869061 --> 1.826533).  Saving model ...
+
+ | Global Training Round : 21 |
+
+len idxs_epoch 31
+idxs_epoch [8, 12, 8, 8, 30, 30, 14, 12, 30, 30, 2, 30, 4, 14, 30, 14, 6, 30, 5, 30, 10, 2, 11, 30, 5, 9, 30, 10, 4, 15, 30, 9, 15, 10, 1, 4, 30, 15, 30, 11, 8, 11, 30, 14, 6, 30, 12, 15, 9, 2, 30, 10, 7, 6, 30, 9, 1, 30, 5, 30, 2, 12, 1, 15, 15, 30, 1, 7, 30, 3, 11, 15, 11, 8, 12, 30, 30, 10, 14, 6, 10, 2, 11, 7, 30, 4, 9, 30, 13, 30, 15, 14, 9, 30, 30, 7, 14, 11, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 21 global rounds:
+Validation Loss : 1.7879094719290733
+Validation Accuracy: 35.90%
+
+Validation loss decreased (1.826533 --> 1.787909).  Saving model ...
+
+ | Global Training Round : 22 |
+
+len idxs_epoch 31
+idxs_epoch [1, 5, 3, 6, 6, 1, 2, 30, 30, 13, 30, 10, 2, 30, 14, 8, 6, 11, 13, 30, 9, 9, 30, 30, 30, 1, 30, 30, 1, 30, 11, 2, 7, 11, 3, 30, 2, 11, 4, 3, 11, 15, 11, 5, 13, 14, 30, 6, 30, 12, 8, 30, 30, 11, 6, 30, 30, 30, 13, 7, 1, 30, 6, 30, 4, 30, 10, 30, 2, 10, 1, 11, 2, 6, 13, 2, 30, 11, 30, 6, 6, 11, 1, 30, 9, 9, 9, 30, 2, 15, 14, 2, 1, 30, 30, 14, 11, 30, 3, 30]
+len_epoch: 100
+
+Avg validation Stats after 22 global rounds:
+Validation Loss : 1.758294780194759
+Validation Accuracy: 36.60%
+
+Validation loss decreased (1.787909 --> 1.758295).  Saving model ...
+
+ | Global Training Round : 23 |
+
+len idxs_epoch 31
+idxs_epoch [6, 1, 30, 30, 3, 2, 12, 6, 30, 5, 30, 2, 15, 9, 1, 30, 10, 5, 5, 13, 30, 30, 30, 2, 14, 15, 9, 3, 30, 8, 3, 13, 15, 5, 10, 6, 6, 1, 30, 30, 30, 15, 1, 8, 8, 30, 13, 30, 13, 14, 30, 30, 30, 14, 7, 3, 1, 15, 30, 9, 7, 6, 5, 30, 1, 30, 15, 30, 30, 4, 30, 3, 30, 30, 12, 30, 3, 2, 1, 9, 4, 1, 3, 3, 13, 8, 30, 10, 15, 7, 5, 12, 30, 2, 6, 1, 30, 7, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 23 global rounds:
+Validation Loss : 1.7315168664455405
+Validation Accuracy: 37.48%
+
+Validation loss decreased (1.758295 --> 1.731517).  Saving model ...
+
+ | Global Training Round : 24 |
+
+len idxs_epoch 31
+idxs_epoch [30, 11, 10, 30, 10, 9, 12, 12, 30, 14, 5, 6, 7, 1, 10, 12, 6, 30, 30, 1, 30, 30, 3, 3, 1, 30, 30, 9, 9, 15, 1, 13, 30, 30, 10, 15, 13, 30, 14, 3, 30, 14, 30, 30, 30, 1, 30, 4, 2, 1, 13, 3, 9, 11, 13, 3, 7, 2, 6, 6, 2, 5, 1, 9, 14, 30, 15, 1, 8, 30, 11, 30, 30, 30, 30, 30, 11, 3, 5, 30, 6, 2, 5, 4, 3, 30, 7, 30, 30, 13, 4, 8, 14, 9, 11, 30, 6, 30, 30, 8]
+len_epoch: 100
+
+Avg validation Stats after 24 global rounds:
+Validation Loss : 1.7103242182135583
+Validation Accuracy: 37.96%
+
+Validation loss decreased (1.731517 --> 1.710324).  Saving model ...
+
+ | Global Training Round : 25 |
+
+len idxs_epoch 31
+idxs_epoch [4, 30, 15, 6, 1, 10, 6, 30, 1, 30, 12, 30, 2, 4, 10, 5, 1, 9, 30, 30, 5, 12, 30, 30, 9, 30, 2, 30, 8, 2, 15, 4, 30, 4, 30, 14, 30, 9, 13, 5, 30, 1, 30, 30, 6, 30, 30, 10, 1, 9, 30, 8, 10, 15, 4, 10, 6, 5, 5, 13, 5, 30, 30, 11, 3, 13, 5, 30, 3, 30, 3, 30, 11, 30, 15, 4, 9, 30, 6, 30, 2, 30, 9, 5, 7, 30, 1, 7, 1, 14, 9, 11, 4, 2, 4, 3, 30, 3, 30, 9]
+len_epoch: 100
+
+Avg validation Stats after 25 global rounds:
+Validation Loss : 1.693309632778168
+Validation Accuracy: 38.80%
+
+Validation loss decreased (1.710324 --> 1.693310).  Saving model ...
+
+ | Global Training Round : 26 |
+
+len idxs_epoch 31
+idxs_epoch [5, 30, 10, 30, 7, 13, 6, 5, 30, 30, 12, 1, 30, 30, 30, 30, 6, 12, 30, 15, 4, 11, 30, 6, 3, 5, 9, 30, 5, 30, 4, 30, 14, 15, 14, 6, 3, 14, 30, 6, 12, 4, 13, 9, 30, 30, 30, 30, 12, 8, 5, 3, 2, 11, 3, 8, 6, 3, 3, 14, 15, 30, 30, 12, 30, 30, 3, 3, 15, 3, 30, 15, 5, 30, 7, 30, 14, 30, 13, 30, 3, 7, 12, 11, 11, 30, 2, 8, 2, 5, 15, 30, 4, 2, 7, 10, 14, 11, 30, 3]
+len_epoch: 100
+
+Avg validation Stats after 26 global rounds:
+Validation Loss : 1.676972922861576
+Validation Accuracy: 38.78%
+
+Validation loss decreased (1.693310 --> 1.676973).  Saving model ...
+
+ | Global Training Round : 27 |
+
+len idxs_epoch 31
+idxs_epoch [3, 14, 30, 30, 10, 10, 7, 4, 30, 30, 30, 2, 8, 30, 1, 11, 10, 1, 11, 30, 15, 7, 6, 6, 30, 5, 13, 8, 12, 3, 30, 13, 12, 30, 5, 9, 8, 3, 2, 30, 6, 30, 30, 15, 15, 5, 7, 13, 13, 3, 1, 6, 14, 11, 30, 30, 30, 30, 1, 30, 5, 12, 14, 2, 10, 4, 30, 30, 30, 4, 30, 3, 15, 3, 15, 30, 14, 8, 30, 30, 10, 3, 11, 30, 14, 10, 30, 11, 3, 3, 30, 30, 4, 1, 8, 8, 30, 14, 11, 5]
+len_epoch: 100
+
+Avg validation Stats after 27 global rounds:
+Validation Loss : 1.6614515560269356
+Validation Accuracy: 39.50%
+
+Validation loss decreased (1.676973 --> 1.661452).  Saving model ...
+
+ | Global Training Round : 28 |
+
+len idxs_epoch 31
+idxs_epoch [5, 10, 2, 11, 2, 8, 30, 5, 2, 10, 12, 2, 30, 30, 15, 30, 2, 7, 2, 13, 30, 30, 5, 11, 15, 30, 30, 5, 10, 30, 13, 11, 30, 13, 15, 30, 15, 30, 12, 30, 13, 2, 8, 30, 8, 15, 30, 4, 13, 4, 5, 4, 3, 8, 7, 30, 30, 4, 10, 2, 7, 30, 30, 30, 6, 15, 30, 9, 30, 7, 4, 7, 8, 30, 30, 30, 14, 14, 6, 30, 5, 1, 10, 6, 30, 2, 13, 30, 4, 5, 11, 15, 6, 7, 30, 11, 14, 30, 6, 30]
+len_epoch: 100
+
+Avg validation Stats after 28 global rounds:
+Validation Loss : 1.6459528157114987
+Validation Accuracy: 40.16%
+
+Validation loss decreased (1.661452 --> 1.645953).  Saving model ...
+
+ | Global Training Round : 29 |
+
+len idxs_epoch 31
+idxs_epoch [7, 12, 30, 1, 4, 15, 30, 3, 3, 6, 4, 15, 30, 15, 8, 9, 10, 11, 5, 9, 30, 13, 3, 2, 9, 30, 30, 30, 12, 4, 30, 5, 5, 12, 11, 6, 1, 10, 30, 30, 30, 14, 4, 30, 6, 12, 4, 30, 30, 11, 12, 5, 8, 3, 6, 30, 30, 30, 30, 1, 4, 30, 4, 30, 15, 9, 1, 13, 2, 3, 5, 30, 8, 6, 5, 30, 12, 14, 9, 30, 2, 13, 1, 5, 15, 11, 30, 9, 3, 3, 30, 30, 30, 9, 30, 11, 2, 30, 11, 30]
+len_epoch: 100
+
+Avg validation Stats after 29 global rounds:
+Validation Loss : 1.6354039912819862
+Validation Accuracy: 40.34%
+
+Validation loss decreased (1.645953 --> 1.635404).  Saving model ...
+
+ | Global Training Round : 30 |
+
+len idxs_epoch 31
+idxs_epoch [11, 30, 7, 9, 4, 12, 30, 3, 12, 30, 1, 30, 2, 30, 1, 5, 8, 3, 9, 30, 13, 30, 1, 1, 14, 13, 30, 30, 14, 9, 2, 30, 9, 30, 15, 30, 6, 3, 10, 11, 30, 9, 8, 4, 5, 8, 30, 30, 30, 5, 8, 30, 30, 30, 4, 30, 30, 3, 11, 7, 8, 15, 11, 10, 1, 30, 10, 15, 12, 5, 11, 11, 30, 30, 30, 4, 30, 30, 9, 8, 6, 4, 30, 30, 13, 12, 2, 30, 12, 30, 14, 2, 5, 1, 9, 9, 13, 10, 6, 9]
+len_epoch: 100
+
+Avg validation Stats after 30 global rounds:
+Validation Loss : 1.6227358003854757
+Validation Accuracy: 40.90%
+
+Validation loss decreased (1.635404 --> 1.622736).  Saving model ...
+precision: 0.40822835352684034
+recall 0.4135
+accuracy 0.4135
+F1 score 0.4066698723058229
+correct : 4135.0
+total : 10000.0
+test loss now: 1.601033010060274
+bnatch index: 79
+
+ Results after 30 global rounds of training:
+ Train loss:  [2.3036898574252462, 2.3029934869068454, 2.302018623911973, 2.300306696898092, 2.2991737589255843, 2.2981157279978994, 2.2962494768898596, 2.2941389350063632, 2.2917956356333677, 2.2876299729706746, 2.2780766195529893, 2.2639731799704688, 2.239804583874787, 2.1845992339690925, 2.116682435881209, 2.049564996521137, 1.9591490602375021, 1.8909349402308284, 1.8459991918969678, 1.7956716443540213, 1.741370769021831, 1.7081461494208887, 1.6772329347676191, 1.644303514402561, 1.6379209368372352, 1.5954206380279605, 1.5676409365777073, 1.553547683661575, 1.522845230666332, 1.469774541338586]
+ Validation loss:  [2.3043596653938296, 2.3033296391963964, 2.3023388049602507, 2.3015356526374817, 2.300287123680115, 2.298812299489976, 2.2968358976840966, 2.2945039200782773, 2.2913396944999693, 2.287149258613586, 2.2782099592685703, 2.2599132966995232, 2.2314104257822036, 2.164794014930725, 2.107678379297256, 2.0538878890275956, 1.9813601233959195, 1.9064141424894336, 1.8690605438947685, 1.826533212244511, 1.7879094719290733, 1.758294780194759, 1.7315168664455405, 1.7103242182135583, 1.693309632778168, 1.676972922861576, 1.6614515560269356, 1.6459528157114987, 1.6354039912819862, 1.6227358003854757]
+ Validation accuracy:  [10.09999999999999, 10.219999999999995, 12.499999999999993, 14.599999999999994, 14.439999999999998, 15.259999999999996, 15.179999999999987, 16.439999999999994, 16.2, 16.339999999999993, 17.44, 18.779999999999994, 20.72, 22.80000000000001, 25.47999999999999, 27.659999999999997, 29.48, 31.6, 32.38000000000001, 34.46, 35.900000000000006, 36.60000000000002, 37.480000000000004, 37.96000000000001, 38.800000000000004, 38.77999999999999, 39.5, 40.16, 40.339999999999996, 40.90000000000002]
+ Test Accuracy: 41.35%
+ Test loss: 1.60
+
+ Total Run Time: 717.0275
+----------Experiment---------
+Namespace(dataset='cifer', epoch=30, frac=0.3, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=3, num_filters=32, num_users=100, optimizer='sgd', seed=0, stop=10, straggler_frac=0.5, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 30
+ Federated settings
+Dataset : IID
+Fraction of participating users: 0.3
+Local batch size: 128
+Local epochs: 30
+straggler_frac: 0.5
+Files already downloaded and verified
+Files already downloaded and verified
+
+ | Global Training Round : 1 |
+
+len idxs_epoch 51
+idxs_epoch [30, 14, 13, 30, 8, 2, 15, 11, 30, 30, 30, 7, 30, 30, 12, 30, 3, 9, 30, 30, 30, 6, 13, 30, 7, 30, 30, 9, 12, 2, 11, 7, 30, 2, 5, 30, 30, 14, 30, 4, 8, 30, 30, 8, 30, 3, 15, 30, 3, 30, 3, 14, 30, 30, 30, 30, 6, 30, 30, 4, 1, 30, 1, 6, 8, 10, 1, 30, 3, 2, 9, 14, 30, 30, 3, 2, 3, 2, 30, 30, 13, 30, 10, 30, 13, 30, 7, 30, 30, 30, 30, 30, 30, 30, 5, 30, 30, 30, 30, 30]
+len_epoch: 100
+/home/sourasb/PHD/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.3028843786716466
+Validation Accuracy: 9.98%
+
+Validation loss decreased (inf --> 2.302884).  Saving model ...
+
+ | Global Training Round : 2 |
+
+len idxs_epoch 51
+idxs_epoch [8, 10, 30, 15, 13, 30, 30, 30, 30, 9, 30, 30, 12, 30, 30, 12, 30, 30, 9, 10, 9, 30, 30, 7, 30, 1, 1, 30, 30, 9, 30, 30, 30, 1, 30, 12, 30, 5, 10, 30, 3, 30, 2, 30, 8, 30, 30, 12, 14, 5, 30, 4, 5, 30, 3, 4, 11, 5, 30, 30, 30, 30, 1, 30, 13, 5, 14, 2, 30, 3, 30, 30, 10, 7, 30, 5, 30, 30, 30, 6, 3, 30, 1, 7, 10, 30, 1, 2, 12, 30, 30, 30, 14, 1, 30, 30, 3, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 2 global rounds:
+Validation Loss : 2.3011906466484073
+Validation Accuracy: 10.02%
+
+Validation loss decreased (2.302884 --> 2.301191).  Saving model ...
+
+ | Global Training Round : 3 |
+
+len idxs_epoch 51
+idxs_epoch [7, 30, 30, 1, 30, 14, 2, 30, 30, 1, 11, 30, 30, 30, 30, 30, 8, 1, 30, 10, 10, 1, 30, 30, 5, 13, 30, 14, 9, 5, 30, 30, 15, 1, 30, 30, 30, 30, 30, 2, 30, 6, 30, 1, 3, 30, 30, 30, 8, 13, 3, 30, 10, 30, 30, 30, 30, 12, 5, 30, 30, 30, 30, 15, 1, 30, 30, 13, 4, 30, 30, 30, 30, 6, 2, 8, 1, 6, 30, 14, 5, 13, 30, 30, 30, 15, 30, 12, 1, 11, 2, 30, 2, 30, 30, 2, 5, 6, 7, 30]
+len_epoch: 100
+
+Avg validation Stats after 3 global rounds:
+Validation Loss : 2.2995073249340057
+Validation Accuracy: 10.70%
+
+Validation loss decreased (2.301191 --> 2.299507).  Saving model ...
+
+ | Global Training Round : 4 |
+
+len idxs_epoch 51
+idxs_epoch [30, 30, 7, 5, 30, 1, 15, 6, 7, 30, 12, 30, 30, 30, 30, 30, 11, 30, 2, 12, 30, 14, 6, 1, 15, 12, 30, 9, 3, 30, 15, 3, 14, 3, 30, 30, 30, 30, 1, 4, 15, 8, 8, 30, 5, 2, 30, 30, 30, 3, 30, 4, 30, 15, 3, 2, 30, 15, 30, 30, 30, 1, 6, 30, 30, 9, 30, 5, 8, 5, 30, 30, 8, 5, 30, 3, 30, 30, 30, 6, 30, 30, 14, 30, 30, 30, 30, 30, 30, 1, 30, 3, 30, 30, 30, 7, 30, 30, 7, 10]
+len_epoch: 100
+
+Avg validation Stats after 4 global rounds:
+Validation Loss : 2.2966354024410247
+Validation Accuracy: 14.96%
+
+Validation loss decreased (2.299507 --> 2.296635).  Saving model ...
+
+ | Global Training Round : 5 |
+
+len idxs_epoch 51
+idxs_epoch [30, 7, 5, 30, 5, 9, 13, 30, 30, 30, 30, 5, 30, 30, 30, 14, 2, 30, 9, 11, 4, 2, 30, 30, 30, 30, 30, 30, 13, 30, 9, 30, 30, 4, 7, 14, 13, 4, 30, 30, 14, 7, 30, 30, 12, 10, 30, 3, 30, 14, 6, 30, 30, 30, 6, 1, 1, 14, 30, 30, 2, 30, 12, 2, 3, 12, 30, 5, 9, 2, 10, 8, 8, 8, 30, 30, 30, 30, 14, 3, 2, 15, 30, 30, 30, 30, 30, 7, 12, 30, 30, 30, 30, 30, 30, 30, 30, 30, 1, 15]
+len_epoch: 100
+
+Avg validation Stats after 5 global rounds:
+Validation Loss : 2.2930553057193754
+Validation Accuracy: 14.80%
+
+Validation loss decreased (2.296635 --> 2.293055).  Saving model ...
+
+ | Global Training Round : 6 |
+
+len idxs_epoch 51
+idxs_epoch [9, 14, 10, 13, 8, 6, 30, 30, 30, 4, 30, 30, 2, 4, 30, 30, 30, 30, 30, 30, 30, 13, 30, 30, 6, 30, 30, 30, 30, 2, 5, 30, 3, 30, 8, 5, 1, 30, 30, 3, 30, 14, 30, 30, 11, 5, 30, 2, 10, 4, 30, 30, 30, 14, 30, 30, 1, 1, 30, 30, 30, 30, 30, 9, 11, 3, 11, 2, 30, 30, 15, 8, 30, 30, 30, 30, 10, 6, 8, 8, 13, 30, 30, 30, 2, 9, 9, 11, 30, 6, 30, 30, 11, 4, 30, 3, 12, 11, 5, 30]
+len_epoch: 100
+
+Avg validation Stats after 6 global rounds:
+Validation Loss : 2.287717696666716
+Validation Accuracy: 15.72%
+
+Validation loss decreased (2.293055 --> 2.287718).  Saving model ...
+
+ | Global Training Round : 7 |
+
+len idxs_epoch 51
+idxs_epoch [30, 12, 6, 30, 2, 8, 30, 30, 30, 6, 1, 14, 30, 30, 30, 30, 9, 2, 12, 30, 8, 30, 30, 14, 13, 30, 2, 5, 4, 12, 10, 30, 30, 8, 2, 14, 30, 30, 30, 6, 30, 4, 30, 15, 30, 30, 30, 5, 3, 30, 30, 30, 30, 8, 30, 1, 30, 30, 30, 12, 14, 7, 8, 30, 13, 30, 30, 11, 30, 14, 30, 30, 30, 30, 3, 30, 2, 30, 4, 30, 30, 9, 8, 30, 9, 30, 30, 10, 30, 10, 30, 3, 30, 6, 30, 30, 1, 12, 4, 15]
+len_epoch: 100
+
+Avg validation Stats after 7 global rounds:
+Validation Loss : 2.273381906032562
+Validation Accuracy: 18.48%
+
+Validation loss decreased (2.287718 --> 2.273382).  Saving model ...
+
+ | Global Training Round : 8 |
+
+len idxs_epoch 51
+idxs_epoch [8, 5, 30, 30, 5, 30, 10, 9, 4, 14, 3, 13, 13, 30, 30, 13, 30, 30, 30, 6, 30, 30, 30, 9, 14, 30, 30, 30, 30, 11, 30, 30, 30, 30, 11, 30, 5, 5, 13, 30, 1, 2, 30, 13, 30, 1, 30, 1, 30, 30, 3, 9, 30, 15, 8, 30, 15, 30, 30, 30, 11, 8, 30, 14, 4, 7, 30, 3, 1, 30, 30, 30, 15, 8, 30, 2, 30, 10, 13, 30, 30, 1, 10, 30, 30, 9, 9, 30, 1, 30, 6, 30, 2, 30, 4, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 8 global rounds:
+Validation Loss : 2.244735773086548
+Validation Accuracy: 19.68%
+
+Validation loss decreased (2.273382 --> 2.244736).  Saving model ...
+
+ | Global Training Round : 9 |
+
+len idxs_epoch 51
+idxs_epoch [1, 30, 10, 30, 30, 4, 10, 30, 30, 30, 30, 30, 15, 3, 4, 15, 30, 30, 30, 5, 15, 30, 4, 30, 30, 30, 5, 15, 7, 6, 30, 9, 10, 30, 30, 10, 5, 30, 30, 4, 30, 8, 30, 30, 30, 4, 30, 7, 30, 30, 4, 11, 30, 30, 30, 30, 1, 6, 12, 30, 8, 30, 9, 13, 5, 30, 30, 30, 30, 30, 15, 30, 30, 1, 30, 30, 13, 3, 30, 14, 30, 12, 13, 4, 2, 30, 13, 30, 30, 30, 30, 30, 9, 2, 14, 7, 1, 6, 6, 13]
+len_epoch: 100
+
+Avg validation Stats after 9 global rounds:
+Validation Loss : 2.1788728969097138
+Validation Accuracy: 21.42%
+
+Validation loss decreased (2.244736 --> 2.178873).  Saving model ...
+
+ | Global Training Round : 10 |
+
+len idxs_epoch 51
+idxs_epoch [3, 30, 6, 10, 30, 30, 30, 10, 30, 15, 30, 14, 4, 30, 6, 6, 30, 9, 30, 3, 12, 30, 30, 30, 30, 15, 30, 30, 8, 8, 9, 11, 14, 2, 2, 12, 8, 30, 5, 15, 30, 30, 1, 30, 30, 6, 7, 30, 3, 30, 30, 30, 15, 30, 30, 5, 9, 30, 30, 30, 4, 4, 1, 30, 5, 30, 30, 6, 30, 5, 30, 7, 30, 3, 10, 30, 30, 14, 1, 6, 30, 30, 7, 11, 8, 30, 4, 30, 30, 30, 30, 30, 30, 10, 5, 4, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 10 global rounds:
+Validation Loss : 2.110225106954575
+Validation Accuracy: 24.48%
+
+Validation loss decreased (2.178873 --> 2.110225).  Saving model ...
+
+ | Global Training Round : 11 |
+
+len idxs_epoch 51
+idxs_epoch [6, 30, 30, 8, 30, 5, 4, 30, 2, 15, 30, 30, 8, 30, 30, 14, 2, 30, 5, 30, 11, 30, 9, 30, 30, 30, 30, 15, 30, 30, 30, 9, 30, 30, 1, 30, 2, 5, 14, 8, 6, 7, 30, 30, 30, 30, 30, 30, 5, 30, 4, 4, 4, 12, 7, 30, 6, 30, 9, 4, 11, 3, 11, 5, 30, 11, 30, 30, 30, 30, 30, 30, 30, 12, 4, 30, 15, 30, 30, 12, 30, 9, 30, 30, 11, 13, 30, 30, 30, 15, 10, 10, 30, 30, 4, 11, 11, 30, 15, 30]
+len_epoch: 100
+
+Avg validation Stats after 11 global rounds:
+Validation Loss : 2.059320177435874
+Validation Accuracy: 27.46%
+
+Validation loss decreased (2.110225 --> 2.059320).  Saving model ...
+
+ | Global Training Round : 12 |
+
+len idxs_epoch 51
+idxs_epoch [5, 30, 30, 11, 4, 12, 3, 30, 6, 30, 30, 30, 30, 6, 2, 13, 30, 4, 30, 2, 7, 12, 30, 7, 30, 6, 30, 11, 30, 30, 11, 3, 13, 8, 2, 30, 30, 30, 30, 30, 13, 1, 8, 14, 30, 30, 6, 30, 15, 12, 14, 30, 30, 30, 3, 30, 30, 30, 8, 2, 30, 12, 2, 30, 6, 30, 8, 30, 30, 30, 5, 11, 30, 9, 30, 30, 4, 30, 30, 30, 30, 30, 30, 30, 4, 30, 30, 30, 3, 14, 4, 30, 30, 8, 9, 30, 30, 6, 13, 3]
+len_epoch: 100
+
+Avg validation Stats after 12 global rounds:
+Validation Loss : 2.0159193108081825
+Validation Accuracy: 28.96%
+
+Validation loss decreased (2.059320 --> 2.015919).  Saving model ...
+
+ | Global Training Round : 13 |
+
+len idxs_epoch 51
+idxs_epoch [5, 2, 14, 30, 30, 30, 9, 30, 30, 14, 8, 30, 4, 2, 30, 3, 30, 30, 11, 9, 30, 4, 30, 30, 9, 30, 6, 30, 13, 11, 30, 4, 14, 13, 13, 14, 30, 30, 30, 30, 4, 30, 30, 30, 30, 9, 11, 30, 30, 12, 6, 11, 30, 2, 30, 30, 5, 30, 12, 30, 13, 30, 30, 2, 4, 12, 15, 5, 3, 10, 15, 30, 7, 30, 30, 9, 30, 15, 30, 30, 30, 30, 2, 30, 30, 5, 30, 30, 3, 14, 1, 30, 30, 30, 11, 15, 30, 30, 7, 30]
+len_epoch: 100
+
+Avg validation Stats after 13 global rounds:
+Validation Loss : 1.9793874975442884
+Validation Accuracy: 29.84%
+
+Validation loss decreased (2.015919 --> 1.979387).  Saving model ...
+
+ | Global Training Round : 14 |
+
+len idxs_epoch 51
+idxs_epoch [30, 12, 30, 30, 30, 30, 11, 30, 10, 5, 4, 30, 30, 30, 11, 4, 30, 30, 30, 11, 5, 30, 30, 3, 7, 13, 30, 30, 30, 4, 4, 30, 30, 12, 30, 10, 14, 3, 4, 30, 14, 30, 1, 30, 30, 2, 30, 30, 15, 30, 30, 2, 11, 15, 30, 2, 9, 30, 30, 30, 30, 5, 11, 30, 30, 30, 30, 12, 9, 30, 13, 30, 30, 8, 30, 5, 30, 5, 4, 6, 1, 30, 12, 30, 15, 11, 30, 30, 3, 30, 7, 30, 3, 7, 30, 30, 30, 15, 2, 8]
+len_epoch: 100
+
+Avg validation Stats after 14 global rounds:
+Validation Loss : 1.9407044782638547
+Validation Accuracy: 31.18%
+
+Validation loss decreased (1.979387 --> 1.940704).  Saving model ...
+
+ | Global Training Round : 15 |
+
+len idxs_epoch 51
+idxs_epoch [9, 6, 13, 30, 13, 1, 30, 30, 7, 4, 10, 30, 10, 2, 30, 30, 30, 2, 14, 30, 15, 30, 30, 30, 30, 30, 30, 30, 3, 30, 15, 15, 13, 30, 30, 6, 30, 9, 14, 10, 30, 30, 11, 9, 30, 3, 30, 30, 30, 15, 4, 1, 30, 3, 30, 14, 30, 30, 7, 30, 30, 13, 30, 30, 8, 30, 30, 30, 11, 8, 11, 2, 5, 30, 7, 12, 30, 11, 6, 2, 30, 30, 5, 30, 30, 5, 15, 10, 30, 30, 11, 15, 4, 30, 30, 30, 30, 7, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 15 global rounds:
+Validation Loss : 1.9016433271765707
+Validation Accuracy: 32.42%
+
+Validation loss decreased (1.940704 --> 1.901643).  Saving model ...
+
+ | Global Training Round : 16 |
+
+len idxs_epoch 51
+idxs_epoch [2, 30, 3, 8, 8, 30, 5, 14, 6, 13, 30, 6, 8, 30, 30, 30, 30, 30, 8, 10, 30, 3, 30, 30, 13, 12, 30, 30, 30, 30, 9, 30, 1, 13, 30, 30, 30, 30, 9, 30, 30, 12, 2, 30, 12, 8, 7, 30, 9, 1, 30, 5, 30, 9, 14, 7, 30, 7, 10, 30, 15, 30, 14, 30, 30, 6, 3, 10, 30, 30, 15, 12, 30, 30, 11, 30, 30, 30, 8, 13, 30, 7, 30, 30, 2, 5, 30, 30, 2, 15, 14, 30, 30, 4, 30, 30, 6, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 16 global rounds:
+Validation Loss : 1.868502403914928
+Validation Accuracy: 33.38%
+
+Validation loss decreased (1.901643 --> 1.868502).  Saving model ...
+
+ | Global Training Round : 17 |
+
+len idxs_epoch 51
+idxs_epoch [2, 8, 11, 30, 30, 5, 6, 9, 7, 30, 30, 9, 13, 30, 12, 6, 8, 30, 11, 30, 30, 1, 8, 30, 30, 30, 30, 30, 13, 4, 30, 30, 30, 10, 30, 30, 30, 15, 30, 30, 14, 4, 30, 30, 10, 10, 10, 2, 1, 30, 30, 5, 30, 2, 4, 30, 30, 11, 10, 4, 30, 1, 15, 14, 30, 8, 30, 30, 8, 6, 7, 30, 11, 30, 30, 7, 30, 30, 30, 30, 12, 30, 30, 30, 9, 30, 14, 30, 8, 30, 30, 30, 2, 10, 30, 11, 30, 30, 2, 15]
+len_epoch: 100
+
+Avg validation Stats after 17 global rounds:
+Validation Loss : 1.8381882454156875
+Validation Accuracy: 34.26%
+
+Validation loss decreased (1.868502 --> 1.838188).  Saving model ...
+
+ | Global Training Round : 18 |
+
+len idxs_epoch 51
+idxs_epoch [6, 30, 13, 3, 30, 30, 8, 30, 11, 13, 30, 30, 30, 15, 10, 12, 30, 30, 5, 30, 14, 30, 5, 4, 30, 30, 9, 9, 30, 4, 30, 8, 30, 30, 30, 30, 30, 7, 5, 4, 15, 30, 30, 5, 15, 4, 30, 12, 30, 11, 14, 5, 30, 30, 3, 30, 30, 15, 10, 30, 8, 30, 30, 8, 12, 13, 30, 30, 30, 8, 12, 30, 30, 30, 30, 30, 30, 7, 13, 10, 5, 4, 30, 30, 30, 4, 30, 14, 6, 30, 12, 30, 30, 30, 5, 2, 30, 13, 15, 30]
+len_epoch: 100
+
+Avg validation Stats after 18 global rounds:
+Validation Loss : 1.7999545144438744
+Validation Accuracy: 36.02%
+
+Validation loss decreased (1.838188 --> 1.799955).  Saving model ...
+
+ | Global Training Round : 19 |
+
+len idxs_epoch 51
+idxs_epoch [4, 15, 2, 14, 10, 14, 5, 10, 1, 4, 8, 30, 30, 30, 4, 30, 1, 30, 30, 14, 30, 30, 15, 11, 30, 30, 15, 15, 3, 30, 30, 30, 4, 11, 30, 10, 3, 30, 30, 30, 15, 30, 6, 10, 30, 30, 5, 9, 30, 30, 30, 8, 10, 30, 3, 30, 4, 30, 5, 14, 9, 7, 30, 30, 30, 30, 13, 1, 30, 30, 9, 30, 8, 30, 30, 30, 3, 11, 30, 30, 12, 9, 12, 30, 30, 10, 30, 4, 30, 30, 30, 6, 30, 30, 30, 30, 30, 4, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 19 global rounds:
+Validation Loss : 1.7712582762837414
+Validation Accuracy: 37.22%
+
+Validation loss decreased (1.799955 --> 1.771258).  Saving model ...
+
+ | Global Training Round : 20 |
+
+len idxs_epoch 51
+idxs_epoch [11, 30, 13, 9, 2, 7, 30, 30, 30, 30, 10, 9, 30, 30, 30, 30, 30, 30, 30, 30, 2, 30, 30, 1, 30, 30, 30, 14, 3, 30, 30, 30, 30, 30, 30, 9, 30, 30, 3, 30, 4, 30, 13, 3, 9, 3, 30, 14, 30, 13, 11, 30, 1, 7, 30, 12, 30, 4, 30, 30, 3, 2, 30, 14, 7, 1, 14, 4, 2, 30, 30, 30, 6, 30, 6, 6, 11, 9, 15, 30, 2, 14, 30, 12, 30, 1, 30, 30, 30, 1, 30, 6, 30, 10, 30, 9, 30, 3, 30, 14]
+len_epoch: 100
+
+Avg validation Stats after 20 global rounds:
+Validation Loss : 1.7359505011439318
+Validation Accuracy: 38.10%
+
+Validation loss decreased (1.771258 --> 1.735951).  Saving model ...
+
+ | Global Training Round : 21 |
+
+len idxs_epoch 51
+idxs_epoch [2, 14, 8, 30, 14, 30, 30, 30, 14, 4, 30, 10, 3, 30, 6, 12, 2, 13, 30, 30, 10, 8, 2, 7, 30, 30, 30, 30, 30, 14, 8, 30, 10, 6, 30, 13, 30, 30, 13, 30, 14, 5, 30, 9, 30, 10, 9, 30, 2, 30, 10, 30, 12, 30, 2, 30, 30, 30, 5, 10, 4, 30, 30, 4, 30, 7, 30, 30, 30, 30, 30, 30, 2, 3, 30, 30, 30, 30, 7, 5, 30, 30, 13, 30, 15, 15, 30, 30, 7, 30, 12, 30, 10, 30, 30, 30, 13, 14, 12, 11]
+len_epoch: 100
+
+Avg validation Stats after 21 global rounds:
+Validation Loss : 1.7157986688613887
+Validation Accuracy: 38.56%
+
+Validation loss decreased (1.735951 --> 1.715799).  Saving model ...
+
+ | Global Training Round : 22 |
+
+len idxs_epoch 51
+idxs_epoch [15, 4, 15, 30, 4, 30, 30, 1, 30, 14, 7, 30, 15, 11, 30, 30, 30, 2, 2, 30, 30, 30, 30, 15, 30, 8, 30, 30, 30, 3, 11, 30, 11, 6, 30, 30, 30, 9, 4, 10, 13, 30, 12, 30, 9, 30, 2, 30, 11, 30, 30, 7, 30, 30, 15, 10, 3, 8, 30, 11, 15, 30, 2, 30, 5, 14, 15, 30, 30, 30, 30, 13, 30, 11, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 8, 7, 8, 6, 30, 10, 5, 7, 7, 30, 1, 15, 30, 30, 30, 12]
+len_epoch: 100
+
+Avg validation Stats after 22 global rounds:
+Validation Loss : 1.6965179777741433
+Validation Accuracy: 39.82%
+
+Validation loss decreased (1.715799 --> 1.696518).  Saving model ...
+
+ | Global Training Round : 23 |
+
+len idxs_epoch 51
+idxs_epoch [10, 15, 30, 2, 3, 30, 30, 8, 30, 11, 5, 30, 30, 30, 9, 30, 13, 30, 8, 7, 14, 7, 30, 10, 30, 30, 30, 30, 2, 30, 11, 30, 30, 8, 30, 3, 7, 30, 6, 30, 30, 3, 4, 4, 5, 30, 30, 6, 30, 4, 15, 30, 30, 30, 30, 8, 8, 7, 4, 30, 4, 30, 10, 30, 30, 4, 4, 5, 30, 30, 3, 9, 15, 30, 30, 12, 5, 30, 30, 4, 30, 12, 30, 30, 2, 30, 3, 30, 30, 13, 30, 30, 30, 30, 4, 30, 14, 10, 1, 30]
+len_epoch: 100
+
+Avg validation Stats after 23 global rounds:
+Validation Loss : 1.678372690975666
+Validation Accuracy: 40.34%
+
+Validation loss decreased (1.696518 --> 1.678373).  Saving model ...
+
+ | Global Training Round : 24 |
+
+len idxs_epoch 51
+idxs_epoch [9, 30, 1, 10, 15, 30, 30, 30, 30, 9, 8, 3, 30, 12, 30, 30, 15, 15, 30, 4, 30, 30, 30, 5, 6, 30, 30, 15, 30, 30, 3, 2, 30, 13, 30, 30, 15, 30, 30, 30, 9, 2, 30, 5, 30, 15, 30, 5, 30, 30, 9, 9, 5, 30, 13, 6, 15, 1, 5, 30, 30, 30, 15, 2, 13, 9, 6, 13, 30, 30, 10, 30, 30, 15, 30, 9, 30, 2, 30, 30, 11, 30, 15, 30, 30, 30, 9, 1, 30, 30, 30, 9, 7, 30, 30, 14, 30, 6, 9, 30]
+len_epoch: 100
+
+Avg validation Stats after 24 global rounds:
+Validation Loss : 1.6671704860925667
+Validation Accuracy: 40.64%
+
+Validation loss decreased (1.678373 --> 1.667170).  Saving model ...
+
+ | Global Training Round : 25 |
+
+len idxs_epoch 51
+idxs_epoch [13, 4, 30, 30, 15, 14, 30, 1, 3, 3, 10, 30, 30, 30, 8, 30, 14, 10, 30, 30, 11, 6, 30, 3, 30, 8, 12, 7, 30, 10, 10, 8, 30, 14, 5, 10, 14, 30, 5, 30, 1, 30, 6, 9, 30, 14, 30, 30, 30, 4, 3, 30, 4, 30, 1, 30, 30, 12, 30, 30, 30, 10, 30, 30, 30, 30, 13, 30, 30, 30, 5, 4, 30, 14, 30, 30, 30, 14, 30, 7, 30, 30, 30, 30, 30, 13, 30, 9, 30, 30, 5, 11, 9, 7, 13, 2, 30, 1, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 25 global rounds:
+Validation Loss : 1.6583798284530633
+Validation Accuracy: 41.34%
+
+Validation loss decreased (1.667170 --> 1.658380).  Saving model ...
+
+ | Global Training Round : 26 |
+
+len idxs_epoch 51
+idxs_epoch [30, 30, 7, 11, 11, 1, 30, 13, 30, 30, 30, 9, 12, 2, 30, 1, 30, 30, 7, 30, 4, 9, 30, 6, 30, 30, 13, 30, 30, 15, 30, 30, 30, 30, 30, 30, 30, 30, 8, 30, 2, 8, 30, 2, 30, 30, 30, 3, 9, 13, 30, 6, 30, 9, 13, 30, 3, 30, 5, 3, 12, 1, 10, 1, 5, 30, 7, 4, 30, 12, 8, 30, 11, 1, 13, 6, 2, 30, 30, 30, 15, 8, 12, 6, 30, 30, 1, 30, 11, 30, 30, 30, 30, 30, 30, 6, 30, 3, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 26 global rounds:
+Validation Loss : 1.6580377007126799
+Validation Accuracy: 41.84%
+
+Validation loss decreased (1.658380 --> 1.658038).  Saving model ...
+
+ | Global Training Round : 27 |
+
+len idxs_epoch 51
+idxs_epoch [3, 12, 15, 3, 11, 30, 11, 5, 30, 30, 30, 12, 2, 14, 30, 30, 12, 3, 30, 30, 9, 2, 30, 30, 14, 5, 1, 5, 30, 30, 2, 30, 13, 30, 1, 30, 30, 9, 30, 30, 7, 3, 30, 30, 2, 30, 30, 12, 15, 13, 30, 30, 30, 30, 11, 30, 30, 30, 30, 30, 30, 2, 30, 30, 30, 7, 30, 30, 15, 9, 30, 1, 13, 9, 30, 1, 3, 30, 6, 7, 8, 12, 30, 5, 30, 7, 6, 9, 30, 30, 10, 12, 9, 15, 30, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 27 global rounds:
+Validation Loss : 1.6511885118782519
+Validation Accuracy: 42.42%
+
+Validation loss decreased (1.658038 --> 1.651189).  Saving model ...
+
+ | Global Training Round : 28 |
+
+len idxs_epoch 51
+idxs_epoch [30, 15, 30, 15, 11, 30, 4, 30, 3, 10, 30, 10, 30, 30, 30, 30, 5, 15, 30, 5, 30, 5, 3, 30, 15, 8, 14, 30, 30, 4, 30, 30, 10, 30, 2, 30, 30, 30, 11, 3, 7, 30, 30, 5, 15, 30, 2, 11, 6, 11, 30, 6, 1, 30, 10, 2, 30, 30, 30, 12, 30, 5, 7, 12, 6, 30, 30, 5, 7, 30, 15, 30, 30, 30, 30, 4, 30, 7, 30, 30, 3, 13, 30, 13, 12, 30, 14, 30, 30, 30, 30, 30, 10, 14, 30, 6, 30, 30, 1, 30]
+len_epoch: 100
+
+Avg validation Stats after 28 global rounds:
+Validation Loss : 1.6523905623555177
+Validation Accuracy: 42.36%
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 29 |
+
+len idxs_epoch 51
+idxs_epoch [1, 30, 30, 12, 30, 15, 6, 30, 30, 12, 30, 4, 9, 30, 3, 30, 14, 14, 30, 11, 30, 2, 1, 30, 30, 30, 30, 3, 14, 14, 30, 15, 1, 12, 30, 1, 6, 30, 5, 30, 30, 30, 30, 30, 2, 30, 14, 30, 2, 30, 5, 30, 30, 6, 14, 30, 1, 30, 30, 4, 30, 30, 13, 11, 14, 15, 30, 3, 7, 3, 30, 14, 30, 7, 30, 30, 4, 30, 30, 11, 30, 9, 11, 13, 30, 30, 7, 6, 5, 30, 30, 8, 3, 30, 30, 30, 30, 30, 30, 5]
+len_epoch: 100
+
+Avg validation Stats after 29 global rounds:
+Validation Loss : 1.6440685093402865
+Validation Accuracy: 42.72%
+
+Validation loss decreased (1.651189 --> 1.644069).  Saving model ...
+
+ | Global Training Round : 30 |
+
+len idxs_epoch 51
+idxs_epoch [9, 30, 30, 30, 30, 4, 30, 30, 12, 3, 30, 4, 30, 30, 30, 6, 8, 5, 10, 30, 30, 14, 11, 9, 9, 7, 30, 30, 30, 12, 30, 30, 5, 14, 30, 7, 11, 30, 30, 30, 8, 30, 30, 12, 30, 30, 30, 10, 2, 1, 3, 30, 8, 30, 30, 30, 10, 30, 9, 30, 30, 12, 30, 4, 1, 12, 2, 1, 30, 30, 30, 30, 13, 6, 30, 15, 30, 4, 30, 12, 30, 12, 7, 30, 3, 30, 6, 30, 6, 11, 30, 30, 2, 30, 8, 1, 30, 2, 30, 12]
+len_epoch: 100
+
+Avg validation Stats after 30 global rounds:
+Validation Loss : 1.6473948187530039
+Validation Accuracy: 43.50%
+
+EarlyStopping counter: 1 out of 10
+precision: 0.42263502260350333
+recall 0.4281
+accuracy 0.4281
+F1 score 0.4213874336653299
+correct : 4281.0
+total : 10000.0
+test loss now: 1.627983942816529
+bnatch index: 79
+
+ Results after 30 global rounds of training:
+ Train loss:  [2.3013445390901, 2.299970101962702, 2.297150526157639, 2.295665655795229, 2.292952166499446, 2.2876713035491743, 2.276267532981014, 2.253080681253363, 2.199432863897715, 2.119007839533846, 2.050534860575946, 1.9984290459999925, 1.9615357857828712, 1.9071401524443417, 1.8585706587913793, 1.819860684720499, 1.7837051067250327, 1.7580440160072703, 1.6962809953094962, 1.6793097150701646, 1.589197333875371, 1.5582367805782882, 1.5536470138411191, 1.4843791997189677, 1.4444118905785295, 1.4148788252353235, 1.3870496157542795, 1.34845717115334, 1.3230185030949544, 1.2864670924382446]
+ Validation loss:  [2.3028843786716466, 2.3011906466484073, 2.2995073249340057, 2.2966354024410247, 2.2930553057193754, 2.287717696666716, 2.273381906032562, 2.244735773086548, 2.1788728969097138, 2.110225106954575, 2.059320177435874, 2.0159193108081825, 1.9793874975442884, 1.9407044782638547, 1.9016433271765707, 1.868502403914928, 1.8381882454156875, 1.7999545144438744, 1.7712582762837414, 1.7359505011439318, 1.7157986688613887, 1.6965179777741433, 1.678372690975666, 1.6671704860925667, 1.6583798284530633, 1.6580377007126799, 1.6511885118782519, 1.6523905623555177, 1.6440685093402865, 1.6473948187530039]
+ Validation accuracy:  [9.97999999999999, 10.019999999999989, 10.699999999999992, 14.959999999999996, 14.799999999999997, 15.720000000000004, 18.480000000000004, 19.679999999999993, 21.419999999999987, 24.47999999999999, 27.46, 28.959999999999997, 29.840000000000007, 31.180000000000003, 32.42000000000002, 33.38000000000001, 34.260000000000005, 36.02, 37.22, 38.100000000000016, 38.56000000000002, 39.82000000000002, 40.34000000000002, 40.64000000000003, 41.340000000000025, 41.840000000000025, 42.42, 42.36000000000001, 42.72000000000003, 43.49999999999999]
+ Test Accuracy: 42.81%
+ Test loss: 1.63
+
+ Total Run Time: 1328.7737
+----------Experiment---------
+Namespace(dataset='cifer', epoch=30, frac=0.4, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=3, num_filters=32, num_users=100, optimizer='sgd', seed=0, stop=10, straggler_frac=0.3, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 30
+ Federated settings
+Dataset : IID
+Fraction of participating users: 0.4
+Local batch size: 128
+Local epochs: 30
+straggler_frac: 0.3
+Files already downloaded and verified
+Files already downloaded and verified
+
+ | Global Training Round : 1 |
+
+len idxs_epoch 71
+idxs_epoch [30, 15, 1, 30, 30, 30, 30, 30, 30, 30, 30, 30, 12, 30, 8, 5, 30, 30, 30, 10, 30, 30, 30, 30, 30, 30, 11, 9, 30, 8, 30, 14, 5, 12, 30, 30, 30, 30, 15, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 14, 2, 30, 15, 30, 13, 3, 30, 30, 11, 30, 5, 30, 30, 30, 30, 30, 30, 30, 30, 6, 30, 30, 30, 30, 30, 15, 30, 30, 30, 30, 30, 30, 30, 30, 30, 15, 9, 30, 8, 13, 30, 8, 30, 30, 9, 30, 4, 30]
+len_epoch: 100
+/home/sourasb/PHD/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.3019987363815315
+Validation Accuracy: 10.36%
+
+Validation loss decreased (inf --> 2.301999).  Saving model ...
+
+ | Global Training Round : 2 |
+
+len idxs_epoch 71
+idxs_epoch [30, 14, 30, 30, 30, 30, 14, 30, 30, 30, 30, 30, 30, 13, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 4, 14, 13, 30, 12, 30, 12, 30, 30, 30, 30, 30, 11, 10, 12, 30, 30, 30, 30, 30, 30, 30, 30, 3, 13, 13, 10, 30, 2, 10, 30, 30, 1, 30, 30, 30, 3, 30, 9, 13, 10, 30, 30, 30, 30, 5, 30, 30, 30, 12, 30, 9, 30, 9, 30, 30, 12, 30, 30, 30, 3, 5, 30]
+len_epoch: 100
+
+Avg validation Stats after 2 global rounds:
+Validation Loss : 2.3006696605682366
+Validation Accuracy: 11.80%
+
+Validation loss decreased (2.301999 --> 2.300670).  Saving model ...
+
+ | Global Training Round : 3 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 10, 30, 30, 30, 7, 30, 30, 5, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 12, 30, 30, 6, 5, 30, 8, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 5, 12, 30, 9, 30, 30, 30, 3, 30, 30, 30, 30, 30, 30, 7, 7, 10, 7, 30, 30, 9, 3, 14, 30, 30, 30, 30, 15, 30, 30, 8, 30, 30, 30, 14, 10, 11, 30, 30, 30, 30, 30, 30, 11, 11, 30, 4, 4, 11, 13, 30, 30, 30, 30, 30, 30, 10]
+len_epoch: 100
+
+Avg validation Stats after 3 global rounds:
+Validation Loss : 2.298595839738846
+Validation Accuracy: 13.16%
+
+Validation loss decreased (2.300670 --> 2.298596).  Saving model ...
+
+ | Global Training Round : 4 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 13, 30, 30, 30, 6, 12, 30, 30, 30, 30, 7, 3, 5, 1, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 10, 14, 11, 30, 30, 11, 30, 13, 30, 30, 30, 30, 30, 30, 9, 30, 30, 30, 30, 30, 30, 30, 30, 12, 30, 13, 30, 30, 30, 14, 7, 30, 8, 2, 12, 9, 10, 30, 30, 15, 30, 11, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 13, 15, 30, 30, 30, 30, 15, 30, 30, 6, 6, 30, 7, 30, 30, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 4 global rounds:
+Validation Loss : 2.294120242595673
+Validation Accuracy: 12.78%
+
+Validation loss decreased (2.298596 --> 2.294120).  Saving model ...
+
+ | Global Training Round : 5 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 15, 30, 5, 30, 30, 30, 30, 30, 14, 30, 30, 30, 4, 30, 9, 30, 15, 30, 30, 13, 30, 5, 30, 30, 12, 30, 30, 2, 30, 13, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 13, 30, 15, 12, 30, 30, 30, 30, 30, 30, 30, 6, 9, 30, 30, 30, 30, 30, 30, 14, 7, 30, 3, 30, 30, 30, 30, 30, 30, 13, 10, 30, 30, 30, 9, 30, 30, 30, 1, 30, 30, 12, 30, 3, 1, 30, 12, 9, 30]
+len_epoch: 100
+
+Avg validation Stats after 5 global rounds:
+Validation Loss : 2.282924087047576
+Validation Accuracy: 13.98%
+
+Validation loss decreased (2.294120 --> 2.282924).  Saving model ...
+
+ | Global Training Round : 6 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 14, 30, 30, 30, 5, 7, 30, 3, 30, 12, 30, 30, 30, 30, 30, 30, 10, 30, 30, 30, 30, 30, 2, 30, 30, 30, 30, 30, 30, 30, 30, 30, 4, 30, 30, 30, 30, 8, 30, 11, 11, 15, 1, 30, 30, 30, 30, 30, 30, 30, 30, 15, 10, 15, 15, 30, 30, 4, 5, 30, 30, 30, 30, 6, 14, 30, 30, 30, 30, 30, 10, 30, 10, 11, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 13, 30, 30, 30, 30, 12, 30, 30, 30, 30, 6, 12, 2]
+len_epoch: 100
+
+Avg validation Stats after 6 global rounds:
+Validation Loss : 2.247119586229323
+Validation Accuracy: 14.86%
+
+Validation loss decreased (2.282924 --> 2.247120).  Saving model ...
+
+ | Global Training Round : 7 |
+
+len idxs_epoch 71
+idxs_epoch [3, 30, 30, 30, 30, 1, 2, 30, 30, 30, 11, 30, 30, 4, 30, 30, 30, 30, 7, 30, 30, 30, 30, 3, 30, 30, 30, 30, 6, 6, 30, 30, 30, 30, 6, 1, 30, 2, 12, 30, 4, 30, 30, 30, 8, 30, 30, 8, 1, 30, 30, 12, 3, 9, 30, 11, 30, 30, 30, 30, 3, 30, 30, 30, 30, 30, 30, 30, 30, 9, 30, 30, 30, 6, 30, 30, 30, 30, 30, 30, 30, 3, 13, 30, 30, 3, 30, 14, 30, 30, 10, 30, 30, 30, 30, 30, 4, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 7 global rounds:
+Validation Loss : 2.182023077607155
+Validation Accuracy: 17.06%
+
+Validation loss decreased (2.247120 --> 2.182023).  Saving model ...
+
+ | Global Training Round : 8 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 30, 6, 30, 30, 30, 30, 30, 15, 30, 30, 30, 30, 30, 7, 30, 1, 30, 30, 10, 8, 30, 13, 14, 30, 30, 1, 30, 30, 30, 30, 30, 30, 30, 30, 30, 7, 1, 10, 30, 30, 30, 7, 13, 30, 30, 7, 30, 30, 1, 30, 30, 30, 30, 10, 30, 30, 30, 30, 6, 30, 30, 10, 30, 30, 12, 6, 30, 30, 3, 14, 4, 30, 30, 30, 30, 30, 2, 30, 30, 30, 12, 2, 5, 30, 15, 30, 30, 30, 30, 30, 4, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 8 global rounds:
+Validation Loss : 2.08661592900753
+Validation Accuracy: 23.32%
+
+Validation loss decreased (2.182023 --> 2.086616).  Saving model ...
+
+ | Global Training Round : 9 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 30, 30, 30, 30, 30, 6, 30, 30, 30, 30, 30, 30, 13, 10, 11, 11, 1, 30, 30, 30, 30, 30, 30, 30, 3, 30, 30, 15, 30, 4, 30, 30, 30, 30, 30, 13, 30, 30, 30, 12, 30, 30, 30, 30, 15, 14, 30, 6, 30, 30, 30, 10, 3, 2, 30, 30, 30, 30, 12, 30, 30, 30, 30, 30, 5, 12, 8, 30, 7, 14, 30, 30, 30, 8, 30, 30, 6, 30, 8, 15, 30, 30, 7, 30, 30, 30, 30, 3, 30, 30, 30, 30, 30, 30, 30, 7]
+len_epoch: 100
+
+Avg validation Stats after 9 global rounds:
+Validation Loss : 2.0209177951812736
+Validation Accuracy: 24.96%
+
+Validation loss decreased (2.086616 --> 2.020918).  Saving model ...
+
+ | Global Training Round : 10 |
+
+len idxs_epoch 71
+idxs_epoch [30, 13, 30, 10, 30, 30, 30, 15, 12, 30, 9, 30, 13, 30, 30, 30, 30, 1, 13, 30, 30, 30, 30, 4, 8, 30, 30, 6, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 10, 30, 30, 30, 15, 30, 4, 30, 30, 12, 30, 30, 30, 14, 3, 30, 30, 30, 30, 30, 9, 11, 30, 30, 30, 30, 5, 30, 13, 1, 30, 30, 30, 30, 30, 30, 30, 9, 30, 30, 30, 30, 30, 30, 12, 5, 30, 12, 30, 30, 30, 30, 30, 30, 30, 2, 3, 15, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 10 global rounds:
+Validation Loss : 1.9776149580478672
+Validation Accuracy: 27.24%
+
+Validation loss decreased (2.020918 --> 1.977615).  Saving model ...
+
+ | Global Training Round : 11 |
+
+len idxs_epoch 71
+idxs_epoch [14, 14, 5, 30, 30, 30, 15, 30, 30, 30, 30, 15, 6, 1, 30, 30, 30, 30, 30, 30, 30, 13, 30, 30, 11, 15, 30, 12, 30, 30, 30, 30, 11, 10, 30, 30, 30, 30, 30, 30, 13, 30, 30, 30, 30, 30, 30, 30, 30, 10, 30, 30, 2, 30, 7, 30, 30, 30, 30, 7, 30, 30, 30, 6, 30, 30, 30, 30, 30, 30, 30, 30, 10, 8, 30, 30, 12, 30, 30, 14, 30, 30, 30, 13, 30, 30, 30, 30, 30, 30, 2, 30, 30, 1, 30, 6, 30, 11, 30, 7]
+len_epoch: 100
+
+Avg validation Stats after 11 global rounds:
+Validation Loss : 1.9329585055708889
+Validation Accuracy: 28.76%
+
+Validation loss decreased (1.977615 --> 1.932959).  Saving model ...
+
+ | Global Training Round : 12 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 7, 30, 14, 30, 30, 30, 30, 10, 6, 30, 30, 5, 30, 30, 30, 30, 30, 8, 30, 30, 30, 1, 30, 30, 30, 9, 15, 2, 7, 30, 30, 30, 30, 30, 30, 30, 30, 12, 30, 13, 30, 30, 30, 11, 30, 30, 30, 30, 9, 30, 10, 3, 30, 14, 30, 10, 30, 12, 30, 1, 30, 30, 1, 11, 8, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 2, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 15, 5, 30, 30, 5, 1, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 12 global rounds:
+Validation Loss : 1.8785615401864044
+Validation Accuracy: 31.20%
+
+Validation loss decreased (1.932959 --> 1.878562).  Saving model ...
+
+ | Global Training Round : 13 |
+
+len idxs_epoch 71
+idxs_epoch [30, 8, 30, 30, 30, 30, 4, 30, 30, 30, 30, 10, 30, 13, 30, 2, 3, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 3, 30, 30, 30, 30, 30, 30, 3, 30, 10, 30, 30, 30, 30, 30, 30, 30, 13, 14, 30, 30, 30, 30, 30, 30, 2, 30, 30, 10, 30, 8, 30, 5, 30, 30, 1, 3, 15, 30, 30, 30, 30, 30, 30, 30, 4, 30, 30, 8, 8, 30, 30, 30, 30, 7, 10, 10, 30, 30, 30, 30, 14, 30, 15, 30, 15, 5, 30, 30, 30, 4, 2, 30]
+len_epoch: 100
+
+Avg validation Stats after 13 global rounds:
+Validation Loss : 1.8258135533332827
+Validation Accuracy: 32.20%
+
+Validation loss decreased (1.878562 --> 1.825814).  Saving model ...
+
+ | Global Training Round : 14 |
+
+len idxs_epoch 71
+idxs_epoch [1, 30, 4, 9, 8, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 11, 30, 30, 30, 30, 12, 30, 30, 30, 30, 30, 30, 10, 30, 30, 4, 6, 30, 6, 5, 30, 13, 9, 30, 30, 30, 30, 5, 4, 12, 13, 30, 30, 30, 30, 30, 5, 30, 30, 30, 30, 30, 30, 30, 30, 30, 9, 30, 14, 2, 30, 30, 30, 12, 30, 30, 14, 30, 30, 30, 30, 30, 30, 30, 3, 30, 30, 30, 7, 6, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 9, 10, 30, 5]
+len_epoch: 100
+
+Avg validation Stats after 14 global rounds:
+Validation Loss : 1.7787436002492905
+Validation Accuracy: 33.78%
+
+Validation loss decreased (1.825814 --> 1.778744).  Saving model ...
+
+ | Global Training Round : 15 |
+
+len idxs_epoch 71
+idxs_epoch [15, 30, 30, 30, 30, 30, 30, 13, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 3, 11, 30, 30, 30, 11, 30, 30, 14, 30, 2, 30, 30, 30, 11, 30, 1, 30, 4, 30, 15, 1, 30, 15, 14, 30, 8, 30, 1, 30, 6, 10, 30, 30, 30, 30, 5, 30, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 12, 30, 1, 14, 12, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 15, 3, 12, 30, 30, 30, 30, 7, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 15 global rounds:
+Validation Loss : 1.7397163341045379
+Validation Accuracy: 35.94%
+
+Validation loss decreased (1.778744 --> 1.739716).  Saving model ...
+
+ | Global Training Round : 16 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 10, 10, 11, 30, 30, 30, 30, 8, 9, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 11, 9, 30, 30, 14, 30, 30, 30, 12, 30, 5, 30, 5, 10, 30, 30, 30, 30, 14, 1, 6, 30, 30, 12, 30, 30, 10, 30, 30, 30, 30, 6, 11, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 4, 13, 8, 30, 11, 30, 30, 30, 30, 30, 1, 30, 30, 30, 30, 30, 30, 30, 11, 15, 3, 30, 13, 30, 30, 30, 30, 4, 30, 30, 3, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 16 global rounds:
+Validation Loss : 1.7052863644957548
+Validation Accuracy: 37.96%
+
+Validation loss decreased (1.739716 --> 1.705286).  Saving model ...
+
+ | Global Training Round : 17 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 4, 12, 30, 30, 13, 30, 13, 30, 30, 9, 30, 5, 30, 30, 30, 9, 30, 30, 30, 30, 30, 30, 30, 30, 13, 2, 30, 7, 30, 30, 30, 30, 30, 30, 8, 10, 8, 30, 30, 30, 4, 30, 6, 30, 30, 30, 30, 30, 12, 30, 12, 30, 30, 30, 1, 30, 30, 14, 6, 30, 30, 30, 30, 30, 30, 30, 9, 9, 30, 30, 30, 1, 30, 2, 30, 30, 30, 1, 30, 30, 7, 30, 30, 30, 30, 30, 14, 30, 30, 30, 13, 30, 14, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 17 global rounds:
+Validation Loss : 1.6754277120828636
+Validation Accuracy: 39.30%
+
+Validation loss decreased (1.705286 --> 1.675428).  Saving model ...
+
+ | Global Training Round : 18 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 13, 30, 30, 30, 30, 30, 30, 30, 30, 12, 5, 30, 30, 14, 30, 30, 30, 30, 30, 30, 30, 30, 3, 30, 15, 10, 30, 9, 30, 14, 15, 30, 30, 10, 30, 30, 30, 30, 30, 8, 30, 30, 30, 30, 1, 30, 11, 30, 2, 30, 30, 30, 30, 30, 30, 30, 12, 30, 11, 7, 30, 30, 30, 1, 30, 15, 30, 30, 30, 30, 8, 11, 30, 30, 30, 30, 30, 30, 3, 11, 30, 30, 30, 30, 30, 7, 3, 15, 30, 30, 30, 30, 30, 3, 10, 1, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 18 global rounds:
+Validation Loss : 1.6483234599232675
+Validation Accuracy: 40.76%
+
+Validation loss decreased (1.675428 --> 1.648323).  Saving model ...
+
+ | Global Training Round : 19 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 30, 7, 15, 3, 10, 2, 4, 13, 30, 30, 2, 30, 30, 30, 11, 30, 5, 30, 30, 30, 30, 30, 30, 14, 30, 30, 30, 30, 30, 15, 30, 30, 30, 30, 15, 30, 9, 5, 30, 30, 30, 8, 30, 30, 30, 30, 10, 5, 3, 6, 30, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 30, 4, 30, 30, 30, 11, 30, 30, 4, 12, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 1, 30, 30, 10, 30, 2]
+len_epoch: 100
+
+Avg validation Stats after 19 global rounds:
+Validation Loss : 1.6287815278172493
+Validation Accuracy: 40.74%
+
+Validation loss decreased (1.648323 --> 1.628782).  Saving model ...
+
+ | Global Training Round : 20 |
+
+len idxs_epoch 71
+idxs_epoch [6, 30, 2, 13, 30, 30, 30, 30, 30, 30, 9, 30, 30, 30, 30, 30, 30, 1, 8, 9, 30, 30, 5, 8, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 5, 30, 30, 3, 30, 14, 30, 6, 8, 30, 30, 30, 30, 9, 30, 30, 8, 30, 3, 30, 30, 30, 30, 30, 13, 30, 30, 30, 30, 30, 30, 6, 30, 30, 30, 30, 3, 30, 30, 9, 30, 9, 6, 3, 30, 30, 4, 30, 30, 30, 30, 9, 30, 30, 30, 30, 2, 9, 30, 10, 30]
+len_epoch: 100
+
+Avg validation Stats after 20 global rounds:
+Validation Loss : 1.6115252728164193
+Validation Accuracy: 41.90%
+
+Validation loss decreased (1.628782 --> 1.611525).  Saving model ...
+
+ | Global Training Round : 21 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 30, 1, 5, 10, 7, 30, 12, 30, 30, 30, 30, 30, 10, 30, 14, 30, 30, 30, 30, 30, 7, 30, 8, 30, 30, 30, 12, 30, 30, 30, 30, 30, 3, 30, 30, 30, 1, 6, 7, 5, 30, 30, 30, 30, 30, 13, 6, 30, 30, 30, 30, 30, 30, 30, 30, 30, 2, 30, 5, 30, 4, 4, 30, 30, 30, 30, 30, 30, 5, 30, 30, 30, 1, 30, 6, 10, 4, 30, 30, 30, 10, 30, 30, 30, 30, 15, 30, 30, 30, 30, 3, 30, 30, 30, 30, 9]
+len_epoch: 100
+
+Avg validation Stats after 21 global rounds:
+Validation Loss : 1.5961254744827749
+Validation Accuracy: 42.60%
+
+Validation loss decreased (1.611525 --> 1.596125).  Saving model ...
+
+ | Global Training Round : 22 |
+
+len idxs_epoch 71
+idxs_epoch [30, 10, 7, 10, 9, 30, 30, 30, 30, 10, 30, 30, 3, 2, 30, 3, 30, 13, 30, 30, 5, 8, 30, 15, 30, 12, 30, 30, 30, 30, 14, 30, 30, 30, 13, 30, 15, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 15, 14, 30, 15, 30, 30, 30, 30, 30, 30, 9, 30, 30, 30, 30, 11, 30, 30, 7, 30, 30, 5, 30, 30, 30, 30, 7, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 8, 11, 5, 30, 30, 30, 7, 30, 30, 2, 30]
+len_epoch: 100
+
+Avg validation Stats after 22 global rounds:
+Validation Loss : 1.5922818065732716
+Validation Accuracy: 42.88%
+
+Validation loss decreased (1.596125 --> 1.592282).  Saving model ...
+
+ | Global Training Round : 23 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 5, 30, 8, 11, 30, 10, 30, 30, 9, 30, 30, 30, 30, 30, 6, 30, 30, 30, 30, 1, 30, 30, 30, 8, 30, 30, 30, 30, 30, 30, 13, 30, 30, 30, 6, 30, 30, 6, 30, 30, 30, 12, 30, 30, 30, 10, 30, 30, 30, 30, 30, 30, 10, 30, 4, 30, 30, 2, 30, 30, 30, 13, 30, 8, 30, 30, 30, 30, 30, 4, 30, 2, 30, 30, 7, 7, 30, 30, 11, 30, 1, 11, 30, 30, 11, 30, 30, 30, 30, 30, 13, 30, 30, 12, 7, 30]
+len_epoch: 100
+
+Avg validation Stats after 23 global rounds:
+Validation Loss : 1.5772056563943628
+Validation Accuracy: 43.78%
+
+Validation loss decreased (1.592282 --> 1.577206).  Saving model ...
+
+ | Global Training Round : 24 |
+
+len idxs_epoch 71
+idxs_epoch [8, 30, 30, 3, 30, 7, 30, 30, 30, 8, 30, 3, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 1, 30, 30, 2, 4, 1, 30, 30, 30, 30, 30, 15, 30, 30, 14, 30, 30, 30, 13, 12, 30, 9, 30, 6, 30, 30, 30, 30, 10, 30, 30, 12, 30, 15, 30, 30, 30, 30, 30, 13, 30, 30, 15, 30, 30, 30, 30, 30, 12, 30, 30, 8, 30, 30, 30, 6, 12, 11, 8, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 8, 8, 13, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 24 global rounds:
+Validation Loss : 1.575709784835577
+Validation Accuracy: 43.88%
+
+Validation loss decreased (1.577206 --> 1.575710).  Saving model ...
+
+ | Global Training Round : 25 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 8, 7, 30, 8, 30, 30, 30, 30, 30, 30, 30, 9, 30, 30, 15, 30, 30, 12, 30, 30, 13, 30, 30, 30, 30, 30, 30, 30, 10, 30, 30, 2, 30, 6, 30, 1, 30, 30, 30, 11, 30, 30, 30, 30, 30, 4, 30, 30, 8, 30, 30, 3, 30, 30, 30, 30, 3, 14, 30, 30, 30, 30, 11, 30, 30, 10, 30, 30, 30, 30, 1, 4, 30, 30, 30, 9, 30, 30, 30, 30, 30, 14, 1, 10, 2, 30, 30, 30, 1, 5, 30, 30, 30, 30, 30, 30, 7, 14]
+len_epoch: 100
+
+Avg validation Stats after 25 global rounds:
+Validation Loss : 1.5705639330744747
+Validation Accuracy: 44.66%
+
+Validation loss decreased (1.575710 --> 1.570564).  Saving model ...
+
+ | Global Training Round : 26 |
+
+len idxs_epoch 71
+idxs_epoch [10, 10, 30, 30, 4, 30, 30, 30, 30, 30, 30, 30, 30, 30, 10, 30, 30, 5, 30, 30, 2, 30, 9, 5, 13, 30, 8, 30, 30, 12, 13, 30, 30, 6, 1, 30, 30, 30, 30, 30, 8, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 7, 30, 14, 30, 30, 30, 30, 30, 30, 14, 30, 30, 14, 30, 4, 30, 30, 30, 7, 13, 30, 30, 30, 1, 12, 30, 30, 30, 30, 30, 30, 30, 30, 30, 10, 30, 13, 30, 30, 30, 30, 30, 30, 3, 9, 7, 14, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 26 global rounds:
+Validation Loss : 1.5705483269244431
+Validation Accuracy: 45.40%
+
+Validation loss decreased (1.570564 --> 1.570548).  Saving model ...
+
+ | Global Training Round : 27 |
+
+len idxs_epoch 71
+idxs_epoch [12, 4, 14, 30, 9, 1, 30, 2, 30, 30, 30, 8, 30, 15, 30, 30, 13, 30, 30, 8, 5, 30, 30, 30, 30, 30, 14, 30, 30, 30, 30, 30, 3, 30, 30, 5, 30, 30, 30, 30, 14, 30, 30, 30, 12, 30, 30, 30, 8, 30, 30, 15, 30, 10, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 15, 30, 15, 30, 30, 13, 30, 30, 30, 10, 10, 30, 6, 30, 1, 30, 9, 6, 30, 30, 4, 30, 1, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 27 global rounds:
+Validation Loss : 1.5668121915385114
+Validation Accuracy: 45.94%
+
+Validation loss decreased (1.570548 --> 1.566812).  Saving model ...
+
+ | Global Training Round : 28 |
+
+len idxs_epoch 71
+idxs_epoch [30, 13, 30, 30, 30, 30, 30, 30, 14, 30, 30, 1, 30, 30, 30, 30, 30, 30, 30, 15, 15, 30, 30, 30, 30, 30, 30, 30, 13, 30, 30, 12, 13, 30, 30, 9, 30, 3, 30, 3, 30, 14, 30, 30, 30, 30, 30, 4, 6, 30, 30, 5, 30, 30, 30, 30, 30, 12, 30, 30, 30, 30, 30, 30, 30, 10, 13, 30, 6, 6, 9, 7, 30, 30, 30, 11, 6, 30, 14, 30, 30, 30, 30, 10, 30, 30, 30, 30, 2, 30, 30, 30, 30, 8, 30, 30, 30, 3, 30, 5]
+len_epoch: 100
+
+Avg validation Stats after 28 global rounds:
+Validation Loss : 1.5706302635371683
+Validation Accuracy: 46.38%
+
+EarlyStopping counter: 1 out of 10
+
+ | Global Training Round : 29 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 1, 30, 6, 10, 30, 30, 30, 30, 30, 30, 1, 30, 9, 14, 30, 30, 30, 7, 30, 2, 6, 6, 4, 30, 9, 30, 30, 15, 3, 30, 30, 30, 30, 8, 3, 30, 30, 30, 6, 14, 30, 30, 30, 30, 30, 30, 9, 30, 30, 30, 15, 30, 30, 30, 30, 30, 7, 2, 30, 6, 30, 1, 30, 30, 30, 5, 30, 30, 3, 30, 9, 6, 30, 30, 30, 30, 30, 30, 30, 30, 30, 3, 1, 30, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 29 global rounds:
+Validation Loss : 1.5759458340257402
+Validation Accuracy: 46.12%
+
+EarlyStopping counter: 2 out of 10
+
+ | Global Training Round : 30 |
+
+len idxs_epoch 71
+idxs_epoch [30, 30, 10, 12, 7, 30, 30, 30, 30, 30, 30, 9, 30, 30, 15, 9, 30, 12, 30, 30, 5, 1, 15, 30, 30, 30, 30, 13, 30, 9, 30, 30, 30, 30, 12, 30, 30, 12, 30, 3, 30, 30, 30, 8, 30, 30, 30, 6, 5, 30, 30, 6, 30, 30, 30, 30, 30, 6, 30, 12, 30, 8, 30, 11, 10, 5, 30, 30, 30, 2, 30, 11, 30, 30, 30, 4, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 15, 30, 30, 13, 30, 30, 30, 30, 30, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 30 global rounds:
+Validation Loss : 1.5820059375613922
+Validation Accuracy: 46.74%
+
+EarlyStopping counter: 3 out of 10
+precision: 0.4631586406317688
+recall 0.4699
+accuracy 0.4699
+F1 score 0.46139758129179614
+correct : 4699.0
+total : 10000.0
+test loss now: 1.5276005041750171
+bnatch index: 79
+
+ Results after 30 global rounds of training:
+ Train loss:  [2.3000147738288614, 2.298942534986506, 2.297161355726133, 2.2941091844342187, 2.2851902840141842, 2.261566934370332, 2.2068223082437926, 2.116570695000035, 2.015492381593247, 1.9523690015718504, 1.8990191850952418, 1.8512535841956672, 1.7921873097100793, 1.7351104782008424, 1.662203224771546, 1.6325194094876814, 1.5715521075428864, 1.54259087279584, 1.4943716164295955, 1.421842785472544, 1.4093872727178973, 1.3306516669935018, 1.3182265746604722, 1.2740790000266786, 1.2099884836593326, 1.1866911072085968, 1.1462428600747423, 1.1202682873263143, 1.0472465351381628, 0.9633946985430677]
+ Validation loss:  [2.3019987363815315, 2.3006696605682366, 2.298595839738846, 2.294120242595673, 2.282924087047576, 2.247119586229323, 2.182023077607155, 2.08661592900753, 2.0209177951812736, 1.9776149580478672, 1.9329585055708889, 1.8785615401864044, 1.8258135533332827, 1.7787436002492905, 1.7397163341045379, 1.7052863644957548, 1.6754277120828636, 1.6483234599232675, 1.6287815278172493, 1.6115252728164193, 1.5961254744827749, 1.5922818065732716, 1.5772056563943628, 1.575709784835577, 1.5705639330744747, 1.5705483269244431, 1.5668121915385114, 1.5706302635371683, 1.5759458340257402, 1.5820059375613922]
+ Validation accuracy:  [10.359999999999998, 11.799999999999994, 13.159999999999993, 12.779999999999998, 13.979999999999995, 14.859999999999996, 17.059999999999988, 23.320000000000007, 24.96, 27.240000000000013, 28.76000000000001, 31.2, 32.2, 33.78000000000003, 35.94000000000002, 37.96000000000001, 39.30000000000001, 40.760000000000005, 40.74, 41.9, 42.59999999999999, 42.87999999999999, 43.78000000000001, 43.879999999999995, 44.660000000000004, 45.40000000000003, 45.940000000000005, 46.38, 46.12000000000002, 46.73999999999999]
+ Test Accuracy: 46.99%
+ Test loss: 1.53
+
+ Total Run Time: 2052.3791
+----------Experiment---------
+Namespace(dataset='cifer', epoch=30, frac=0.5, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=3, num_filters=32, num_users=100, optimizer='sgd', seed=0, stop=10, straggler_frac=0.7, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 30
+ Federated settings
+Dataset : IID
+Fraction of participating users: 0.5
+Local batch size: 128
+Local epochs: 30
+straggler_frac: 0.7
+Files already downloaded and verified
+Files already downloaded and verified
+
+ | Global Training Round : 1 |
+
+len idxs_epoch 31
+idxs_epoch [8, 2, 3, 15, 5, 11, 13, 9, 10, 15, 15, 30, 30, 30, 1, 4, 15, 30, 10, 15, 4, 30, 30, 2, 9, 15, 1, 30, 30, 30, 7, 30, 30, 14, 30, 2, 1, 1, 1, 6, 3, 30, 30, 15, 6, 30, 4, 15, 4, 30, 13, 1, 30, 2, 15, 5, 12, 8, 6, 15, 6, 30, 2, 6, 13, 30, 4, 30, 30, 8, 3, 9, 30, 1, 10, 30, 8, 3, 5, 12, 7, 9, 8, 30, 30, 6, 6, 30, 9, 30, 30, 9, 30, 13, 14, 30, 2, 30, 7, 7]
+len_epoch: 100
+/home/sourasb/PHD/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.304809938669204
+Validation Accuracy: 10.10%
+
+Validation loss decreased (inf --> 2.304810).  Saving model ...
+
+ | Global Training Round : 2 |
+
+len idxs_epoch 31
+idxs_epoch [13, 10, 9, 1, 4, 4, 9, 30, 4, 30, 30, 15, 11, 2, 2, 1, 7, 14, 3, 30, 30, 11, 30, 30, 6, 30, 13, 30, 30, 30, 30, 4, 30, 13, 30, 30, 13, 3, 12, 30, 11, 15, 7, 12, 2, 15, 6, 30, 1, 8, 4, 15, 1, 30, 10, 5, 30, 8, 1, 11, 30, 7, 12, 11, 13, 30, 30, 3, 6, 3, 14, 4, 7, 13, 11, 30, 14, 30, 4, 4, 5, 30, 14, 14, 30, 10, 3, 30, 30, 7, 13, 30, 8, 30, 13, 30, 1, 14, 9, 2]
+len_epoch: 100
+
+Avg validation Stats after 2 global rounds:
+Validation Loss : 2.303841540575027
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.304810 --> 2.303842).  Saving model ...
+
+ | Global Training Round : 3 |
+
+len idxs_epoch 31
+idxs_epoch [1, 7, 9, 30, 4, 6, 12, 9, 30, 3, 30, 10, 30, 9, 30, 4, 30, 10, 11, 13, 5, 15, 10, 30, 10, 12, 30, 15, 4, 30, 10, 30, 9, 7, 11, 30, 4, 10, 8, 10, 9, 15, 3, 4, 30, 15, 30, 30, 4, 30, 30, 12, 3, 30, 13, 30, 12, 6, 1, 11, 30, 13, 6, 30, 30, 30, 30, 6, 7, 5, 11, 13, 3, 13, 15, 15, 30, 30, 7, 2, 14, 12, 13, 5, 4, 1, 8, 1, 30, 30, 12, 3, 30, 30, 30, 7, 6, 30, 13, 9]
+len_epoch: 100
+
+Avg validation Stats after 3 global rounds:
+Validation Loss : 2.3028672144412985
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.303842 --> 2.302867).  Saving model ...
+
+ | Global Training Round : 4 |
+
+len idxs_epoch 31
+idxs_epoch [6, 30, 9, 3, 6, 7, 30, 3, 30, 30, 13, 8, 1, 30, 12, 3, 7, 15, 4, 1, 1, 30, 30, 15, 30, 30, 14, 13, 2, 30, 14, 5, 6, 15, 12, 30, 2, 30, 14, 2, 14, 13, 5, 30, 9, 3, 30, 4, 12, 7, 7, 2, 8, 30, 1, 30, 4, 30, 15, 6, 30, 12, 14, 14, 30, 3, 13, 1, 11, 5, 13, 9, 30, 6, 2, 30, 13, 15, 30, 7, 30, 5, 11, 30, 30, 30, 30, 4, 13, 8, 2, 10, 30, 30, 3, 10, 3, 30, 4, 30]
+len_epoch: 100
+
+Avg validation Stats after 4 global rounds:
+Validation Loss : 2.301824899911881
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.302867 --> 2.301825).  Saving model ...
+
+ | Global Training Round : 5 |
+
+len idxs_epoch 31
+idxs_epoch [30, 9, 5, 7, 6, 30, 14, 13, 30, 15, 7, 1, 6, 30, 6, 9, 30, 7, 5, 7, 10, 30, 2, 4, 9, 30, 11, 3, 30, 30, 15, 7, 1, 11, 1, 30, 30, 6, 7, 6, 30, 14, 14, 7, 1, 15, 30, 30, 9, 2, 30, 30, 7, 30, 14, 11, 1, 30, 2, 12, 30, 9, 10, 30, 4, 15, 5, 10, 5, 4, 30, 30, 13, 5, 13, 30, 1, 1, 10, 1, 30, 8, 6, 3, 3, 30, 9, 30, 10, 30, 12, 30, 15, 7, 7, 30, 4, 10, 13, 30]
+len_epoch: 100
+
+Avg validation Stats after 5 global rounds:
+Validation Loss : 2.3010393011569987
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.301825 --> 2.301039).  Saving model ...
+
+ | Global Training Round : 6 |
+
+len idxs_epoch 31
+idxs_epoch [15, 12, 9, 1, 12, 30, 6, 14, 10, 13, 7, 30, 1, 2, 30, 5, 15, 1, 30, 15, 12, 4, 30, 30, 8, 4, 30, 2, 30, 12, 7, 1, 10, 2, 30, 15, 30, 1, 15, 12, 30, 14, 12, 15, 10, 3, 1, 2, 7, 15, 30, 9, 6, 8, 2, 30, 12, 1, 30, 30, 13, 30, 5, 30, 30, 1, 30, 30, 7, 15, 15, 3, 14, 7, 30, 30, 1, 14, 30, 15, 15, 5, 30, 30, 13, 30, 4, 8, 30, 14, 30, 12, 30, 9, 12, 14, 15, 30, 14, 30]
+len_epoch: 100
+
+Avg validation Stats after 6 global rounds:
+Validation Loss : 2.2998044202327725
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.301039 --> 2.299804).  Saving model ...
+
+ | Global Training Round : 7 |
+
+len idxs_epoch 31
+idxs_epoch [30, 8, 30, 3, 1, 9, 9, 13, 6, 13, 14, 6, 10, 30, 30, 7, 4, 11, 30, 30, 30, 4, 7, 1, 3, 14, 10, 1, 14, 30, 30, 30, 11, 3, 14, 1, 4, 30, 30, 4, 30, 9, 30, 14, 30, 2, 30, 9, 30, 13, 10, 10, 4, 30, 30, 30, 6, 2, 2, 30, 15, 30, 9, 11, 15, 30, 9, 11, 13, 30, 30, 12, 4, 6, 13, 2, 4, 4, 30, 3, 15, 5, 3, 30, 13, 30, 13, 15, 30, 13, 30, 8, 14, 30, 4, 9, 6, 7, 1, 2]
+len_epoch: 100
+
+Avg validation Stats after 7 global rounds:
+Validation Loss : 2.2985511846542357
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.299804 --> 2.298551).  Saving model ...
+
+ | Global Training Round : 8 |
+
+len idxs_epoch 31
+idxs_epoch [6, 2, 30, 30, 11, 30, 15, 30, 9, 30, 11, 10, 30, 9, 30, 30, 14, 8, 11, 12, 3, 4, 13, 5, 2, 8, 6, 15, 5, 1, 12, 30, 6, 5, 30, 10, 30, 2, 10, 8, 7, 5, 13, 14, 14, 5, 4, 13, 30, 30, 30, 11, 12, 30, 30, 1, 30, 30, 30, 30, 10, 1, 14, 6, 6, 5, 2, 30, 30, 1, 30, 6, 14, 2, 4, 6, 7, 30, 3, 30, 30, 6, 6, 14, 5, 9, 2, 30, 30, 7, 10, 12, 30, 30, 9, 6, 9, 14, 5, 30]
+len_epoch: 100
+
+Avg validation Stats after 8 global rounds:
+Validation Loss : 2.296791883707046
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.298551 --> 2.296792).  Saving model ...
+
+ | Global Training Round : 9 |
+
+len idxs_epoch 31
+idxs_epoch [30, 30, 11, 30, 30, 3, 7, 7, 13, 8, 30, 1, 1, 11, 30, 6, 5, 7, 4, 2, 5, 30, 30, 30, 30, 30, 14, 6, 4, 12, 5, 12, 30, 4, 30, 15, 30, 14, 10, 14, 12, 5, 2, 12, 5, 10, 8, 6, 4, 10, 2, 30, 3, 4, 30, 30, 30, 30, 3, 10, 8, 30, 8, 30, 1, 3, 30, 30, 30, 11, 11, 4, 8, 10, 6, 3, 30, 5, 9, 15, 13, 7, 3, 5, 7, 30, 30, 30, 5, 8, 8, 5, 3, 30, 30, 30, 11, 2, 10, 15]
+len_epoch: 100
+
+Avg validation Stats after 9 global rounds:
+Validation Loss : 2.29429595541954
+Validation Accuracy: 10.10%
+
+Validation loss decreased (2.296792 --> 2.294296).  Saving model ...
+
+ | Global Training Round : 10 |
+
+len idxs_epoch 31
+idxs_epoch [12, 30, 13, 12, 9, 14, 8, 30, 5, 15, 14, 8, 15, 7, 15, 10, 7, 4, 9, 30, 15, 30, 30, 14, 6, 9, 5, 12, 1, 6, 10, 1, 1, 30, 30, 13, 3, 30, 1, 10, 6, 5, 2, 30, 13, 11, 6, 5, 30, 11, 13, 30, 30, 8, 30, 14, 30, 30, 2, 30, 4, 2, 30, 30, 12, 6, 30, 30, 30, 5, 13, 6, 11, 13, 30, 6, 15, 14, 3, 30, 7, 30, 30, 30, 7, 30, 30, 4, 30, 13, 9, 6, 10, 14, 30, 10, 15, 1, 6, 14]
+len_epoch: 100
+
+Avg validation Stats after 10 global rounds:
+Validation Loss : 2.2891529631614684
+Validation Accuracy: 11.80%
+
+Validation loss decreased (2.294296 --> 2.289153).  Saving model ...
+
+ | Global Training Round : 11 |
+
+len idxs_epoch 31
+idxs_epoch [30, 1, 7, 14, 30, 2, 12, 30, 12, 30, 9, 1, 4, 9, 11, 10, 14, 30, 4, 11, 30, 30, 30, 1, 8, 5, 13, 15, 14, 8, 30, 13, 11, 10, 7, 7, 9, 7, 8, 10, 3, 10, 2, 1, 30, 1, 30, 13, 7, 3, 7, 30, 30, 11, 15, 14, 30, 6, 15, 2, 2, 30, 13, 30, 30, 30, 7, 3, 30, 30, 8, 10, 30, 30, 30, 30, 8, 2, 7, 5, 30, 7, 14, 9, 14, 30, 9, 14, 12, 13, 15, 10, 7, 30, 30, 9, 30, 30, 30, 11]
+len_epoch: 100
+
+Avg validation Stats after 11 global rounds:
+Validation Loss : 2.280637679576874
+Validation Accuracy: 15.04%
+
+Validation loss decreased (2.289153 --> 2.280638).  Saving model ...
+
+ | Global Training Round : 12 |
+
+len idxs_epoch 31
+idxs_epoch [1, 2, 30, 3, 2, 12, 3, 15, 14, 30, 30, 30, 30, 30, 2, 13, 12, 14, 13, 4, 11, 11, 5, 30, 7, 30, 5, 8, 30, 30, 30, 30, 1, 30, 2, 14, 5, 30, 12, 5, 30, 3, 4, 4, 4, 30, 30, 4, 9, 4, 15, 2, 5, 30, 2, 6, 10, 6, 12, 5, 3, 30, 2, 15, 30, 13, 5, 1, 2, 11, 7, 11, 4, 5, 14, 5, 3, 30, 30, 30, 30, 4, 4, 4, 30, 4, 12, 3, 6, 30, 30, 30, 4, 30, 6, 15, 5, 30, 15, 10]
+len_epoch: 100
+
+Avg validation Stats after 12 global rounds:
+Validation Loss : 2.2659425978660592
+Validation Accuracy: 17.22%
+
+Validation loss decreased (2.280638 --> 2.265943).  Saving model ...
+
+ | Global Training Round : 13 |
+
+len idxs_epoch 31
+idxs_epoch [13, 30, 4, 7, 4, 14, 5, 6, 9, 30, 4, 11, 11, 30, 1, 30, 30, 5, 9, 1, 12, 30, 30, 8, 12, 30, 11, 30, 30, 10, 30, 4, 13, 14, 10, 9, 1, 5, 8, 14, 11, 30, 30, 13, 30, 3, 11, 4, 30, 30, 30, 1, 30, 8, 6, 30, 10, 30, 4, 8, 30, 30, 2, 3, 3, 10, 30, 30, 12, 30, 30, 13, 15, 10, 14, 30, 30, 30, 2, 14, 7, 11, 9, 7, 7, 14, 11, 30, 2, 6, 9, 3, 15, 14, 6, 14, 6, 30, 5, 13]
+len_epoch: 100
+
+Avg validation Stats after 13 global rounds:
+Validation Loss : 2.241584518671036
+Validation Accuracy: 18.82%
+
+Validation loss decreased (2.265943 --> 2.241585).  Saving model ...
+
+ | Global Training Round : 14 |
+
+len idxs_epoch 31
+idxs_epoch [9, 30, 13, 14, 7, 30, 30, 14, 30, 15, 8, 13, 13, 12, 30, 14, 12, 30, 9, 5, 10, 7, 11, 6, 12, 10, 30, 7, 30, 12, 11, 30, 3, 30, 10, 2, 11, 30, 30, 11, 15, 8, 1, 4, 6, 3, 4, 30, 30, 8, 11, 30, 8, 12, 15, 7, 30, 30, 30, 30, 30, 14, 4, 10, 3, 8, 30, 11, 13, 30, 13, 12, 14, 7, 1, 12, 3, 30, 30, 14, 9, 5, 30, 7, 30, 30, 30, 15, 14, 6, 4, 2, 14, 30, 30, 4, 9, 30, 11, 2]
+len_epoch: 100
+
+Avg validation Stats after 14 global rounds:
+Validation Loss : 2.1956744540929796
+Validation Accuracy: 21.90%
+
+Validation loss decreased (2.241585 --> 2.195674).  Saving model ...
+
+ | Global Training Round : 15 |
+
+len idxs_epoch 31
+idxs_epoch [9, 6, 12, 3, 30, 3, 30, 30, 14, 2, 9, 30, 30, 9, 13, 1, 12, 8, 7, 3, 14, 14, 30, 30, 30, 2, 3, 5, 10, 7, 30, 12, 11, 30, 3, 7, 8, 30, 30, 10, 30, 10, 10, 30, 8, 30, 2, 30, 30, 30, 11, 30, 1, 14, 4, 5, 30, 4, 9, 7, 30, 30, 2, 12, 12, 14, 30, 30, 10, 30, 10, 9, 6, 5, 7, 14, 5, 9, 6, 2, 30, 30, 5, 11, 9, 15, 10, 30, 30, 10, 6, 4, 30, 10, 9, 15, 13, 5, 2, 30]
+len_epoch: 100
+
+Avg validation Stats after 15 global rounds:
+Validation Loss : 2.1397766933441167
+Validation Accuracy: 24.90%
+
+Validation loss decreased (2.195674 --> 2.139777).  Saving model ...
+
+ | Global Training Round : 16 |
+
+len idxs_epoch 31
+idxs_epoch [12, 30, 4, 5, 14, 12, 4, 12, 12, 15, 30, 30, 30, 2, 9, 10, 14, 30, 8, 4, 30, 30, 30, 13, 12, 13, 10, 14, 7, 6, 1, 4, 4, 5, 15, 1, 9, 8, 30, 2, 3, 11, 30, 3, 8, 30, 4, 4, 9, 10, 5, 7, 30, 7, 30, 30, 15, 2, 6, 2, 6, 1, 30, 1, 9, 7, 30, 30, 14, 30, 11, 30, 11, 30, 14, 15, 2, 1, 30, 30, 7, 30, 30, 6, 4, 8, 30, 3, 30, 30, 6, 30, 30, 30, 6, 15, 7, 30, 9, 6]
+len_epoch: 100
+
+Avg validation Stats after 16 global rounds:
+Validation Loss : 2.081608800530434
+Validation Accuracy: 27.10%
+
+Validation loss decreased (2.139777 --> 2.081609).  Saving model ...
+
+ | Global Training Round : 17 |
+
+len idxs_epoch 31
+idxs_epoch [4, 30, 11, 12, 10, 7, 14, 15, 8, 30, 30, 13, 30, 7, 30, 8, 3, 30, 30, 30, 3, 2, 11, 4, 12, 5, 2, 30, 30, 7, 10, 14, 3, 30, 7, 30, 30, 1, 14, 1, 30, 7, 10, 10, 5, 6, 30, 14, 2, 2, 12, 10, 10, 3, 30, 10, 30, 2, 15, 30, 13, 30, 12, 7, 6, 3, 12, 15, 2, 9, 30, 30, 30, 9, 3, 1, 9, 13, 2, 10, 30, 30, 14, 5, 30, 30, 9, 1, 10, 6, 15, 30, 6, 30, 3, 30, 6, 11, 30, 5]
+len_epoch: 100
+
+Avg validation Stats after 17 global rounds:
+Validation Loss : 2.0283914982080455
+Validation Accuracy: 28.78%
+
+Validation loss decreased (2.081609 --> 2.028391).  Saving model ...
+
+ | Global Training Round : 18 |
+
+len idxs_epoch 31
+idxs_epoch [2, 3, 12, 30, 5, 10, 4, 30, 30, 1, 10, 30, 15, 6, 14, 3, 4, 14, 30, 30, 8, 30, 7, 13, 15, 2, 14, 5, 30, 14, 13, 11, 30, 7, 12, 6, 30, 3, 2, 30, 2, 7, 30, 14, 15, 30, 11, 8, 1, 2, 8, 9, 2, 3, 30, 8, 30, 6, 30, 30, 30, 5, 4, 8, 8, 30, 8, 30, 13, 1, 11, 30, 30, 30, 13, 15, 12, 30, 7, 12, 9, 30, 1, 1, 30, 15, 7, 30, 3, 1, 13, 30, 30, 11, 7, 13, 30, 4, 30, 9]
+len_epoch: 100
+
+Avg validation Stats after 18 global rounds:
+Validation Loss : 1.9778649488687519
+Validation Accuracy: 30.42%
+
+Validation loss decreased (2.028391 --> 1.977865).  Saving model ...
+
+ | Global Training Round : 19 |
+
+len idxs_epoch 31
+idxs_epoch [5, 14, 3, 15, 11, 30, 13, 30, 9, 30, 14, 10, 3, 8, 4, 7, 30, 9, 4, 11, 15, 30, 30, 10, 4, 15, 3, 3, 30, 1, 15, 30, 4, 7, 12, 13, 14, 30, 3, 6, 13, 9, 4, 30, 30, 30, 12, 3, 3, 30, 30, 1, 3, 30, 30, 1, 12, 14, 30, 11, 30, 5, 3, 30, 5, 30, 14, 9, 10, 3, 14, 11, 3, 30, 30, 4, 14, 15, 11, 3, 8, 8, 15, 30, 30, 30, 30, 30, 5, 15, 8, 7, 12, 30, 12, 9, 30, 30, 14, 12]
+len_epoch: 100
+
+Avg validation Stats after 19 global rounds:
+Validation Loss : 1.937866892457008
+Validation Accuracy: 31.14%
+
+Validation loss decreased (1.977865 --> 1.937867).  Saving model ...
+
+ | Global Training Round : 20 |
+
+len idxs_epoch 31
+idxs_epoch [13, 11, 10, 9, 30, 6, 5, 30, 30, 14, 6, 1, 15, 10, 30, 30, 30, 30, 30, 7, 30, 6, 6, 12, 30, 30, 30, 12, 6, 14, 30, 30, 3, 1, 14, 1, 15, 15, 30, 3, 9, 30, 5, 30, 9, 15, 10, 12, 5, 30, 2, 30, 4, 30, 5, 30, 30, 7, 8, 11, 30, 11, 15, 13, 5, 13, 5, 30, 12, 30, 9, 30, 30, 1, 13, 10, 5, 10, 2, 10, 8, 14, 1, 30, 15, 11, 3, 6, 4, 7, 30, 11, 3, 7, 30, 14, 6, 3, 4, 13]
+len_epoch: 100
+
+Avg validation Stats after 20 global rounds:
+Validation Loss : 1.9113784680366512
+Validation Accuracy: 32.06%
+
+Validation loss decreased (1.937867 --> 1.911378).  Saving model ...
+
+ | Global Training Round : 21 |
+
+len idxs_epoch 31
+idxs_epoch [30, 30, 30, 30, 7, 13, 9, 3, 30, 3, 30, 6, 30, 10, 30, 15, 12, 30, 15, 6, 7, 6, 7, 15, 12, 5, 30, 6, 2, 9, 9, 11, 11, 4, 8, 5, 30, 30, 4, 10, 12, 12, 30, 11, 13, 30, 6, 30, 11, 30, 3, 9, 9, 30, 11, 1, 6, 30, 2, 30, 30, 12, 11, 4, 30, 5, 9, 7, 30, 30, 30, 30, 8, 8, 1, 9, 12, 30, 30, 5, 13, 30, 5, 30, 14, 13, 13, 11, 2, 10, 1, 9, 9, 14, 30, 2, 10, 4, 14, 14]
+len_epoch: 100
+
+Avg validation Stats after 21 global rounds:
+Validation Loss : 1.883907092213631
+Validation Accuracy: 32.90%
+
+Validation loss decreased (1.911378 --> 1.883907).  Saving model ...
+
+ | Global Training Round : 22 |
+
+len idxs_epoch 31
+idxs_epoch [30, 3, 12, 2, 30, 30, 7, 5, 7, 3, 1, 9, 30, 1, 12, 2, 3, 30, 30, 30, 30, 10, 3, 11, 10, 30, 10, 11, 11, 6, 30, 3, 14, 30, 11, 2, 7, 30, 1, 30, 30, 30, 30, 11, 2, 1, 11, 1, 5, 10, 30, 10, 5, 8, 3, 15, 8, 3, 13, 14, 30, 3, 30, 14, 2, 30, 7, 7, 8, 15, 6, 30, 5, 30, 1, 12, 6, 30, 3, 13, 2, 12, 30, 30, 8, 9, 30, 15, 3, 6, 6, 30, 11, 30, 30, 30, 9, 12, 30, 4]
+len_epoch: 100
+
+Avg validation Stats after 22 global rounds:
+Validation Loss : 1.8571180500984195
+Validation Accuracy: 33.64%
+
+Validation loss decreased (1.883907 --> 1.857118).  Saving model ...
+
+ | Global Training Round : 23 |
+
+len idxs_epoch 31
+idxs_epoch [30, 8, 4, 10, 13, 11, 15, 8, 1, 1, 12, 30, 9, 12, 14, 2, 30, 30, 8, 12, 6, 9, 11, 30, 30, 2, 14, 13, 7, 4, 30, 14, 6, 8, 12, 7, 30, 30, 5, 15, 10, 10, 1, 2, 13, 9, 30, 1, 15, 4, 30, 1, 11, 2, 6, 30, 30, 30, 10, 30, 30, 3, 30, 1, 9, 6, 12, 30, 30, 9, 13, 7, 30, 30, 6, 30, 30, 30, 14, 14, 4, 15, 2, 4, 30, 8, 30, 30, 9, 1, 8, 12, 11, 8, 30, 30, 11, 11, 4, 30]
+len_epoch: 100
+
+Avg validation Stats after 23 global rounds:
+Validation Loss : 1.8329862344264989
+Validation Accuracy: 34.58%
+
+Validation loss decreased (1.857118 --> 1.832986).  Saving model ...
+
+ | Global Training Round : 24 |
+
+len idxs_epoch 31
+idxs_epoch [7, 14, 30, 15, 5, 12, 3, 3, 30, 14, 6, 9, 14, 8, 15, 30, 3, 8, 9, 11, 2, 30, 8, 11, 7, 9, 9, 12, 15, 30, 15, 12, 13, 8, 30, 4, 9, 30, 2, 5, 4, 12, 30, 30, 7, 10, 2, 14, 30, 30, 30, 8, 30, 2, 8, 30, 4, 30, 2, 8, 30, 2, 8, 30, 30, 10, 14, 30, 14, 30, 11, 30, 7, 14, 12, 10, 30, 4, 30, 8, 30, 30, 2, 11, 30, 30, 11, 14, 4, 12, 7, 1, 30, 30, 30, 30, 1, 12, 6, 8]
+len_epoch: 100
+
+Avg validation Stats after 24 global rounds:
+Validation Loss : 1.8086568274497992
+Validation Accuracy: 34.90%
+
+Validation loss decreased (1.832986 --> 1.808657).  Saving model ...
+
+ | Global Training Round : 25 |
+
+len idxs_epoch 31
+idxs_epoch [30, 14, 30, 3, 7, 6, 10, 30, 14, 2, 30, 1, 30, 4, 8, 30, 2, 12, 10, 30, 11, 7, 30, 3, 7, 4, 4, 9, 30, 12, 2, 3, 9, 12, 2, 6, 30, 30, 30, 15, 11, 1, 12, 11, 30, 30, 2, 10, 15, 1, 4, 12, 5, 30, 30, 1, 3, 30, 1, 11, 6, 8, 6, 30, 30, 1, 6, 10, 13, 30, 30, 6, 30, 2, 15, 9, 30, 15, 13, 30, 30, 11, 30, 1, 7, 8, 30, 2, 13, 30, 7, 14, 12, 9, 30, 30, 7, 30, 9, 2]
+len_epoch: 100
+
+Avg validation Stats after 25 global rounds:
+Validation Loss : 1.790658123016358
+Validation Accuracy: 35.50%
+
+Validation loss decreased (1.808657 --> 1.790658).  Saving model ...
+
+ | Global Training Round : 26 |
+
+len idxs_epoch 31
+idxs_epoch [11, 3, 30, 14, 1, 1, 5, 13, 9, 10, 15, 1, 30, 15, 30, 8, 30, 30, 6, 4, 30, 9, 30, 30, 9, 15, 10, 11, 30, 9, 4, 5, 30, 13, 7, 30, 3, 3, 1, 2, 14, 8, 7, 10, 8, 6, 11, 30, 30, 14, 30, 13, 30, 13, 14, 2, 14, 10, 30, 30, 13, 14, 1, 30, 14, 30, 15, 13, 8, 30, 7, 30, 30, 12, 11, 30, 13, 2, 5, 30, 9, 30, 2, 30, 30, 14, 2, 5, 11, 10, 10, 9, 13, 7, 30, 14, 2, 4, 30, 30]
+len_epoch: 100
+
+Avg validation Stats after 26 global rounds:
+Validation Loss : 1.7692111209630967
+Validation Accuracy: 36.00%
+
+Validation loss decreased (1.790658 --> 1.769211).  Saving model ...
+
+ | Global Training Round : 27 |
+
+len idxs_epoch 31
+idxs_epoch [11, 4, 9, 3, 15, 10, 7, 8, 10, 14, 3, 30, 14, 30, 2, 30, 11, 13, 2, 30, 30, 13, 10, 30, 9, 30, 30, 9, 2, 30, 30, 30, 30, 2, 30, 3, 30, 6, 14, 3, 15, 5, 30, 5, 5, 30, 14, 1, 3, 30, 4, 5, 1, 9, 8, 7, 30, 8, 8, 3, 30, 15, 8, 9, 30, 5, 6, 1, 9, 7, 6, 4, 12, 10, 11, 9, 30, 8, 7, 11, 30, 2, 14, 3, 30, 1, 9, 9, 30, 30, 30, 30, 8, 8, 30, 30, 30, 30, 15, 8]
+len_epoch: 100
+
+Avg validation Stats after 27 global rounds:
+Validation Loss : 1.7465275300741194
+Validation Accuracy: 36.98%
+
+Validation loss decreased (1.769211 --> 1.746528).  Saving model ...
+
+ | Global Training Round : 28 |
+
+len idxs_epoch 31
+idxs_epoch [30, 13, 10, 1, 5, 1, 30, 11, 1, 30, 14, 14, 30, 1, 4, 3, 7, 30, 13, 2, 30, 7, 30, 12, 13, 13, 30, 14, 9, 8, 13, 11, 12, 5, 9, 10, 9, 5, 30, 10, 5, 11, 30, 30, 30, 3, 6, 15, 30, 30, 10, 30, 30, 30, 30, 30, 5, 9, 30, 12, 30, 5, 30, 12, 9, 30, 30, 7, 10, 30, 30, 15, 30, 6, 14, 30, 11, 7, 3, 10, 1, 9, 4, 7, 1, 30, 13, 30, 14, 13, 12, 4, 30, 13, 9, 5, 2, 8, 1, 10]
+len_epoch: 100
+
+Avg validation Stats after 28 global rounds:
+Validation Loss : 1.7298809205889705
+Validation Accuracy: 37.48%
+
+Validation loss decreased (1.746528 --> 1.729881).  Saving model ...
+
+ | Global Training Round : 29 |
+
+len idxs_epoch 31
+idxs_epoch [4, 30, 13, 15, 1, 30, 6, 7, 4, 12, 12, 12, 6, 8, 2, 30, 30, 9, 1, 7, 15, 30, 11, 30, 30, 15, 11, 15, 30, 4, 10, 30, 15, 30, 13, 30, 9, 30, 30, 30, 13, 2, 7, 6, 3, 14, 9, 7, 30, 30, 11, 10, 7, 30, 14, 11, 3, 30, 11, 10, 1, 7, 15, 6, 14, 1, 13, 11, 30, 15, 30, 1, 7, 14, 13, 5, 30, 30, 3, 10, 30, 1, 30, 10, 30, 30, 4, 8, 6, 30, 5, 3, 30, 3, 30, 30, 1, 30, 14, 12]
+len_epoch: 100
+
+Avg validation Stats after 29 global rounds:
+Validation Loss : 1.7133439593315125
+Validation Accuracy: 38.12%
+
+Validation loss decreased (1.729881 --> 1.713344).  Saving model ...
+
+ | Global Training Round : 30 |
+
+len idxs_epoch 31
+idxs_epoch [30, 7, 9, 30, 11, 30, 30, 14, 5, 13, 10, 30, 1, 11, 4, 6, 8, 6, 6, 30, 7, 13, 14, 30, 7, 30, 4, 8, 14, 11, 30, 5, 6, 9, 7, 6, 6, 10, 8, 10, 30, 6, 11, 30, 30, 5, 3, 30, 2, 30, 9, 4, 5, 30, 30, 30, 30, 30, 4, 5, 11, 7, 5, 5, 6, 30, 30, 10, 30, 2, 1, 14, 15, 6, 30, 5, 30, 6, 6, 15, 14, 14, 14, 4, 1, 30, 12, 30, 30, 30, 10, 7, 30, 2, 13, 30, 8, 1, 30, 10]
+len_epoch: 100
+
+Avg validation Stats after 30 global rounds:
+Validation Loss : 1.7008364021778102
+Validation Accuracy: 38.54%
+
+Validation loss decreased (1.713344 --> 1.700836).  Saving model ...
+precision: 0.3806089263212913
+recall 0.3871
+accuracy 0.3871
+F1 score 0.3760304039733227
+correct : 3871.0
+total : 10000.0
+test loss now: 1.6835589846478234
+bnatch index: 79
+
+ Results after 30 global rounds of training:
+ Train loss:  [2.303563274951644, 2.303143886456882, 2.301896791872184, 2.300495815299607, 2.300068323877192, 2.2988947095063623, 2.2976104904298147, 2.2952778104257736, 2.29353073810053, 2.289095198659727, 2.2819304168320573, 2.2695523002755524, 2.2474261165249607, 2.2069649715802906, 2.1543683661341726, 2.0941386170921152, 2.028949365883484, 1.9726328032214844, 1.933296542453502, 1.8997896601882496, 1.8748458544991757, 1.8388147773583847, 1.799846445849201, 1.7843992020893171, 1.7717502823332623, 1.7381256892559116, 1.7197548874754482, 1.6889145452087484, 1.6639425024704686, 1.6526977011239965]
+ Validation loss:  [2.304809938669204, 2.303841540575027, 2.3028672144412985, 2.301824899911881, 2.3010393011569987, 2.2998044202327725, 2.2985511846542357, 2.296791883707046, 2.29429595541954, 2.2891529631614684, 2.280637679576874, 2.2659425978660592, 2.241584518671036, 2.1956744540929796, 2.1397766933441167, 2.081608800530434, 2.0283914982080455, 1.9778649488687519, 1.937866892457008, 1.9113784680366512, 1.883907092213631, 1.8571180500984195, 1.8329862344264989, 1.8086568274497992, 1.790658123016358, 1.7692111209630967, 1.7465275300741194, 1.7298809205889705, 1.7133439593315125, 1.7008364021778102]
+ Validation accuracy:  [10.099999999999994, 10.099999999999994, 10.099999999999994, 10.099999999999994, 10.099999999999994, 10.099999999999994, 10.099999999999994, 10.099999999999994, 10.09999999999999, 11.799999999999994, 15.03999999999999, 17.22, 18.819999999999997, 21.89999999999999, 24.900000000000002, 27.09999999999999, 28.780000000000005, 30.42, 31.140000000000008, 32.06, 32.90000000000002, 33.640000000000015, 34.58000000000003, 34.900000000000006, 35.500000000000014, 36.00000000000001, 36.98000000000002, 37.48000000000002, 38.120000000000005, 38.54000000000002]
+ Test Accuracy: 38.71%
+ Test loss: 1.68
+
+ Total Run Time: 1583.4211

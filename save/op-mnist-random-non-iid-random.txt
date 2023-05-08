@@ -1,0 +1,638 @@
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=2, frac=0.2, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=32, l_epoch=4, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+Optimizer : sgd
+learning rate : 0.01
+Global Rounds : 2
+Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.2
+Local batch size: 32
+Local epochs: 4
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.0578070231740013
+Validation Accuracy: 41.52% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 1.32722381802921
+Validation Accuracy: 70.40% 
+
+precision: 0.7432933173995689
+recall 0.6964910970144107
+accuracy 0.7062
+F1 score 0.6645746173672024
+correct : 7062.0
+total : 10000.0
+test loss now: 1.293880651268778
+bnatch index: 79
+ 
+ Results after 2 global rounds of training:
+ Train loss:  [1.8579282970336763, 1.414797165845389]
+ Validation loss:  [2.0578070231740013, 1.32722381802921]
+ Validation accuracy:  [41.516300527705475, 70.39991837431498]
+ Test Accuracy: 70.62%
+ Test loss: 1.29
+
+ Total Run Time: 32.7137
+(base) soura@soura-Lenovo-ideapad-320-15IKB:~/WASP-Phd/straggler-mitigation-fl/code$ ./run_all.sh
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=10, frac=0.1, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 10
+ Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.1
+Local batch size: 128
+Local epochs: 30
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+^Z
+[6]+  Stopped                 ./run_all.sh
+(base) soura@soura-Lenovo-ideapad-320-15IKB:~/WASP-Phd/straggler-mitigation-fl/code$ ./run_all.sh
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=10, frac=0.1, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=32, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 10
+ Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.1
+Local batch size: 32
+Local epochs: 30
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 1.4878300905390918
+Validation Accuracy: 61.82% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 0.5272150446796655
+Validation Accuracy: 85.13% 
+
+
+ | Global Training Round : 3 |
+
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 0.3608631521724604
+Validation Accuracy: 89.28% 
+
+
+ | Global Training Round : 4 |
+
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 0.373778984635689
+Validation Accuracy: 87.30% 
+
+
+ | Global Training Round : 5 |
+
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.2576714930425145
+Validation Accuracy: 92.45% 
+
+
+ | Global Training Round : 6 |
+
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.2749018407706454
+Validation Accuracy: 91.36% 
+
+
+ | Global Training Round : 7 |
+
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.21364174340494266
+Validation Accuracy: 92.90% 
+
+
+ | Global Training Round : 8 |
+
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.22755268467214027
+Validation Accuracy: 93.12% 
+
+
+ | Global Training Round : 9 |
+
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.21882648749352662
+Validation Accuracy: 93.90% 
+
+
+ | Global Training Round : 10 |
+
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.18379434963110636
+Validation Accuracy: 94.75% 
+
+precision: 0.9545865262357394
+recall 0.9532969149703444
+accuracy 0.9539
+F1 score 0.953531957285454
+correct : 9539.0
+total : 10000.0
+test loss now: 0.1498629217849502
+bnatch index: 79
+ 
+ Results after 10 global rounds of training:
+ Train loss:  [0.9200947655252227, 0.5575825987361817, 0.3168371255524981, 0.28200695257803754, 0.24927279875239866, 0.27842585628389216, 0.23819792476518056, 0.14725972244360527, 0.13977038864951233, 0.18050908661192114]
+ Validation loss:  [1.4878300905390918, 0.5272150446796655, 0.3608631521724604, 0.373778984635689, 0.2576714930425145, 0.2749018407706454, 0.21364174340494266, 0.22755268467214027, 0.21882648749352662, 0.18379434963110636]
+ Validation accuracy:  [61.82090125131145, 85.13339992137205, 89.28185799924185, 87.295881345177, 92.45454573720049, 91.3555081373734, 92.90122523159668, 93.11598417750115, 93.90218407753231, 94.74615785659127]
+ Test Accuracy: 95.39%
+ Test loss: 0.15
+
+ Total Run Time: 440.0304
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=10, frac=0.2, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=32, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 10
+ Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.2
+Local batch size: 32
+Local epochs: 30
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 1.249085700501616
+Validation Accuracy: 72.64% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 0.38542912194231826
+Validation Accuracy: 89.33% 
+
+
+ | Global Training Round : 3 |
+
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 0.2513798599044666
+Validation Accuracy: 92.35% 
+
+
+ | Global Training Round : 4 |
+
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 0.2380338065046478
+Validation Accuracy: 92.82% 
+
+
+ | Global Training Round : 5 |
+
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.23577001835601266
+Validation Accuracy: 92.85% 
+
+
+ | Global Training Round : 6 |
+
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.21539941506288143
+Validation Accuracy: 93.21% 
+
+
+ | Global Training Round : 7 |
+
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.17282288681495242
+Validation Accuracy: 94.80% 
+
+
+ | Global Training Round : 8 |
+
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.1453935380848777
+Validation Accuracy: 95.78% 
+
+
+ | Global Training Round : 9 |
+
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.14226187481321814
+Validation Accuracy: 95.83% 
+
+
+ | Global Training Round : 10 |
+
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.13206987239071533
+Validation Accuracy: 95.93% 
+
+precision: 0.9652704952127749
+recall 0.9646325333891472
+accuracy 0.965
+F1 score 0.9648495460765485
+correct : 9650.0
+total : 10000.0
+test loss now: 0.11480825627443698
+bnatch index: 79
+ 
+ Results after 10 global rounds of training:
+ Train loss:  [0.9416071913037299, 0.4322644002653009, 0.28082433105235405, 0.15809102934756986, 0.1817663556491162, 0.17103058412797045, 0.16106624518352816, 0.15872667241387037, 0.14161323116343505, 0.13330544717881565]
+ Validation loss:  [1.249085700501616, 0.38542912194231826, 0.2513798599044666, 0.2380338065046478, 0.23577001835601266, 0.21539941506288143, 0.17282288681495242, 0.1453935380848777, 0.14226187481321814, 0.13206987239071533]
+ Validation accuracy:  [72.63791486089772, 89.33416936072405, 92.35411084772302, 92.81574394768869, 92.8472799583794, 93.20584210370927, 94.80123868877266, 95.7828139638662, 95.83244001287443, 95.92556540769317]
+ Test Accuracy: 96.50%
+ Test loss: 0.11
+
+ Total Run Time: 1086.9653
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=10, frac=0.3, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=32, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 10
+ Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.3
+Local batch size: 32
+Local epochs: 30
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 1.1444068745952323
+Validation Accuracy: 82.91% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 0.38746459773705255
+Validation Accuracy: 90.64% 
+
+
+ | Global Training Round : 3 |
+
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 0.2263076938456858
+Validation Accuracy: 93.49% 
+
+
+ | Global Training Round : 4 |
+
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 0.21085704767542934
+Validation Accuracy: 93.42% 
+
+
+ | Global Training Round : 5 |
+
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.17665145142578154
+Validation Accuracy: 94.52% 
+
+
+ | Global Training Round : 6 |
+
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.14119471706421444
+Validation Accuracy: 95.93% 
+
+
+ | Global Training Round : 7 |
+
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.1409320361159122
+Validation Accuracy: 95.67% 
+
+
+ | Global Training Round : 8 |
+
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.12823400097362309
+Validation Accuracy: 96.31% 
+
+
+ | Global Training Round : 9 |
+
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.12191269827667997
+Validation Accuracy: 96.29% 
+
+
+ | Global Training Round : 10 |
+
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.11579793096521358
+Validation Accuracy: 96.70% 
+
+precision: 0.9665048482842227
+recall 0.9666062606480523
+accuracy 0.9667
+F1 score 0.9664061030610608
+correct : 9667.0
+total : 10000.0
+test loss now: 0.10826553332971563
+bnatch index: 79
+ 
+ Results after 10 global rounds of training:
+ Train loss:  [1.062465132091946, 0.4031010509935372, 0.26528700343503153, 0.1918011938068769, 0.197123837934891, 0.16741010674098591, 0.155282081101787, 0.15715780470617985, 0.13672362613618058, 0.10738670439702377]
+ Validation loss:  [1.1444068745952323, 0.38746459773705255, 0.2263076938456858, 0.21085704767542934, 0.17665145142578154, 0.14119471706421444, 0.1409320361159122, 0.12823400097362309, 0.12191269827667997, 0.11579793096521358]
+ Validation accuracy:  [82.90509093060662, 90.64495964965921, 93.4882308733503, 93.42477409870459, 94.51642753730022, 95.92556350917145, 95.66808060034968, 96.31399298549225, 96.28977048293089, 96.69889544251235]
+ Test Accuracy: 96.67%
+ Test loss: 0.11
+
+ Total Run Time: 1274.3487
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=10, frac=0.4, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=32, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 10
+ Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.4
+Local batch size: 32
+Local epochs: 30
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 1.0352271814135126
+Validation Accuracy: 83.41% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 0.3962949102417603
+Validation Accuracy: 88.87% 
+
+
+ | Global Training Round : 3 |
+
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 0.25001965201193577
+Validation Accuracy: 92.54% 
+
+
+ | Global Training Round : 4 |
+
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 0.20843555198776
+Validation Accuracy: 93.80% 
+
+
+ | Global Training Round : 5 |
+
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.17300514010425505
+Validation Accuracy: 94.77% 
+
+
+ | Global Training Round : 6 |
+
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.158827254163198
+Validation Accuracy: 94.88% 
+
+
+ | Global Training Round : 7 |
+
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.15296459409899146
+Validation Accuracy: 95.39% 
+
+
+ | Global Training Round : 8 |
+
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.13848978670835518
+Validation Accuracy: 95.68% 
+
+
+ | Global Training Round : 9 |
+
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.12866602452416023
+Validation Accuracy: 95.67% 
+
+
+ | Global Training Round : 10 |
+
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.12010212507440411
+Validation Accuracy: 96.01% 
+
+precision: 0.9628066534194956
+recall 0.962645151594811
+accuracy 0.963
+F1 score 0.9626904769483048
+correct : 9630.0
+total : 10000.0
+test loss now: 0.11783116736634976
+bnatch index: 79
+ 
+ Results after 10 global rounds of training:
+ Train loss:  [0.9770792621160138, 0.4062234114260229, 0.2745210637632468, 0.22122094540400922, 0.1758898246640727, 0.19210896513178824, 0.15126942713456842, 0.14724267340881794, 0.15646643668422772, 0.13078344933152314]
+ Validation loss:  [1.0352271814135126, 0.3962949102417603, 0.25001965201193577, 0.20843555198776, 0.17300514010425505, 0.158827254163198, 0.15296459409899146, 0.13848978670835518, 0.12866602452416023, 0.12010212507440411]
+ Validation accuracy:  [83.40613243883584, 88.87203578493262, 92.54158063495412, 93.80336331430792, 94.77166811751981, 94.87889720907854, 95.39364647653983, 95.67992381031716, 95.67148107881408, 96.00528013270136]
+ Test Accuracy: 96.30%
+ Test loss: 0.12
+
+ Total Run Time: 1635.4219
+----------Experiment---------
+Namespace(dataset='mnist', early_stop=10, epoch=10, frac=0.5, gpu=None, iid=2, kernel_num=9, kernel_sizes='3,4,5', l_batch=32, l_epoch=30, lr=0.01, max_pool='True', method='fedavg', model='cnn', n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', seed=0, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 10
+ Federated settings
+Dataset : non-IID_random
+Fraction of participating users: 0.5
+Local batch size: 32
+Local epochs: 30
+/home/soura/anaconda3/lib/python3.7/site-packages/torchvision/datasets/mnist.py:45: UserWarning: train_labels has been renamed targets
+  warnings.warn("train_labels has been renamed targets")
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 1.1479096201411116
+Validation Accuracy: 78.09% 
+
+
+ | Global Training Round : 2 |
+
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 0.4154142371636349
+Validation Accuracy: 88.78% 
+
+
+ | Global Training Round : 3 |
+
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 0.27878835720971135
+Validation Accuracy: 91.40% 
+
+
+ | Global Training Round : 4 |
+
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 0.2100702385411429
+Validation Accuracy: 93.66% 
+
+
+ | Global Training Round : 5 |
+
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.17526804368624924
+Validation Accuracy: 94.66% 
+
+
+ | Global Training Round : 6 |
+
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.1586539609785648
+Validation Accuracy: 95.12% 
+
+
+ | Global Training Round : 7 |
+
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.1480909032987013
+Validation Accuracy: 95.66% 
+
+
+ | Global Training Round : 8 |
+
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.14365750871067745
+Validation Accuracy: 95.66% 
+
+
+ | Global Training Round : 9 |
+
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.1301655541407987
+Validation Accuracy: 96.06% 
+
+
+ | Global Training Round : 10 |
+
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.12570983200282798
+Validation Accuracy: 96.11% 
+
+precision: 0.9605235560220786
+recall 0.9604476987854811
+accuracy 0.9607
+F1 score 0.960422112448698
+correct : 9607.0
+total : 10000.0
+test loss now: 0.12179967775186405
+bnatch index: 79
+ 
+ Results after 10 global rounds of training:
+ Train loss:  [1.0740697931967924, 0.4260687172061477, 0.29635001770780495, 0.2501837331728957, 0.22914914884645765, 0.2031265268400858, 0.17925413715093164, 0.16568982142193228, 0.16669645041437822, 0.1601786115769839]
+ Validation loss:  [1.1479096201411116, 0.4154142371636349, 0.27878835720971135, 0.2100702385411429, 0.17526804368624924, 0.1586539609785648, 0.1480909032987013, 0.14365750871067745, 0.1301655541407987, 0.12570983200282798]
+ Validation accuracy:  [78.09143664164763, 88.78357722107687, 91.39863316537934, 93.65941644425929, 94.65773957675864, 95.11910837136273, 95.66064158519872, 95.656751863809, 96.06459096059413, 96.10585276003368]
+ Test Accuracy: 96.07%
+ Test loss: 0.12
+
+ Total Run Time: 2036.0987
+

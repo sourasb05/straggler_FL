@@ -1,0 +1,327 @@
+----------Experiment---------
+Namespace(adaptiveness=5, dataset='mnist', epoch=30, frac=0.2, gpu=None, iid=0, kernel_num=9, kernel_sizes='3,4,5', l_batch=128, l_epoch=20, lr=0.01, max_pool='True', method='fedavg', model='cnn', mu=0.01, n_classes=10, n_equal=0, norm='batch_norm', num_channels=1, num_filters=32, num_users=100, optimizer='sgd', rm_straggler=0, seed=0, stop=10, straggler_frac=0.9, user_type=0, verbose=1)
+ Model : cnn
+
+ Optimizer : sgd
+ learning rate : 0.01
+ Global Rounds : 30
+ Federated settings
+Dataset : IID
+Fraction of participating users: 0.2
+method : fedavg
+Proximal term constant 0.01
+Local batch size: 128
+Local epochs: 20
+straggler_frac: 0.9
+data division is random
+
+ | Global Training Round : 1 |
+
+/home/soura/WASP-Phd/straggler-mitigation-fl/code/model_update.py:22: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(image), torch.tensor(label)
+participants list [[47, 9], [77, 9], [30, 9], [90, 6], [26, 2], [69, 20], [66, 9], [9, 3], [46, 7], [13, 5], [78, 7], [96, 2], [60, 7], [81, 9], [5, 8], [4, 3], [31, 9], [22, 1], [0, 2], [24, 6]]
+ 
+Avg validation Stats after 1 global rounds:
+Validation Loss : 2.236963141202926
+Validation Accuracy: 24.45% 
+
+Validation loss decreased (inf --> 2.236963).  Saving model ...
+
+ | Global Training Round : 2 |
+
+participants list [[63, 4], [17, 10], [45, 2], [85, 20], [41, 7], [55, 10], [67, 9], [8, 10], [65, 6], [89, 20], [24, 4], [68, 7], [21, 1], [14, 6], [75, 20], [28, 3], [25, 20], [1, 4], [52, 7], [39, 4]]
+ 
+Avg validation Stats after 2 global rounds:
+Validation Loss : 2.0359247093200685
+Validation Accuracy: 59.00% 
+
+Validation loss decreased (2.236963 --> 2.035925).  Saving model ...
+
+ | Global Training Round : 3 |
+
+participants list [[18, 5], [30, 6], [31, 1], [25, 5], [32, 9], [22, 10], [19, 5], [15, 6], [50, 3], [73, 1], [42, 4], [28, 9], [16, 1], [36, 9], [8, 10], [47, 20], [64, 2], [29, 4], [89, 7], [23, 5]]
+ 
+Avg validation Stats after 3 global rounds:
+Validation Loss : 1.6998801440000528
+Validation Accuracy: 69.20% 
+
+Validation loss decreased (2.035925 --> 1.699880).  Saving model ...
+
+ | Global Training Round : 4 |
+
+participants list [[19, 20], [29, 7], [41, 6], [12, 8], [66, 7], [52, 8], [0, 7], [59, 8], [94, 3], [80, 1], [79, 6], [57, 5], [27, 5], [23, 9], [45, 1], [93, 3], [85, 2], [63, 9], [22, 8], [56, 10]]
+ 
+Avg validation Stats after 4 global rounds:
+Validation Loss : 1.2667532133460042
+Validation Accuracy: 75.43% 
+
+Validation loss decreased (1.699880 --> 1.266753).  Saving model ...
+
+ | Global Training Round : 5 |
+
+participants list [[82, 6], [76, 6], [34, 4], [38, 9], [31, 7], [13, 3], [16, 7], [35, 6], [51, 10], [46, 20], [89, 8], [12, 2], [50, 7], [70, 6], [59, 6], [15, 2], [75, 2], [27, 1], [58, 8], [90, 5]]
+ 
+Avg validation Stats after 5 global rounds:
+Validation Loss : 0.9731966086626049
+Validation Accuracy: 77.97% 
+
+Validation loss decreased (1.266753 --> 0.973197).  Saving model ...
+
+ | Global Training Round : 6 |
+
+participants list [[30, 4], [74, 2], [76, 4], [60, 2], [65, 9], [31, 9], [50, 4], [7, 3], [15, 10], [51, 6], [96, 9], [71, 3], [4, 7], [38, 10], [68, 9], [97, 10], [17, 10], [91, 7], [87, 9], [84, 4]]
+ 
+Avg validation Stats after 6 global rounds:
+Validation Loss : 0.7850453302413224
+Validation Accuracy: 81.10% 
+
+Validation loss decreased (0.973197 --> 0.785045).  Saving model ...
+
+ | Global Training Round : 7 |
+
+participants list [[25, 10], [22, 8], [20, 4], [27, 9], [86, 20], [52, 5], [2, 9], [31, 2], [95, 1], [28, 4], [36, 5], [71, 10], [50, 10], [15, 4], [33, 20], [5, 9], [56, 4], [32, 8], [23, 3], [88, 9]]
+ 
+Avg validation Stats after 7 global rounds:
+Validation Loss : 0.6653148543536663
+Validation Accuracy: 83.37% 
+
+Validation loss decreased (0.785045 --> 0.665315).  Saving model ...
+
+ | Global Training Round : 8 |
+
+participants list [[20, 5], [17, 5], [98, 8], [8, 7], [30, 8], [54, 3], [69, 10], [40, 4], [49, 1], [67, 5], [65, 7], [66, 1], [82, 9], [34, 20], [90, 4], [99, 10], [41, 1], [26, 4], [29, 20], [39, 10]]
+ 
+Avg validation Stats after 8 global rounds:
+Validation Loss : 0.5790477902442217
+Validation Accuracy: 85.35% 
+
+Validation loss decreased (0.665315 --> 0.579048).  Saving model ...
+
+ | Global Training Round : 9 |
+
+participants list [[50, 9], [36, 5], [13, 4], [57, 9], [51, 5], [69, 9], [24, 10], [78, 9], [40, 3], [65, 20], [62, 4], [95, 3], [29, 6], [35, 4], [71, 6], [85, 5], [44, 6], [5, 2], [80, 6], [10, 5]]
+ 
+Avg validation Stats after 9 global rounds:
+Validation Loss : 0.5250781295150521
+Validation Accuracy: 86.50% 
+
+Validation loss decreased (0.579048 --> 0.525078).  Saving model ...
+
+ | Global Training Round : 10 |
+
+participants list [[64, 3], [38, 1], [33, 5], [96, 1], [3, 9], [23, 9], [26, 4], [87, 6], [14, 2], [19, 7], [22, 3], [61, 4], [89, 1], [32, 10], [95, 7], [50, 10], [91, 8], [54, 2], [72, 20], [99, 1]]
+ 
+Avg validation Stats after 10 global rounds:
+Validation Loss : 0.4861297085732222
+Validation Accuracy: 87.30% 
+
+Validation loss decreased (0.525078 --> 0.486130).  Saving model ...
+
+ | Global Training Round : 11 |
+
+participants list [[3, 7], [7, 2], [72, 10], [5, 20], [29, 20], [62, 4], [51, 1], [4, 20], [18, 6], [87, 7], [41, 9], [90, 1], [59, 6], [89, 9], [73, 6], [32, 5], [21, 20], [97, 3], [55, 8], [28, 20]]
+ 
+Avg validation Stats after 11 global rounds:
+Validation Loss : 0.4419573572296649
+Validation Accuracy: 88.13% 
+
+Validation loss decreased (0.486130 --> 0.441957).  Saving model ...
+
+ | Global Training Round : 12 |
+
+participants list [[5, 7], [23, 5], [7, 5], [36, 1], [9, 4], [12, 9], [74, 1], [99, 5], [39, 1], [88, 9], [96, 3], [76, 3], [21, 20], [84, 20], [46, 6], [34, 6], [40, 10], [66, 5], [22, 4], [6, 9]]
+ 
+Avg validation Stats after 12 global rounds:
+Validation Loss : 0.41449904881976535
+Validation Accuracy: 89.05% 
+
+Validation loss decreased (0.441957 --> 0.414499).  Saving model ...
+
+ | Global Training Round : 13 |
+
+participants list [[40, 5], [39, 4], [88, 5], [72, 7], [47, 20], [82, 1], [59, 6], [56, 4], [77, 6], [81, 20], [18, 7], [68, 3], [61, 3], [63, 3], [17, 7], [94, 3], [21, 8], [38, 20], [10, 4], [69, 8]]
+ 
+Avg validation Stats after 13 global rounds:
+Validation Loss : 0.3905965109150857
+Validation Accuracy: 89.65% 
+
+Validation loss decreased (0.414499 --> 0.390597).  Saving model ...
+
+ | Global Training Round : 14 |
+
+participants list [[63, 7], [32, 1], [95, 2], [15, 9], [10, 1], [13, 5], [37, 2], [24, 1], [4, 20], [30, 1], [8, 6], [58, 6], [19, 4], [45, 4], [28, 10], [54, 6], [52, 2], [22, 20], [74, 20], [26, 6]]
+ 
+Avg validation Stats after 14 global rounds:
+Validation Loss : 0.36660265954211346
+Validation Accuracy: 90.38% 
+
+Validation loss decreased (0.390597 --> 0.366603).  Saving model ...
+
+ | Global Training Round : 15 |
+
+participants list [[77, 10], [11, 5], [40, 5], [97, 2], [18, 5], [37, 7], [53, 1], [32, 20], [43, 6], [36, 1], [41, 8], [21, 4], [73, 20], [13, 20], [64, 10], [83, 2], [95, 10], [71, 10], [34, 7], [9, 7]]
+ 
+Avg validation Stats after 15 global rounds:
+Validation Loss : 0.34802671778574584
+Validation Accuracy: 90.70% 
+
+Validation loss decreased (0.366603 --> 0.348027).  Saving model ...
+
+ | Global Training Round : 16 |
+
+participants list [[13, 4], [18, 4], [46, 20], [67, 9], [97, 8], [91, 2], [42, 9], [31, 7], [48, 2], [65, 8], [66, 7], [20, 8], [14, 10], [37, 3], [76, 2], [6, 9], [86, 2], [19, 6], [79, 4], [71, 20]]
+ 
+Avg validation Stats after 16 global rounds:
+Validation Loss : 0.33087236856482916
+Validation Accuracy: 91.20% 
+
+Validation loss decreased (0.348027 --> 0.330872).  Saving model ...
+
+ | Global Training Round : 17 |
+
+participants list [[2, 4], [27, 20], [51, 9], [35, 1], [63, 5], [28, 8], [16, 5], [8, 5], [61, 3], [64, 10], [71, 6], [1, 10], [14, 4], [47, 2], [20, 6], [65, 9], [49, 1], [58, 5], [6, 7], [23, 10]]
+ 
+Avg validation Stats after 17 global rounds:
+Validation Loss : 0.3158513805968688
+Validation Accuracy: 91.58% 
+
+Validation loss decreased (0.330872 --> 0.315851).  Saving model ...
+
+ | Global Training Round : 18 |
+
+participants list [[75, 9], [27, 10], [3, 9], [79, 6], [0, 6], [62, 9], [72, 2], [73, 9], [17, 10], [40, 10], [53, 4], [97, 9], [91, 20], [63, 9], [82, 6], [46, 3], [16, 10], [39, 5], [70, 3], [57, 7]]
+ 
+Avg validation Stats after 18 global rounds:
+Validation Loss : 0.3028772939513436
+Validation Accuracy: 91.80% 
+
+Validation loss decreased (0.315851 --> 0.302877).  Saving model ...
+
+ | Global Training Round : 19 |
+
+participants list [[18, 3], [67, 2], [90, 4], [64, 9], [31, 5], [56, 4], [72, 4], [7, 9], [74, 7], [5, 5], [35, 5], [86, 8], [92, 4], [59, 1], [41, 5], [78, 8], [83, 10], [45, 1], [19, 7], [65, 5]]
+ 
+Avg validation Stats after 19 global rounds:
+Validation Loss : 0.29575709947943696
+Validation Accuracy: 91.73% 
+
+Validation loss decreased (0.302877 --> 0.295757).  Saving model ...
+
+ | Global Training Round : 20 |
+
+participants list [[39, 9], [81, 8], [12, 20], [5, 1], [52, 1], [47, 5], [36, 9], [57, 1], [65, 2], [74, 4], [94, 7], [82, 1], [76, 20], [41, 3], [10, 10], [11, 9], [55, 20], [87, 5], [99, 7], [23, 6]]
+ 
+Avg validation Stats after 20 global rounds:
+Validation Loss : 0.2824543371805921
+Validation Accuracy: 92.38% 
+
+Validation loss decreased (0.295757 --> 0.282454).  Saving model ...
+
+ | Global Training Round : 21 |
+
+participants list [[41, 3], [1, 9], [71, 9], [77, 9], [60, 2], [18, 9], [72, 10], [56, 1], [79, 4], [75, 3], [3, 5], [17, 5], [4, 6], [9, 3], [22, 6], [29, 7], [84, 3], [95, 20], [31, 20], [52, 9]]
+ 
+Avg validation Stats after 21 global rounds:
+Validation Loss : 0.2733177025266922
+Validation Accuracy: 92.48% 
+
+Validation loss decreased (0.282454 --> 0.273318).  Saving model ...
+
+ | Global Training Round : 22 |
+
+participants list [[6, 10], [4, 20], [37, 4], [53, 9], [32, 9], [31, 7], [67, 7], [36, 20], [40, 1], [48, 2], [61, 1], [47, 4], [1, 20], [38, 3], [26, 8], [83, 6], [51, 20], [14, 20], [91, 5], [71, 7]]
+ 
+Avg validation Stats after 22 global rounds:
+Validation Loss : 0.2603298489637673
+Validation Accuracy: 92.85% 
+
+Validation loss decreased (0.273318 --> 0.260330).  Saving model ...
+
+ | Global Training Round : 23 |
+
+participants list [[10, 9], [80, 5], [77, 7], [27, 1], [34, 9], [66, 9], [97, 8], [62, 8], [92, 20], [43, 7], [73, 2], [37, 8], [48, 2], [93, 1], [19, 20], [9, 5], [60, 8], [64, 6], [11, 7], [94, 9]]
+ 
+Avg validation Stats after 23 global rounds:
+Validation Loss : 0.25389940973138436
+Validation Accuracy: 92.98% 
+
+Validation loss decreased (0.260330 --> 0.253899).  Saving model ...
+
+ | Global Training Round : 24 |
+
+participants list [[51, 10], [19, 20], [47, 7], [73, 2], [97, 6], [92, 6], [35, 6], [66, 20], [2, 10], [67, 2], [88, 10], [81, 10], [21, 4], [34, 6], [4, 9], [44, 20], [62, 4], [50, 10], [17, 9], [71, 3]]
+ 
+Avg validation Stats after 24 global rounds:
+Validation Loss : 0.24452247484051626
+Validation Accuracy: 93.17% 
+
+Validation loss decreased (0.253899 --> 0.244522).  Saving model ...
+
+ | Global Training Round : 25 |
+
+participants list [[63, 6], [5, 1], [86, 6], [54, 1], [52, 4], [56, 3], [13, 7], [61, 2], [96, 10], [92, 10], [59, 3], [16, 5], [14, 1], [82, 20], [73, 3], [64, 4], [28, 1], [3, 7], [95, 2], [67, 3]]
+ 
+Avg validation Stats after 25 global rounds:
+Validation Loss : 0.2412771594629157
+Validation Accuracy: 93.25% 
+
+Validation loss decreased (0.244522 --> 0.241277).  Saving model ...
+
+ | Global Training Round : 26 |
+
+participants list [[96, 5], [45, 3], [93, 1], [68, 1], [27, 7], [9, 5], [19, 6], [90, 5], [32, 9], [49, 5], [80, 5], [73, 5], [5, 4], [8, 6], [37, 8], [86, 8], [52, 6], [95, 1], [56, 5], [17, 9]]
+ 
+Avg validation Stats after 26 global rounds:
+Validation Loss : 0.23612420591898267
+Validation Accuracy: 93.35% 
+
+Validation loss decreased (0.241277 --> 0.236124).  Saving model ...
+
+ | Global Training Round : 27 |
+
+participants list [[1, 20], [23, 9], [83, 3], [41, 6], [43, 20], [29, 5], [42, 2], [46, 6], [36, 4], [48, 2], [17, 10], [52, 3], [80, 3], [7, 1], [51, 5], [13, 1], [4, 20], [87, 9], [72, 8], [88, 4]]
+ 
+Avg validation Stats after 27 global rounds:
+Validation Loss : 0.2313443467372563
+Validation Accuracy: 93.33% 
+
+Validation loss decreased (0.236124 --> 0.231344).  Saving model ...
+
+ | Global Training Round : 28 |
+
+participants list [[7, 2], [97, 1], [83, 9], [38, 9], [82, 5], [9, 10], [28, 7], [39, 20], [18, 4], [94, 8], [54, 5], [15, 8], [85, 20], [33, 4], [13, 9], [30, 4], [6, 10], [96, 5], [67, 2], [79, 7]]
+ 
+Avg validation Stats after 28 global rounds:
+Validation Loss : 0.22647611215163488
+Validation Accuracy: 93.62% 
+
+Validation loss decreased (0.231344 --> 0.226476).  Saving model ...
+
+ | Global Training Round : 29 |
+
+participants list [[89, 7], [99, 9], [73, 9], [68, 10], [61, 20], [57, 10], [88, 10], [41, 6], [18, 10], [34, 1], [14, 5], [17, 6], [51, 6], [5, 7], [48, 20], [24, 6], [30, 10], [40, 6], [78, 7], [9, 7]]
+ 
+Avg validation Stats after 29 global rounds:
+Validation Loss : 0.22064165850670553
+Validation Accuracy: 93.73% 
+
+Validation loss decreased (0.226476 --> 0.220642).  Saving model ...
+
+ | Global Training Round : 30 |
+
+participants list [[47, 5], [28, 5], [67, 10], [12, 10], [15, 5], [37, 7], [19, 4], [7, 2], [14, 8], [87, 3], [71, 4], [44, 10], [92, 5], [2, 1], [88, 2], [10, 2], [16, 3], [17, 8], [38, 10], [81, 1]]
+ 
+Avg validation Stats after 30 global rounds:
+Validation Loss : 0.21822847605880816
+Validation Accuracy: 93.80% 
+
+Validation loss decreased (0.220642 --> 0.218228).  Saving model ...
+precision: 0.9403560323099567
+recall 0.940105868723094
+accuracy 0.9409
+F1 score 0.9400871137476778
+correct : 9409.0
+total : 10000.0
+test loss now: 0.2000322602925044
+bnatch index: 79
+
